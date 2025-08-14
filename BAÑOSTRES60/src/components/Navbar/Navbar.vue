@@ -128,20 +128,20 @@ const navItems = ref([
     title: 'Nuestros servicios profesionales en acero inoxidable y soldadura industrial',  // esto es para cuando dejas en raton sobre el boton la info que sale
     ariaLabel: 'Servicios', 
     keywords: 'servicios industriales, acero inoxidable, soldadura, soluciones',
-    hasSubmenu: false, 
-    /* DESPLEGABLE PARA EL SERVICIO
+    hasSubmenu: true, 
+    //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
       { name: 'Servicio 1.1', path: '/servicios', title: 'Catálogo completo de servicios industriales', ariaLabel: 'Nuestros servicios' },
-      { name: 'Servicio 1.2', path: '/servicios#asi-funciona', title: 'Cómo funciona nuestro proceso de trabajo', ariaLabel: 'Así funciona' },
+      /*{ name: 'Servicio 1.2', path: '/servicios#asi-funciona', title: 'Cómo funciona nuestro proceso de trabajo', ariaLabel: 'Así funciona' },
       { 
         name: 'Servicio 1.3', 
         path: '/todo-servicios', 
         title: 'Diferentes técnicas de soldadura industrial que ofrecemos', 
         ariaLabel: 'Tipos de soldadura',
         hasSubmenu: false
-      }
+      }*/
     ]
-    */
+    //*/
   },
   { 
     name: 'PLATOS', 
@@ -157,13 +157,13 @@ const navItems = ref([
     title: 'Nuestra maquinaria industrial especializada', 
     ariaLabel: 'Maquinaria', 
     keywords: 'maquinaria industrial, equipos, tecnología',
-    //hasSubmenu: true, DESPLEGABLE PARA EL SERVICIO
-    /* DESPLEGABLE PARA EL SERVICIO
+    hasSubmenu: true, 
+    //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
       { name: 'Servicio 3.1', path: '/maquinaria/instalaciones', title: 'Instalaciones y equipamiento técnico', ariaLabel: 'Nuestras instalaciones' },
       { name: 'Servicio 3.2', path: '/maquinaria/industria', title: 'Soluciones para la industria con nuestra maquinaria', ariaLabel: 'Industria' }
     ]
-    */
+    //*/
   },
   { 
     name: 'MAMPARAS', 
@@ -171,15 +171,15 @@ const navItems = ref([
     title: 'Procesos auxiliares y servicios adicionales', 
     ariaLabel: 'Procesos Auxiliares', 
     keywords: 'procesos auxiliares, servicios adicionales',
-    //hasSubmenu: true, DESPLEGABLE PARA EL SERVICIO
-    /* DESPLEGABLE PARA EL SERVICIO
+    hasSubmenu: true,
+    //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
       { name: 'Servicio 4.1', path: '/procesos-auxiliares#transformacion', title: 'Servicios de transformación metalúrgica', ariaLabel: 'Transformación metalúrgica', component: 'TransformacionesMetalurgicas.vue' },
       { name: 'Servicio 4.2', path: '/procesos-auxiliares#tratamiento', title: 'Tratamientos de superficies metálicas', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
       { name: 'Servicio 4.3', path: '/procesos-auxiliares#modulacion', title: 'Servicios de modulación industrial', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
       { name: 'Servicio 4.4', path: '/procesos-auxiliares#logistica', title: 'Servicios logísticos para la industria', ariaLabel: 'Logística', component: 'Logistica.vue' }
     ]
-    */
+    //*/
   },
   { 
     name: 'CONTACTO', 

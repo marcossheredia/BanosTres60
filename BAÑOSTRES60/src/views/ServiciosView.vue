@@ -37,11 +37,11 @@ onMounted(() => {
     <v-container>
       <v-row justify="center">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">Servicios Industriales</h1>
+          <h1 class="text-h3 font-weight-bold position-relative d-inline-block">TITULO GRIFOS</h1>
         </v-col>
         <v-col cols="12" md="10" lg="8">
           <p class="servicios-intro text-body-1">
-            Ofrecemos una amplia gama de <strong>servicios industriales</strong> especializados en <strong>acero inoxidable</strong> y <strong>soldadura de precisión</strong>, adaptados a las necesidades específicas de cada sector. Nuestra <strong>tecnología robotizada</strong> garantiza acabados de la más alta calidad.
+            Grifos <strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos<strong>Grifos</strong>Grifos
           </p>
         </v-col>
       </v-row>
