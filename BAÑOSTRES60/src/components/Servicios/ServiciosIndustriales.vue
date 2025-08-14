@@ -70,9 +70,245 @@ onMounted(() => {
 //AQUI VAN A IR TODAS LAS FOTOS DE LOS GRIFOS
 <template>
   <div>
-    <p>fotos de los grifos</p>
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src='@/assets/imagenes/usoGeneral/Logo verde.png'
+            alt="Descripción de la imagen 1"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>AQUÍ VA TU TÍTULO</h2>
+            <p>
+              Aquí va tu información o descripción.  
+              Escribe lo que quieras, incluso varias líneas de texto.
+            </p>
+          </div>
+        </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= "@/assets/imagenes/usoGeneral/Logo verde.png"
+            alt="Descripción de la imagen 2"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= "@/assets/imagenes/usoGeneral/Logo verde.png"
+            alt="Descripción de la imagen 3"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
+
+    <div>
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src='@/assets/imagenes/usoGeneral/Logo verde.png'
+            alt="Descripción de la imagen 1"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>AQUÍ VA TU TÍTULO</h2>
+            <p>
+              Aquí va tu información o descripción.  
+              Escribe lo que quieras, incluso varias líneas de texto.
+            </p>
+          </div>
+        </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= "@/assets/imagenes/usoGeneral/Logo verde.png"
+            alt="Descripción de la imagen 2"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= "@/assets/imagenes/usoGeneral/Logo verde.png"
+            alt="Descripción de la imagen 3"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+
+
+    <div>
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src='@/assets/imagenes/usoGeneral/Logo verde.png'
+            alt="Descripción de la imagen 1"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>AQUÍ VA TU TÍTULO</h2>
+            <p>
+              Aquí va tu información o descripción.  
+              Escribe lo que quieras, incluso varias líneas de texto.
+            </p>
+          </div>
+        </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= "@/assets/imagenes/usoGeneral/Logo verde.png"
+            alt="Descripción de la imagen 2"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= "@/assets/imagenes/usoGeneral/Logo verde.png"
+            alt="Descripción de la imagen 3"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+
+
+    <div>
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src='@/assets/imagenes/usoGeneral/Logo verde.png'
+            alt="Descripción de la imagen 1"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>AQUÍ VA TU TÍTULO</h2>
+            <p>
+              Aquí va tu información o descripción.  
+              Escribe lo que quieras, incluso varias líneas de texto.
+            </p>
+          </div>
+        </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= "@/assets/imagenes/usoGeneral/Logo verde.png"
+            alt="Descripción de la imagen 2"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= "@/assets/imagenes/usoGeneral/Logo verde.png"
+            alt="Descripción de la imagen 3"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+
+
+    <div>
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src='@/assets/imagenes/usoGeneral/Logo verde.png'
+            alt="Descripción de la imagen 1"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>AQUÍ VA TU TÍTULO</h2>
+            <p>
+              Aquí va tu información o descripción.  
+              Escribe lo que quieras, incluso varias líneas de texto.
+            </p>
+          </div>
+        </v-col>
+
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= "@/assets/imagenes/usoGeneral/Logo verde.png"
+            alt="Descripción de la imagen 2"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= "@/assets/imagenes/usoGeneral/Logo verde.png"
+            alt="Descripción de la imagen 3"
+            height="300"
+            cover
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+
 </template>
+
 
 <style scoped>
 /* Variables de estilo */
@@ -80,7 +316,7 @@ onMounted(() => {
   --secondary-color: #808990;
   --text-color: #000000;
   --background-color: #FFFFFF;
-  --soft-gray: #F9F9F9; /* Nuevo color gris suave */
+  --soft-gray:rgba(249, 249, 249, 0.62); /* Nuevo color gris suave */
   --primary-color: #F6911D; /* Color principal naranja */
   --border-radius: 12px; /* Bordes más suaves para un look moderno */
   --spacing-unit: 1rem;
