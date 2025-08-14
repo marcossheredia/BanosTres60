@@ -30,31 +30,35 @@ const steps = [
 </script>
 
 <template>
-  <v-container class="servicios-container">
-    <v-sheet class="process-section" id="asi-funciona" color="transparent">
-      <div class="title-container">
-        <h2 class="section-title">Así Funciona</h2>
-      </div>
-      
-      <v-row class="process-steps">
-        <v-col v-for="(step, index) in steps" :key="index" cols="12" sm="6" md="4">
-          <v-card 
-            class="step" 
-            elevation="4" 
-            :style="{ borderLeft: '5px solid #F6911D' }"
-            height="100%"
-          >
-            <v-card-item>
-              <header>
-                <h3 v-html="step.title"></h3>
-              </header>
-              <p v-html="step.content"></p>
-            </v-card-item>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-sheet>
-  </v-container>
+<div>
+  <!--
+    <v-container class="servicios-container">
+      <v-sheet class="process-section" id="asi-funciona" color="transparent">
+        <div class="title-container">
+          <h2 class="section-title">Así Funciona</h2>
+        </div>
+        
+        <v-row class="process-steps">
+          <v-col v-for="(step, index) in steps" :key="index" cols="12" sm="6" md="4">
+            <v-card 
+              class="step" 
+              elevation="4" 
+              :style="{ borderLeft: '5px solid #F6911D' }"
+              height="100%"
+            >
+              <v-card-item>
+                <header>
+                  <h3 v-html="step.title"></h3>
+                </header>
+                <p v-html="step.content"></p>
+              </v-card-item>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-sheet>
+    </v-container>
+  -->
+</div>
 </template>
 
 <style scoped>

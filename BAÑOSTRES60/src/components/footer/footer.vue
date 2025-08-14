@@ -1,6 +1,6 @@
 <script setup>
 const currentYear = new Date().getFullYear();
-const logoPath = new URL('@/assets/imagenes/usoGeneral/logo_footer.png', import.meta.url).href;
+const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo verde.png', import.meta.url).href;
 </script>
 
 <template>
@@ -35,31 +35,31 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/logo_footer.png', import.
             <v-divider class="d-block d-sm-none my-2" color="white" width="80%"></v-divider>
             
             <v-btn
-              href="mailto:administracion@ssab450.es"
+              href="mailto:duchastres60@gmail.com"
               variant="text"
               class="footer-link my-1 my-sm-0 mx-sm-2"
             >
               <v-icon start size="small" class="mr-1">mdi-email-outline</v-icon>
-              administracion@ssab450.es
+              duchastres60@gmail.com
             </v-btn>
             
             <v-divider vertical class="d-none d-sm-block mx-4" color="white"></v-divider>
             <v-divider class="d-block d-sm-none my-2" color="white" width="80%"></v-divider>
             
             <v-btn
-              href="tel:+34913005422"
+              href="tel:+34661805952"
               variant="text"
               class="footer-link my-1 my-sm-0 mx-sm-2"
             >
               <v-icon start size="small" class="mr-1">mdi-phone</v-icon>
-              +34 913 00 54 22
+              +34 661 80 59 52
             </v-btn>
           </v-col>
         </v-row>
 
         <v-row justify="center" align="center">
           <v-col cols="12" class="text-center copyright-text">
-            Copyright © {{ currentYear }} SSAB450 - Todos los derechos reservados
+            Copyright © {{ currentYear }} BAÑOS TRES60  - Todos los derechos reservados
           </v-col>
         </v-row>
       </v-container>
