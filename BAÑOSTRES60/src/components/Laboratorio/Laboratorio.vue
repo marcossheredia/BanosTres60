@@ -7,62 +7,53 @@ import imgMetal2    from '@/assets/imagenes/nuestrasinstalaciones/Laboratorio/_S
 
 
 <template>
-  <v-container class="py-6 contenedor-centrado">
-    <v-row justify="center" class="mb-8 text-center">
-      <v-col cols="12">
-        <h1 class="title">Laboratorio</h1>
-        <v-divider class="mx-auto divider-naranja" :thickness="4" width="100" />
-      </v-col>
-    </v-row>
+    <div>
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src='src/assets/imagenes/Grifos/Gr 1/1.1.JPG'
+            alt="Descripción de la imagen 1"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
 
-    <!-- Texto dentro de recuadro blanco expandido -->
-    <v-row justify="center">
-      <v-col cols="12" md="10">
-        <p class="subtitle">
-          Nuestro laboratorio está dotado de los medios necesarios para realizar
-          ensayos en metales tanto <b>metalográfico</b> como de <b>tracción</b>,
-          que verifica que se cumplen las condiciones necesarias para su uso en los diferentes proyectos.
-          Garantizando así la <b>calidad</b> de nuestro trabajo.
-        </p>
-      </v-col>
-    </v-row>
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>Plato 1.1.1 MODELO XZY</h2>
+            <p>
+              Plato de ducha cojonudo.  
+              Duchate y experimenta como cae el agua en el plato de ducha.
+            </p>
+          </div>
+        </v-col>
 
-    <!-- Ensayos de Tracción -->
-    <v-row align="center" class="mb-10" style="background-color: #f9f9f9;">
-      <v-col cols="12" class="text-center mb-6">
-        <h2 class="section-title">Ensayo de Tracción</h2>
-      </v-col>
-      <v-col class="d-flex justify-center" cols="12" md="6">
-        <v-img :src="imgTraccion1" class="image" height="350" width="100%" cover />
-      </v-col>
-      <v-col class="d-flex justify-center" cols="12" md="6">
-        <v-img :src="imgTraccion2" class="image" height="350" width="100%" cover />
-      </v-col>
-    </v-row>
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= 'src/assets/imagenes/Grifos/Gr 1/1.2.JPG'
+            alt="Descripción de la imagen 2"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
 
-    <!-- Ensayos Metalográficos -->
-    <v-row align="center" class="mb-12" style="background-color: #f9f9f9;">
-      <v-col cols="12" class="text-center mb-6">
-        <h2 class="section-title">Ensayo Metalográfico</h2>
-      </v-col>
-      <v-col class="d-flex justify-center" cols="12" md="6">
-        <v-img :src="imgMetal1" class="image" height="350" width="100%" cover />
-      </v-col>
-      <v-col class="d-flex justify-center" cols="12" md="6">
-        <v-img :src="imgMetal2" class="image" height="350" width="100%" cover />
-      </v-col>
-    </v-row>
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= 'src/assets/imagenes/Grifos/Gr 1/1.3.JPG'
+            alt="Descripción de la imagen 3"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 
-    <!-- Sección contacto -->
-    <section class="consulta-section">
-      <div class="consulta-container">
-        <h3 class="consulta-title mb-4">¿Tienes alguna consulta?</h3>
-        <router-link to="/contacto">
-          <button class="contact-button">Contáctanos</button>
-        </router-link>
-      </div>
-    </section>
-  </v-container>
 </template>
 
 <style scoped>

@@ -124,7 +124,7 @@ const navItems = ref([
   },
   { 
     name: 'GRIFOS' , 
-    path: '',    // determinar path
+    path: '/servicios',    // determinar path
     title: 'Nuestros servicios profesionales en acero inoxidable y soldadura industrial',  // esto es para cuando dejas en raton sobre el boton la info que sale
     ariaLabel: 'Servicios', 
     keywords: 'servicios industriales, acero inoxidable, soldadura, soluciones',

@@ -1,39 +1,51 @@
 <template>
-  <v-container class="py-6 contenedor-centrado">
-    <!-- Título -->
-    <v-row justify="center" class="mb-8 text-center">
-      <v-col cols="12">
-        <h1 class="title">Industria</h1>
-        <v-divider class="mx-auto divider-naranja" :thickness="4" width="100" />
-      </v-col>
-    </v-row>
+    <div>
+    <v-container class="py-8">
+      <v-row>
+        <!-- Arriba izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src='src/assets/imagenes/Grifos/Gr 1/1.1.JPG'
+            alt="Descripción de la imagen 1"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
 
-    <!-- Texto en recuadro blanco -->
-    <v-row justify="center" class="mb-10">
-      <v-col cols="12" md="10">
-        <div class="texto-box">
-          <p class="descripcion-industria">
-            Para un mejor resultado en el <strong>diseño</strong>, <strong>fabricación</strong> y <strong>producción</strong> de nuestra
-            actividad es <strong>esencial</strong> tener los medios adecuados para conseguir <strong>grandes resultados</strong>,
-            más <strong>precisos</strong>, con <strong>calidad</strong>, de forma <strong>rápida</strong> y cumpliendo los
-            <strong>tiempos</strong> establecidos por nuestros clientes.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
+        <!-- Arriba derecha: texto/información -->
+        <v-col cols="12" md="6" class="d-flex align-center justify-center">
+          <div class="pa-4 text-center">
+            <h2>GRIFO 1.1.1 MODELO XZY</h2>
+            <p>
+              Grifo que suelta agua de mi casa.  
+              Funciona de forma muy correcta levantas y sale agua.
+            </p>
+          </div>
+        </v-col>
 
-    <!-- Imagen destacada -->
-    <v-row justify="center">
-      <v-col cols="12" md="12" class="text-center">
-        <div class="imagen-wrapper">
-          <img src="@/assets/imagenes/Mig-Mag2.0/_S0A7350.webp"
-               alt="Robot de soldadura industrial MIG-MAG en plena operación"
-               class="imagen-industria"
-               loading="lazy" />
-        </div>
-      </v-col>
-    </v-row>
-  </v-container>
+        <!-- Abajo izquierda: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= 'src/assets/imagenes/Grifos/Gr 1/1.2.JPG'
+            alt="Descripción de la imagen 2"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
+
+        <!-- Abajo derecha: imagen -->
+        <v-col cols="12" md="6">
+          <v-img
+            src= 'src/assets/imagenes/Grifos/Gr 1/1.3.JPG'
+            alt="Descripción de la imagen 3"
+            height="300"
+            contain
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+
 </template>
 
 <script setup>
