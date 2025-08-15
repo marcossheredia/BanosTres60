@@ -19,10 +19,11 @@ onMounted(() => {
 <template>
   <!-- Sección hero con imagen de fondo -->
   <v-parallax
-    src="/src/assets/imagenes/Mig Mag robotizada/_S0A7353.webp"
+    src="/src/assets/imagenes/Grifos/cabeceraGrifos.jpg"
     height="350"
     alt="Soldadura MIG MAG robotizada de alta precisión en instalaciones industriales"
     class="hero-image-section"
+    contain
   >
     <template v-slot:placeholder>
       <v-row class="fill-height ma-0" align="center" justify="center">
