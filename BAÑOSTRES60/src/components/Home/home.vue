@@ -74,7 +74,6 @@ function prevSlide() {
         <div class="content">
           <h1>{{ slides[currentSlide].title }}</h1>
           <p><b>{{ slides[currentSlide].description }}</b></p>
-          <button>Saber más</button>
         </div>
         <span @click="nextSlide">›</span>
       </div>
@@ -108,16 +107,16 @@ function prevSlide() {
       </div>
     </div>
     <div class="texto">
+    <!-- CON EL <strong> SE HACEN LOS TEXTOS EN NEGRITA -->
       <h2>Conócenos</h2>
-      <p>SSAB450, S.L. nace con el propósito de cubrir las necesidades de soldaduras y uniones como industria auxiliar dentro del entramado industrial.</p>
-      <p>Nuestro equipo dinámico, con gran experiencia en el sector de la <strong>SOLDADURA Y BRAZING</strong>, estará encantado de ofrecer las soluciones adecuadas en función de cada caso.</p>
-      <p>Como principal logro en nuestro haber está la aceptación de nuestra propuesta auxiliar en la exigente industria de automoción y energética.</p>
-      <p>Siendo nuestra rápida respuesta y pro actividad, posibles gracias a los medios con que contamos: hornos, robots, laboratorio… <br>¡Y nuestra propia filosofía!</p>
-      <button>Saber más</button>
+      <p>Infoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+      <p>Infoaaaaaaaaaaaaaaaaaaaaa</p>
+      <p>Info</p>
+      <p>Info</p>
     </div>
   </div>
 </section>
-
+<!--
 <section class="servicios-section">
   <div class="servicios-container">
     <h2>Nuestros Servicios</h2>
@@ -158,7 +157,7 @@ function prevSlide() {
     </div>
   </div>
 </section>
-
+-->
 <section class="mejor-opcion-section">
   <div class="mejor-opcion-container">
     <h2>¿Por qué somos la mejor opción?</h2>

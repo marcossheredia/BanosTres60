@@ -741,243 +741,67 @@ onUnmounted(() => {
     </v-list>
   </v-navigation-drawer>
 </template>
+/* ============================
+   NAVBAR STYLE - BAÑOS TRES60
+   ============================ */
 
-<style scoped>
-/* Estilos para el enlace de saltar al contenido */
-.skip-to-content {
-  position: absolute;
-  left: -9999px;
-  z-index: 1001;
-  padding: 1rem;
-  background: white;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.skip-to-content:focus {
-  left: 0;
-  top: 0;
-}
-
-/* Estilos para la barra de navegación */
 .navbar {
-  transition: all 0.3s ease;
+  background-color: #0D3642; /* fondo oscuro */
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navbar.scrolled :deep(.v-toolbar__content) {
-  padding: 0 !important;
+/* Logo */
+.navbar-logo img {
+  height: 50px;
+  width: auto;
 }
 
-.logo a {
-  display: block;
+/* Links de la navbar */
+.nav-link {
+  color: #FFFFFF !important;
   text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Efecto de línea naranja debajo de los botones del menú */
-:deep(.v-btn) {
-  position: relative;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
+/* Hover efecto en verde agua */
+.nav-link:hover {
+  color: #58B7AE !important;
 }
 
-:deep(.v-btn::after) {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: #F6911D;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+/* Botón destacado (ej: contacto o CTA) */
+.nav-btn {
+  background-color: #58B7AE !important;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
-:deep(.v-btn:hover::after),
-:deep(.v-btn:focus::after) {
-  width: 60%;
+.nav-btn:hover {
+  background-color: #46a199 !important; /* verde agua más oscuro */
 }
 
-:deep(.v-btn:hover) {
-  color: #F6911D !important;
-}
-
-:deep(.v-btn--active::after) {
-  width: 60%;
-}
-
-:deep(.v-btn--active) {
-  color: #F6911D !important;
-}
-
-/* Rotación del icono del menú desplegable */
-.rotate-icon {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease;
-}
-
-/* Estilos para el menú móvil */
-:deep(.v-navigation-drawer) {
-  overflow-y: auto;
-  background-color: #FFFFFF !important;
-}
-
-/* Colores personalizados para los elementos activos */
-:deep(.v-list-item--active) {
-  color: #F6911D !important;
-  font-weight: bold !important;
-}
-
-:deep(.v-list-group__header.v-list-item--active) {
-  color: #F6911D !important;
-  font-weight: bold !important;
-}
-
-:deep(.v-list-group--active > .v-list-group__header) {
-  color: #F6911D !important;
-}
-
-/* Estilos para los elementos del submenú */
-:deep(.v-list-item) {
-  min-height: 40px;
-  transition: all 0.3s ease;
-}
-
-:deep(.v-list-item:hover) {
-  color: #F6911D !important;
-}
-
-:deep(.v-list-item__overlay) {
-  background-color: rgba(246, 145, 29, 0.08) !important;
-}
-
-:deep(.v-list-group__header__prepend-icon) {
-  color: #F6911D !important;
-}
-
-:deep(.v-list-group--active .v-list-group__header__prepend-icon) {
-  transform: rotate(90deg);
-}
-
-/* Media queries para ajustes responsivos adicionales */
+/* Responsive: centrar links en móvil */
 @media (max-width: 768px) {
-  :deep(.v-list-item__title) {
-    white-space: normal;
-    overflow: visible;
-    text-overflow: initial;
-    line-height: 1.4;
-    font-size: 14px !important;
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
   }
-  
-  :deep(.v-list-item) {
-    min-height: 48px;
-    height: auto !important;
-    padding: 10px 16px !important;
+
+  .nav-link {
+    margin: 0.5rem 0;
   }
-  
-  :deep(.text-wrap) {
-    hyphens: auto;
-    word-break: break-word;
-    display: block;
+
+  .nav-btn {
     width: 100%;
-  }
-  
-  :deep(.v-list-group__items .v-list-item) {
-    padding-left: 28px !important;
-  }
-  
-  :deep(.v-list-group--children .v-list-item) {
-    padding-left: 28spx !important;
-  }
-  
-  :deep(.v-list-group__header__prepend-icon) {
-    margin-right: 8px !important;
-  }
-  
-  :deep(.v-navigation-drawer) {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1) !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-  }
-  
-  :deep(.v-list-item--density-comfortable) {
-    min-height: 44px !important;
+    text-align: center;
+    margin-top: 0.5rem;
   }
 }
-
-/* Estilos adicionales para mejorar la apariencia en móvil */
-:deep(.v-list-group__items) {
-  text-align: left;
-  padding-left: 0 !important;
-}
-
-:deep(.v-list-item__prepend) {
-  margin-right: 0px !important;
-}
-
-:deep(.v-list-item__title) {
-  text-align: left;
-  width: 100%;
-  padding-left: 4px;
-}
-
-:deep(.v-navigation-drawer .v-list-item--active) {
-  background-color: rgba(246, 145, 29, 0.08) !important;
-}
-
-:deep(.v-list-group__header.v-list-item--active > .v-list-item__content) {
-  color: #F6911D !important;
-}
-
-/* Estilos para los botones del menú móvil */
-:deep(.v-list-group .v-list-group__header .v-list-item__icon) {
-  margin-right: 8px !important;
-}
-
-/* Mejorar el aspecto de los chevron en el menú */
-:deep(.v-list-group--active > .v-list-group__header .v-icon) {
-  transform: rotate(90deg);
-  color: #F6911D !important;
-}
-
-/* Ajustes para escritorio */
-@media (min-width: 769px) {
-  :deep(.v-container) {
-    margin: 0 auto;
-  }
-  
-  :deep(.v-toolbar__content) {
-    justify-content: center;
-  }
-
-  :deep(.v-menu .v-list-item:hover) {
-    color: #F6911D !important;
-    background-color: rgba(246, 145, 29, 0.08) !important;
-  }
-  
-  :deep(.v-btn.nav-link) {
-    overflow: visible;
-  }
-  
-  :deep(.v-menu.v-overlay) {
-    border-radius: 8px !important;
-    overflow: hidden !important;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1) !important;
-  }
-}
-
-/* Estilos para los subelementos del menú móvil */
-:deep(.submenu-item .v-list-item__title) {
-  font-size: 8px !important;
-}
-
-:deep(.nested-submenu-item .v-list-item__title) {
-  font-size: 8px !important;
-}
-
-/* Ajustar el espaciado de los iconos */
-:deep(.v-list-item__prepend > .v-icon) {
-  margin-right: 0px !important;
-  opacity: 0.7;
-}
-</style>

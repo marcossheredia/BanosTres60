@@ -69,26 +69,26 @@ const enviarFormulario = async () => {
         <div class="dato">
           <div>
             <h3><b>Dirección</b> <i class="fa-solid fa-map" style="color: black; font-size: large;"></i></h3>
-            <p>C. Tejo, 12</p>
-            <p>45200 Illescas, Toledo</p>
+            <p>C. Manolo, 666</p>
+            <p>28805 Alcala de Henares, Madrid</p>
           </div>
         </div>
         <div class="dato">
           <div>
             <h3><b>Horario</b> <i class="fa-solid fa-clock" style="color: black; font-size: large;"></i></h3>
-            <p>Lunes a Viernes: 09:00h a 19:00h</p>
+            <p>Lunes a Viernes: cuando me salga de los cojones. </p>
           </div>
         </div>
         <div class="dato">
           <div>
             <h3><b>Teléfono</b> <i class="fa-solid fa-user" style="color: black; font-size: large;"></i></h3>
-            <p><a href="tel:+34913005422">+34 913 00 54 22</a></p>
+            <p><a href="tel:+34913005422">+34 661 80 59 52</a></p>
           </div>
         </div>
         <div class="dato">
           <div>
             <h3><b>Email</b> <i class="fa-solid fa-envelope" style="color: black; font-size: large;"></i></h3>
-            <p><a href="mailto:administracion@ssab450.es">administracion@ssab450.es</a></p>
+            <p><a href="duchastres60@gmail.com">duchastres60@gmail.com</a></p>
           </div>
         </div>
       </div>
