@@ -85,6 +85,16 @@ const router = createRouter({
       path: '/maquinaria/instalaciones',
       name: 'nuestras-instalaciones',
       component: () => import('../components/Maquinaria/NuestrasInstalaciones.vue')
+    },
+    {
+      path: '/grifos2',
+      name: 'grifos2',
+      component: () => import('../components/Grifos/Grifos2.vue'),
+    },
+    {
+      path: '/grifos3',
+      name: 'grifos3',
+      component: () => import('../components/Grifos/Grifos3.vue'),
     }    
   ],
 })

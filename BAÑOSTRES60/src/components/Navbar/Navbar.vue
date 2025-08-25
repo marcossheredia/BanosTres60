@@ -125,21 +125,21 @@ const navItems = ref([
   { 
     name: 'GRIFOS' , 
     path: '/servicios',    // determinar path
-    title: 'Nuestros servicios profesionales en acero inoxidable y soldadura industrial',  // esto es para cuando dejas en raton sobre el boton la info que sale
+    title: 'Nuestros servicios profesionales acerca de grifos',  // esto es para cuando dejas en raton sobre el boton la info que sale
     ariaLabel: 'Servicios', 
     keywords: 'servicios industriales, acero inoxidable, soldadura, soluciones',
     hasSubmenu: true, 
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
-      { name: 'Servicio 1.1', path: '/servicios', title: 'Catálogo completo de servicios industriales', ariaLabel: 'Nuestros servicios' },
-      /*{ name: 'Servicio 1.2', path: '/servicios#asi-funciona', title: 'Cómo funciona nuestro proceso de trabajo', ariaLabel: 'Así funciona' },
+      { name: 'Grifos 1.1', path: '/servicios', title: 'Catálogo completo de servicios industriales', ariaLabel: 'Nuestros servicios' },
+      { name: 'Grifos 1.2', path: '/grifos2', title: 'Cómo funciona nuestro proceso de trabajo', ariaLabel: 'Así funciona' },
       { 
-        name: 'Servicio 1.3', 
-        path: '/todo-servicios', 
+        name: 'Grifos 1.3', 
+        path: '/grifos3', 
         title: 'Diferentes técnicas de soldadura industrial que ofrecemos', 
         ariaLabel: 'Tipos de soldadura',
         hasSubmenu: false
-      }*/
+      }
     ]
     //*/
   },
