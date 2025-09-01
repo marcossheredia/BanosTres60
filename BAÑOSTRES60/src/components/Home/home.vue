@@ -141,24 +141,43 @@ function prevSlide() {
 <section class="banera-section">
   <div class="banera-container">
     <div class="imagenes">
-      <div class="img-left-top">
-        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Foto 1 cambio bañera" />
+      
+
+      <div class="img img-right">
+        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Cambio de bañera imagen 2" loading="lazy" width="600" height="600"/>
       </div>
-      <div class="img-right">
-        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Foto 2 cambio bañera" />
+
+      <!-- NUEVAS: fila intermedia -->
+      <div class="img img-left-middle">
+        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Cambio de bañera imagen 3" loading="lazy" width="600" height="600"/>
       </div>
-      <div class="img-left-bottom">
-        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Foto 3 cambio bañera" />
+      <div class="img img-right-middle">
+        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Cambio de bañera imagen 4" loading="lazy" width="600" height="600"/>
       </div>
+
+      <div class="img img-left-bottom">
+        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Cambio de bañera imagen 5" loading="lazy" width="600" height="600"/>
+      </div>
+
+      
     </div>
+
     <div class="texto">
       <h2>🚿 Cambio de bañera por plato de ducha</h2>
-      <p>Información por determinar.</p>
-      <p>Información por determinar.</p>
-      <p>Información por determinar.</p>
+      <p>¡Renueva tu baño de manera <strong>fácil y rápida</strong>!</p>
+      <p>Transforma tu espacio con una solución <strong>moderna, segura y funcional</strong>. 
+         Nuestro equipo profesional adapta la instalación a tus necesidades y preferencias.</p>
+      <ul>
+        <li>⚡ Instalación rápida y sin complicaciones</li>
+        <li>🏆 Materiales de calidad y acabados a tu gusto</li>
+        <li>👌 Mayor comodidad y accesibilidad</li>
+      </ul>
+      <p class="cta">✨ <strong>¡Solicita tu presupuesto sin compromiso!</strong></p>
+      <p>📞 Llámanos al <a href="tel:912950536">912 950 536</a> o visítanos en nuestra tienda a partir del 1 de septiembre.</p>
     </div>
   </div>
 </section>
+º
 
 
 <section class="confian-section">
@@ -459,6 +478,83 @@ function prevSlide() {
   .banera-container .img-right {
     grid-row: auto;
     grid-column: auto;
+  }
+}
+/* --- Layout general --- */
+.banera-section{
+  padding: clamp(24px, 5vw, 56px) 0;
+  background: #f6f8f8;
+}
+.banera-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 32px);
+  display: grid;
+  grid-template-columns: minmax(280px, 520px) 1fr;
+  gap: clamp(16px, 3vw, 40px);
+  align-items: center;
+}
+
+/* --- Mosaico 3x2 de imágenes --- */
+.imagenes{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "lt rt"
+    "lm rm"
+    "lb rb";
+  gap: 16px;
+}
+
+.img{ 
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  aspect-ratio: 1/1;     /* cuadrados bonitos */
+  display: grid;
+  place-items: center;
+}
+.img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+  transition: transform .35s ease;
+}
+.img:hover img{ transform: scale(1.06); }
+
+/* Posiciones en la cuadrícula */
+.img-left-top{ grid-area: lt; }
+.img-right{ grid-area: rt; }           /* top-right existente */
+.img-left-middle{ grid-area: lm; }     /* NUEVA */
+.img-right-middle{ grid-area: rm; }    /* NUEVA */
+.img-left-bottom{ grid-area: lb; }
+.img-right-bottom{ grid-area: rb; }
+
+/* --- Texto --- */
+.texto h2{
+  font-size: clamp(28px, 3.2vw, 44px);
+  line-height: 1.1;
+  margin: 0 0 10px;
+  color: #0b3340;
+}
+.texto p{ color: #23424a; margin: 8px 0; }
+.texto ul{ margin: 12px 0 18px; padding-left: 20px; color:#23424a; }
+.texto .cta{ margin-top: 10px; font-weight: 700; color:#0b3340; }
+
+/* --- Responsive --- */
+@media (max-width: 980px){
+  .banera-container{
+    grid-template-columns: 1fr;
+  }
+  .imagenes{
+    order: 2;                   /* texto arriba, imágenes abajo (puedes quitarlo si no lo quieres) */
+    grid-template-columns: repeat(3, 1fr);  /* 3 columnas en móvil ancho */
+    grid-template-areas:
+      "lt rt lm"
+      "rm lb rb";
   }
 }
 
