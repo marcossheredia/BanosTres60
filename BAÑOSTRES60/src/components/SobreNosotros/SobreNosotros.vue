@@ -1,7 +1,7 @@
 <script setup>
-import oficina from '@/assets/imagenes/sobreNosotros/oficina.webp'
-import piezas from '@/assets/imagenes/sobreNosotros/piezas.webp'
-import vistaTaller from '@/assets/imagenes/sobreNosotros/vistaTaller.webp'
+import oficina from '@/assets/imagenes/sobreNosotros/bañoG.jpg'
+import piezas from '@/assets/imagenes/sobreNosotros/bañoG2.jpg'
+import vistaTaller from '@/assets/imagenes/sobreNosotros/bañoG3.jpg'
 </script>
 
 <template>
@@ -17,8 +17,10 @@ import vistaTaller from '@/assets/imagenes/sobreNosotros/vistaTaller.webp'
     <v-row align="center" class="mb-10 flex-wrap-reverse" style="background-color: #f9f9f9;">
       <v-col cols="12" md="7">
         <p class="subtitle">
-          Nuestros comienzos arrancaron en un taller de soldadura fundado en el año 1962; actualmente nos dedicamos a la soldadura robotizada y por puntos de piezas de automoción, 
-          después de una larga experiencia y muchos años de trayectoria en el sector metalúrgico.
+          En <b>Bañostres60</b> creemos que un baño no es solo un espacio funcional, sino un lugar de confort y bienestar. 
+          Tras una larga experiencia en el sector de las reformas, decidimos especializarnos en lo que fue nuestro origen: 
+          <b>las reformas integrales de baños</b>. Hoy ofrecemos soluciones modernas y personalizadas, siempre con la máxima calidad 
+          y atención al detalle.
         </p>
       </v-col>
       <v-col cols="12" md="5" class="text-center">
@@ -33,9 +35,11 @@ import vistaTaller from '@/assets/imagenes/sobreNosotros/vistaTaller.webp'
       </v-col>
       <v-col cols="12" md="7">
         <p class="subtitle" style="text-align: right;">
-          Como empresa auxiliar de soldadura con una dilatada tradición, hemos experimentado todos y cada uno de los cambios ocurridos en la tecnología aplicada a los procesos 
-          de soldadura en las últimas décadas. Con una gran presencia electrónica, aplicaciones informáticas, brazos robotizados y protecciones de gas respetuosas con el medio 
-          ambiente y la salud del operario.
+          Ofrecemos una amplia variedad de opciones: <b>platos de ducha de resina</b> en distintos colores, 
+          duchas a ras de suelo, <b>grifería empotrada y termostática</b> con acabados de última tendencia, 
+          así como mamparas, espejos, mobiliario a medida y accesorios exclusivos.  
+          También integramos <b>WC inteligentes</b> y soluciones adaptadas a personas con movilidad reducida, 
+          logrando baños seguros, accesibles y con estilo.
         </p>
       </v-col>
     </v-row>
@@ -44,8 +48,10 @@ import vistaTaller from '@/assets/imagenes/sobreNosotros/vistaTaller.webp'
     <v-row align="center" class="mb-12 flex-wrap-reverse last-section" style="background-color: #f9f9f9;">
       <v-col cols="12" md="7">
         <p class="subtitle">
-          Además, estamos pendientes de las innovaciones en el campo de la soldadura y uniones. Nos posicionamos como <b>empresa de referencia</b> en nuevos proyectos y en la mejora 
-          de los existentes, siendo consultados por nuestros clientes como empresa de <b>gran cualificación y conocimiento</b> específico de la soldadura.
+          Nuestra misión es acompañarte en cada paso de la reforma: desde la elección de materiales hasta el diseño final, 
+          aportando <b>asesoramiento profesional</b> y soluciones prácticas que se ajusten a tu presupuesto.  
+          Gracias a nuestra experiencia y a un equipo especializado, nos hemos consolidado como una <b>empresa de referencia</b> 
+          en el sector, ofreciendo siempre innovación, confianza y resultados que superan expectativas.
         </p>
       </v-col>
       <v-col cols="12" md="5" class="text-center">
@@ -54,7 +60,6 @@ import vistaTaller from '@/assets/imagenes/sobreNosotros/vistaTaller.webp'
     </v-row>
 
     <!-- Sección contacto -->
-     
     <section class="consulta-section">
       <div class="consulta-container">
         <h3 class="consulta-title mb-4">¿Tienes alguna consulta?</h3>

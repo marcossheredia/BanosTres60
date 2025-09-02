@@ -14,21 +14,25 @@
     <v-row class="mb-12" align="stretch">
       <v-col cols="12" md="4">
         <p class="subtitle">
-          Contamos con un gran conocimiento técnico y una sólida organización que nos permite responder con rapidez y ofrecer <b>soluciones de calidad</b>, frente a cada necesidad, 
-          además de un trato accesible y transparente.
+          En <b>Bañostres60</b> nos especializamos en el <b>cambio de bañera por plato de ducha</b> 
+          y en reformas integrales de baños. Pero nuestra verdadera misión no es solo instalar productos, 
+          sino transformar espacios para que sean más cómodos, seguros y funcionales.
         </p>
       </v-col>
 
       <v-col cols="12" md="5">
         <p class="subtitle">
-          Somos un equipo dispuesto a afrontar nuevos retos, fiel a nuestra filosofía, y enfocado en <b>facilitar los procesos de la soldadura</b> con profundo conocimiento 
-          en todas sus disciplinas.
+          Creemos que la calidad no se mide en el número de proyectos realizados, 
+          sino en la <b>satisfacción de cada cliente</b>. Por eso, cada reforma que emprendemos la abordamos con un 
+          <b>enfoque personalizado</b>, escuchando tus necesidades y adaptándonos a tu estilo de vida.
         </p>
       </v-col>
 
       <v-col cols="12" md="3">
         <p class="subtitle">
-          Gracias a nuestra experiencia, podemos mejorar la productividad <b>con los menores costes</b> y afrontar cualquier desafío industrial con <b>la mejor solución</b>.
+          Nuestro compromiso es contigo: ofrecerte baños modernos, seguros y duraderos.  
+          Tu tranquilidad y confianza son nuestro mayor logro, porque para nosotros 
+          <b>tu satisfacción es nuestra misión</b>.
         </p>
       </v-col>
     </v-row>

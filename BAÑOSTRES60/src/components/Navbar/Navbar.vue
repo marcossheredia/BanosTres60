@@ -119,7 +119,7 @@ const navItems = ref([
     submenu: [
       { name: 'SOBRE NOSOTROS', path: '/sobre-nosotros', title: 'Conozca la historia y valores de nuestra empresa', ariaLabel: 'Sobre nosotros' },
       { name: 'NUESTRA MISIÓN', path: '/mision', title: 'Nuestra misión y objetivos como empresa', ariaLabel: 'Nuestra misión' },
-      { name: '¿POR QUÉ SSAB450?', path: '/por-que', title: 'Ventajas de elegir nuestros servicios industriales', ariaLabel: '¿Por qué SSAB450?' }
+      //{ name: '¿POR QUÉ SSAB450?', path: '/por-que', title: 'Ventajas de elegir nuestros servicios industriales', ariaLabel: '¿Por qué SSAB450?' }
     ]
   },
   { 
