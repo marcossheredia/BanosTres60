@@ -8,6 +8,9 @@ const mensaje = ref('');
 const pdfFiles = ref([]);
 const mostrarCV = ref(false);
 
+// ✅ Endpoint sencillo sin backend propio (FormSubmit)
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/duchastres60@gmail.com';
+
 const handleFileUpload = (event) => {
   const file = event.target.files[0];
   if (!file) return;
@@ -28,35 +31,51 @@ const handleFileUpload = (event) => {
 
 const enviarFormulario = async () => {
   try {
+    // Validación muy básica
+    if (!nombre.value || !email.value || !mensaje.value) {
+      alert('Por favor, completa los campos obligatorios (Nombre, Email y Mensaje).');
+      return;
+    }
+
     const formData = new FormData();
-    formData.append('to', 'annihilux20@gmail.com');
-    formData.append('from', email.value);
-    formData.append('subject', `Nuevo mensaje de contacto de ${nombre.value}`);
-    formData.append('text', `
-      Nombre: ${nombre.value}
-      Email: ${email.value}
-      ${telefono.value ? `Teléfono: ${telefono.value}` : ''}
-      Mensaje: ${mensaje.value}
-    `);
-    
+    // Campos que entenderá el servicio
+    formData.append('name', nombre.value);
+    formData.append('email', email.value);          // usado como Reply-To
+    formData.append('phone', telefono.value || '');
+    formData.append('message', mensaje.value);
+    formData.append('_subject', `Nuevo mensaje de contacto de ${nombre.value}`);
+    formData.append('_template', 'table');          // presentación más clara en el correo
+
+    // Adjuntos (si activas mostrarCV)
     pdfFiles.value.forEach(file => {
-      formData.append('pdfs', file);
+      // FormSubmit acepta multipart; usamos un nombre genérico "attachments"
+      formData.append('attachments', file, file.name || 'adjunto.pdf');
     });
-    
-    // Aquí iría la lógica de envío del email
-    console.log('Enviando email:', formData);
-    
+
+    // 🚀 Envío real
+    const resp = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      body: formData
+      // NO pongas Content-Type; el navegador lo establece para multipart/form-data
+    });
+
+    // FormSubmit devuelve JSON { success: '...' } o similar
+    if (!resp.ok) {
+      const text = await resp.text().catch(() => '');
+      throw new Error(text || `Error HTTP ${resp.status}`);
+    }
+
     // Limpiar el formulario después del envío
     nombre.value = '';
     email.value = '';
     telefono.value = '';
     mensaje.value = '';
     pdfFiles.value = [];
-    
+
     alert('Mensaje enviado correctamente');
   } catch (error) {
     console.error('Error al enviar el mensaje:', error);
-    alert('Error al enviar el mensaje');
+    alert('Error al enviar el mensaje. Si persiste, prueba de nuevo en unos minutos.');
   }
 }
 </script>
