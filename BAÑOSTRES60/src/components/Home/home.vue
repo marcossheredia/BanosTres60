@@ -95,24 +95,22 @@ function prevSlide() {
   
 <section class="conocenos-section">
   <div class="conocenos-container">
-    <div class="imagenes">
-      <div class="img-left-top">
-        <img :src="foto1b" alt="Imagen 1" />
+    <div class="conocenos-imagenes">
+      <div class="conocenos-img conocenos-img-left-top">
+        <img :src="foto1b" alt="Imagen 1" loading="lazy" />
       </div>
-      <div class="img-right">
-        <img :src="foto2b" alt="Imagen 2" />
+      <div class="conocenos-img conocenos-img-right">
+        <img :src="foto2b" alt="Imagen 2" loading="lazy" />
       </div>
-      <div class="img-left-bottom" style="margin-top: -250px;">
-        <img :src="foto3b" alt="Imagen 3" />
+      <div class="conocenos-img conocenos-img-left-bottom">
+        <img :src="foto3b" alt="Imagen 3" loading="lazy" />
       </div>
     </div>
+
     <div class="texto">
-      <!-- Título principal con nombre de empresa -->
       <h1 style="font-size: 2rem; color: #000; margin-bottom: 15px;">
         Bañostres60
       </h1>
-
-      <!-- CON EL <strong> SE HACEN LOS TEXTOS EN NEGRITA -->
       <p><strong>¡Renueva tu baño de manera fácil y rápida!</strong></p>
       <p>
         ¿Pensando en cambiar tu bañera por una ducha?  
@@ -570,6 +568,73 @@ function prevSlide() {
     grid-template-areas:
       "lt rt lm"
       "rm lb rb";
+  }
+}
+
+/* --- Conócenos (aislado para que no choque con otras secciones) --- */
+.conocenos-section {
+  padding: 5rem 2rem;
+  background: #f9f9f9;
+}
+.conocenos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GRID de 2 columnas:
+   ┌─────────┬─────────┐
+   │ leftTop │  right  │
+   │ leftBot │  right  │
+   └─────────┴─────────┘
+*/
+.conocenos-imagenes {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "lt r"
+    "lb r";
+  gap: 1rem;
+
+  /* Filas homogéneas y responsivas: la derecha (2 filas) mantiene proporciones
+     y evita “descolgarse” */
+  grid-auto-rows: minmax(140px, 18vw);
+  min-width: 280px;
+}
+
+.conocenos-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+/* Áreas */
+.conocenos-img-left-top { grid-area: lt; }
+.conocenos-img-left-bottom { grid-area: lb; }
+.conocenos-img-right { grid-area: r; }
+
+/* Imágenes: ocupan su contenedor sin deformarse */
+.conocenos-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Móvil: 1 columna; la imagen “right” pasa al medio */
+@media (max-width: 768px) {
+  .conocenos-imagenes {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "lt"
+      "r"
+      "lb";
+    grid-auto-rows: minmax(160px, 40vw);
   }
 }
 
