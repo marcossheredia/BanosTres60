@@ -44,7 +44,7 @@ function openImage(img) {
 
 // Optimizar para SEO
 onMounted(() => {
-  document.title = 'Servicios Industriales | Soldadura y Acero Inoxidable | SSAB450';
+  document.title = 'Bañostres60';
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) {
     metaDescription.setAttribute(

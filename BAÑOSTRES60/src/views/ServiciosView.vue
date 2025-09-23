@@ -6,7 +6,7 @@ import { onMounted } from 'vue';
 // Optimizar para SEO
 onMounted(() => {
   // Actualizar el título de la página
-  document.title = 'Servicios Industriales | Soldadura y Acero Inoxidable | SSAB450';
+  document.title = 'Bañostres60';
   
   // Agregar meta descripción para SEO
   const metaDescription = document.querySelector('meta[name="description"]');
