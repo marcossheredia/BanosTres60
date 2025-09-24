@@ -687,8 +687,8 @@ onMounted(() => {
 
 <style scoped>
 /* ===========================
-   Grifos Ducha – Estilos
-   Paleta cian con fallbacks
+   Grifos Lavabo – Estilos
+   Paleta cian (con fallbacks)
    =========================== */
 :host, .servicios-header {
   --primary: var(--color-primary, #00bcd4);
@@ -700,9 +700,9 @@ onMounted(() => {
   --bg: var(--color-bg, #f7fafb);
 }
 
-/* Cabecera con título */
+/* Tira superior con título */
 .servicios-header {
-  background: linear-gradient(180deg, rgba(0,188,212,.10), rgba(0,188,212,0));
+  background: var(--surface); /* fondo limpio sin degradado */
   border-bottom: 1px solid rgba(0,0,0,.06);
   padding-block: clamp(24px, 5vw, 48px) !important;
 }
@@ -727,7 +727,7 @@ onMounted(() => {
   background: var(--primary);
 }
 
-/* Intro bajo el título */
+/* Intro (parrafito bajo el título) */
 .servicios-intro {
   line-height: 1.8;
   color: var(--muted);
@@ -735,12 +735,12 @@ onMounted(() => {
   text-align: center;
 }
 
-/* Espaciado por bloque */
+/* Contenedores por bloque */
 .py-8 {
   padding-block: clamp(24px, 6vw, 56px) !important;
 }
 
-/* Tarjetita de texto al lado de la imagen */
+/* Tarjeta de texto a la derecha de la imagen */
 .pa-4.text-center {
   background: var(--surface);
   border: 1px solid rgba(0,0,0,.06);
@@ -762,7 +762,6 @@ onMounted(() => {
 
 /* Imágenes (Vuetify v-img) */
 .cursor-pointer { cursor: pointer; }
-
 :deep(.v-img) {
   border-radius: 16px;
   background: var(--surface);
@@ -774,32 +773,13 @@ onMounted(() => {
   box-shadow: 0 16px 36px rgba(0,0,0,.10);
 }
 
-/* Separadores sutiles entre contenedores */
+/* Opcional: guías suaves entre bloques */
 .v-container + .v-container {
   border-top: 1px dashed rgba(0,0,0,.06);
 }
 
-/* Diálogo (ampliar imagen) y botón primario con color de marca */
-:deep(.v-dialog .v-card) {
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.22);
-}
-:deep(.v-dialog .v-card-actions) {
-  border-top: 1px solid rgba(0,0,0,.06);
-  padding: 12px 16px;
-}
-:deep(.v-btn[color="primary"]) {
-  background: var(--primary) !important;
-  color: #fff !important;
-}
-:deep(.v-btn[color="primary"]:hover) {
-  background: var(--primary-dark) !important;
-}
-
-/* Impresión: oculta cabecera/diálogo */
+/* Impresión: ocultar elementos decorativos */
 @media print {
   .servicios-header { display: none; }
-  :deep(.v-dialog) { display: none !important; }
 }
 </style>

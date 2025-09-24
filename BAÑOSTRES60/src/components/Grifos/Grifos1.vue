@@ -397,7 +397,7 @@ onMounted(() => {
 
 /* Tira superior con título */
 .servicios-header {
-  background: linear-gradient(180deg, rgba(0,188,212,.10), rgba(0,188,212,0));
+  background: var(--surface); /* fondo limpio sin degradado */
   border-bottom: 1px solid rgba(0,0,0,.06);
   padding-block: clamp(24px, 5vw, 48px) !important;
 }
@@ -478,4 +478,5 @@ onMounted(() => {
   .servicios-header { display: none; }
 }
 </style>
+
 
