@@ -175,7 +175,7 @@ const navItems = ref([
     //* DESPLEGABLE PARA EL SERVICIO
     submenu: [
       { name: 'Mamparas Correderas', path: '/mamparas1', title: 'Catálogo completo de mamparas correderas', ariaLabel: 'Transformación metalúrgica', component: 'TransformacionesMetalurgicas.vue' },
-      { name: 'Mamparas de Aluminio ', path: '/mamparas2', title: 'Catálogo completo de mamparas de alumino', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
+      //{ name: 'Mamparas de Aluminio ', path: '/mamparas2', title: 'Catálogo completo de mamparas de alumino', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
       { name: 'Mamparas Abatibles', path: '/mamparas3', title: 'Catálogo completo de mamparas abatibles', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
       { name: 'Mamparas Plegables', path: '/mamparas4', title: 'Catálogo completo de mamparas plegables', ariaLabel: 'Logística', component: 'Logistica.vue' },
       { name: 'Otras soluciones', path: '/mamparas5', title: 'Catálogo completo de otras soluciones para mamparas', ariaLabel: 'Logística', component: 'Logistica.vue' }
