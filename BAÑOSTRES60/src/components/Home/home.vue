@@ -189,7 +189,7 @@ function prevSlide() {
     </div>
   </div>
 </section>
-º
+
 
 
 <section class="confian-section">
