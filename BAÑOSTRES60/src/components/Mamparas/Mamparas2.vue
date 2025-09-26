@@ -138,7 +138,7 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO BASIC</h2>
+          <h2>ESPEJO A</h2>
           <p>
             Colección Basic, cristal de canto pulido recto
             con 4 mm de espesor.  

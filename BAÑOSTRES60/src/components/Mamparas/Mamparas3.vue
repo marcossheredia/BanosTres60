@@ -138,10 +138,9 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO BASIC</h2>
+          <h2>OPEN COMBI A</h2>
           <p>
-            Colección Basic, cristal de canto pulido recto
-            con 4 mm de espesor.  
+            puerta con cierre imán a pared 
           </p>
         </div>
       </v-col>
@@ -170,17 +169,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img3)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO RETRO</h2>
+          <h2>OPEN COMBI A</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor. Luz
-            retroiluminada de 5500 oK. Bastidor de PVC con
-            sistema de fijación regulable y nivelable.
+            + lat. fijo
           </p>
         </div>
       </v-col>
@@ -193,7 +190,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img4)"
         />
       </v-col>
     </v-row>
@@ -209,17 +206,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img5)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO EXTEND H/V </h2>
+          <h2>OPEN COMBI B</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y
-            arenado de 48 mm. Luz frontal de 5500 oK
-            y sistema de fijación extensible.
+            puerta con cierre perfil imán
           </p>
         </div>
       </v-col>
@@ -232,7 +227,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img6)"
         />
       </v-col>
     </v-row>
@@ -248,17 +243,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img7)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO CLASSIC</h2>
+          <h2>OPEN COMBI C</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y are-
-            nado de 33 mm. Luz frontal de 5500 oK. Bastidor de
-            PVC con sistema de fijación regulable y nivelable.
+            fijo + puerta abatible con cierre imán a pared
           </p>
         </div>
       </v-col>
@@ -271,7 +264,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img8)"
         />
       </v-col>
     </v-row>
@@ -287,17 +280,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img9)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO BRIA</h2>
+          <h2>OPEN COMBI C</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado de 
-            33 mm. Luz frontal y retroiluminada de 5500 oK. Bastidor
-            de PVC con sistema de fijación regulable y nivelable.
+            + lat. fijo
           </p>
         </div>
       </v-col>
@@ -310,7 +301,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img10)"
         />
       </v-col>
     </v-row>
@@ -326,17 +317,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img11)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO WHITE</h2>
+          <h2>OPEN COMBI D</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado
-            de 30 mm. Luz retroiluminada de 5500 oK. Bastidor
-            de PVC con sistema de fijación regulable y nivelable.
+            fijo+ puerta abatible con cierre imán
           </p>
         </div>
       </v-col>
@@ -349,7 +338,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img12)"
         />
       </v-col>
     </v-row>
@@ -365,18 +354,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img13)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO NOVA</h2>
+          <h2>OPEN COMBI E</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado de 30 mm.
-            Luz frontal de 5500 oK. Con marco exterior de aluminio
-            y bastidor de PVC con sistema de fijación regulable y
-            nivelable.
+            + puerta abatible con cierre a fijo
           </p>
         </div>
       </v-col>
@@ -389,7 +375,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img14)"
         />
       </v-col>
     </v-row>
@@ -405,17 +391,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img15)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO CLIO</h2>
+          <h2>OPEN COMBI F</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor. Luz frontal y
-            retroiluminada de 5500 oK. Bastidor de PVC y siste-
-            ma de fijación regulable y nivelable
+            fijo + puerta abatible + fijo
           </p>
         </div>
       </v-col>
@@ -428,7 +412,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img16)"
         />
       </v-col>
     </v-row>
@@ -444,17 +428,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img17)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO STRIPE</h2>
+          <h2>OPEN COMBI G</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado
-            de 35 mm. Luz frontal de 5500 oK. Bastidor de PVC
-            con sistema de fijación regulable y nivelable.
+            fijo + 2 puertas abatibles + fijo
           </p>
         </div>
       </v-col>
@@ -467,7 +449,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img18)"
         />
       </v-col>
     </v-row>
@@ -483,18 +465,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img19)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO LINE</h2>
+          <h2>OPEN COMBI H</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado de
-            35 mm. Luz frontal de 5500 oK. Bastidor de PVC con
-            sistema de fijación regulable y nivelable y marco
-            exterior de aluminio.
+            angular 2 puertas + 2 fijos
           </p>
         </div>
       </v-col>
@@ -507,7 +486,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img20)"
         />
       </v-col>
     </v-row>
@@ -523,18 +502,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img21)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO MARCUS</h2>
+          <h2>OPEN COMBI I</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y
-            arenado de 35 mm. Luz frontal y perimetral de
-            5500 oK. Bastidor de PVC con sistema de fijación
-            regulable y nivelable.
+            2 puertas abatibles
           </p>
         </div>
       </v-col>
@@ -547,7 +523,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img22)"
         />
       </v-col>
     </v-row>
@@ -563,17 +539,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img23)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO LEXUS</h2>
+          <h2>OPEN COMBI J</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor. Luz frontal de
-            5500 oK. Bastidor de PVC con sistema de fijación
-            regulable y nivelable.
+            fijo + 2 puertas abatibles
           </p>
         </div>
       </v-col>
@@ -586,7 +560,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img24)"
         />
       </v-col>
     </v-row>
@@ -602,16 +576,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img25)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO ALVERO</h2>
+          <h2>OPEN COMBI K</h2>
           <p>
-            Cristal circular de 4 mm de espesor. 
-            Fijación mediante pletinas metálicas.
+            2 puertas angular
           </p>
         </div>
       </v-col>
@@ -624,7 +597,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img26)"
         />
       </v-col>
     </v-row>
@@ -640,17 +613,13 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img27)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO ALBA</h2>
-          <p>
-            Cristal circular de 4 mm de espesor. 
-            Marco exterior de aluminio.
-          </p>
+          <h2>COMBI A FROST</h2>
         </div>
       </v-col>
     </v-row>
@@ -662,7 +631,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img28)"
         />
       </v-col>
     </v-row>
@@ -678,16 +647,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img29)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO BRUMA</h2>
+          <h2>OPEN FROST PLUS COMBI A</h2>
           <p>
-            Cristal circular de 4 mm de espesor. Luz retroiluminada de
-            5500 oK. Bastidor de goma EVA.
+            + lat. fijo
           </p>
         </div>
       </v-col>
@@ -700,7 +668,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img30)"
         />
       </v-col>
     </v-row>
@@ -716,16 +684,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img31)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO MOON</h2>
+          <h2>OPEN FROST PLUS COMBI C</h2>
           <p>
-            Cristal circular de 4 mm de espesor y arenado de 30 mm. Luz
-            retroiluminada de 5500 oK. Bastidor de goma EVA.
+            + lat. fijo
           </p>
         </div>
       </v-col>
@@ -738,7 +705,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img32)"
         />
       </v-col>
     </v-row>
@@ -754,18 +721,13 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img33)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO SUN</h2>
-          <p>
-            Cristal circular de 4 mm de espesor y arenado de 35 mm con film anti–
-            explosión. Luz frontal regulable de 3000 oK a 6500 oK.
-            Marco exterior de aluminio. Protección IP65.
-          </p>
+          <h2>COMBI G FROST</h2>
         </div>
       </v-col>
     </v-row>
@@ -777,46 +739,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-
-    <!-- Primer bloque -->
-  <v-container class="py-8">
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img35"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img1)"
-        />
-      </v-col>
-
-      <v-col cols="12" md="6" class="d-flex align-center justify-center">
-        <div class="pa-4 text-center">
-          <h2>ESPEJO REDONDO</h2>
-          <p>
-            Cristal circular de 4 mm de espesor y arenado de
-            35 mm. Con luz frontal de 5500 oK, sensor on/off
-            antivaho y bastidor de PVC.
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img36"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img34)"
         />
       </v-col>
     </v-row>

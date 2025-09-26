@@ -138,10 +138,9 @@ onMounted(() => {
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO BASIC</h2>
+          <h2>TWENTY </h2>
           <p>
-            Colección Basic, cristal de canto pulido recto
-            con 4 mm de espesor.  
+            1 fijo+1 corredera 
           </p>
         </div>
       </v-col>
@@ -170,17 +169,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img3)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO RETRO</h2>
+          <h2>TWENTY</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor. Luz
-            retroiluminada de 5500 oK. Bastidor de PVC con
-            sistema de fijación regulable y nivelable.
+            2 fijos+2 correderas
           </p>
         </div>
       </v-col>
@@ -193,7 +190,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img4)"
         />
       </v-col>
     </v-row>
@@ -209,17 +206,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img5)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO EXTEND H/V </h2>
+          <h2>TWENTY</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y
-            arenado de 48 mm. Luz frontal de 5500 oK
-            y sistema de fijación extensible.
+            angular al vértice
           </p>
         </div>
       </v-col>
@@ -232,7 +227,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img6)"
         />
       </v-col>
     </v-row>
@@ -248,17 +243,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img7)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO CLASSIC</h2>
+          <h2>TWENTY</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y are-
-            nado de 33 mm. Luz frontal de 5500 oK. Bastidor de
-            PVC con sistema de fijación regulable y nivelable.
+            frontal + lateral fijo de 6 mm
           </p>
         </div>
       </v-col>
@@ -271,7 +264,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img8)"
         />
       </v-col>
     </v-row>
@@ -287,17 +280,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img9)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO BRIA</h2>
+          <h2>KENNA</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado de 
-            33 mm. Luz frontal y retroiluminada de 5500 oK. Bastidor
-            de PVC con sistema de fijación regulable y nivelable.
+            1 fijo + 1 corredera
           </p>
         </div>
       </v-col>
@@ -310,7 +301,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img10)"
         />
       </v-col>
     </v-row>
@@ -326,17 +317,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img11)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO WHITE</h2>
+          <h2>KENNA</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado
-            de 30 mm. Luz retroiluminada de 5500 oK. Bastidor
-            de PVC con sistema de fijación regulable y nivelable.
+            2 fijos + 2 correderas
           </p>
         </div>
       </v-col>
@@ -349,7 +338,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img12)"
         />
       </v-col>
     </v-row>
@@ -365,18 +354,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img13)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO NOVA</h2>
+          <h2>KENNA</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado de 30 mm.
-            Luz frontal de 5500 oK. Con marco exterior de aluminio
-            y bastidor de PVC con sistema de fijación regulable y
-            nivelable.
+            angular al vértice
           </p>
         </div>
       </v-col>
@@ -389,7 +375,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img14)"
         />
       </v-col>
     </v-row>
@@ -405,17 +391,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img15)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO CLIO</h2>
+          <h2>KENNA</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor. Luz frontal y
-            retroiluminada de 5500 oK. Bastidor de PVC y siste-
-            ma de fijación regulable y nivelable
+            frontal + lateral fijo de 8 mm
           </p>
         </div>
       </v-col>
@@ -428,7 +412,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img16)"
         />
       </v-col>
     </v-row>
@@ -444,17 +428,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img17)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO STRIPE</h2>
+          <h2>BASIC</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado
-            de 35 mm. Luz frontal de 5500 oK. Bastidor de PVC
-            con sistema de fijación regulable y nivelable.
+           fijo + 1 corredera
           </p>
         </div>
       </v-col>
@@ -467,7 +449,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img18)"
         />
       </v-col>
     </v-row>
@@ -483,18 +465,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img19)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO LINE</h2>
+          <h2>BASIC</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado de
-            35 mm. Luz frontal de 5500 oK. Bastidor de PVC con
-            sistema de fijación regulable y nivelable y marco
-            exterior de aluminio.
+            2 fijos + 2 correderas
           </p>
         </div>
       </v-col>
@@ -507,7 +486,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img20)"
         />
       </v-col>
     </v-row>
@@ -523,18 +502,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img21)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO MARCUS</h2>
+          <h2>BASIC FROST PLUS</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y
-            arenado de 35 mm. Luz frontal y perimetral de
-            5500 oK. Bastidor de PVC con sistema de fijación
-            regulable y nivelable.
+            2 fijos + 2 correderas
           </p>
         </div>
       </v-col>
@@ -547,7 +523,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img22)"
         />
       </v-col>
     </v-row>
@@ -563,17 +539,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img23)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO LEXUS</h2>
+          <h2>BASIC</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor. Luz frontal de
-            5500 oK. Bastidor de PVC con sistema de fijación
-            regulable y nivelable.
+            angular al vértice
           </p>
         </div>
       </v-col>
@@ -586,7 +560,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img24)"
         />
       </v-col>
     </v-row>
@@ -602,16 +576,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img25)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO ALVERO</h2>
+          <h2>BASIC</h2>
           <p>
-            Cristal circular de 4 mm de espesor. 
-            Fijación mediante pletinas metálicas.
+            frontal + lateral fijo de 8 mm
           </p>
         </div>
       </v-col>
@@ -624,7 +597,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img26)"
         />
       </v-col>
     </v-row>
@@ -640,16 +613,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img27)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO ALBA</h2>
+          <h2>PRESTIGE</h2>
           <p>
-            Cristal circular de 4 mm de espesor. 
-            Marco exterior de aluminio.
+            semicircular
           </p>
         </div>
       </v-col>
@@ -662,7 +634,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img28)"
         />
       </v-col>
     </v-row>
@@ -678,16 +650,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img29)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO BRUMA</h2>
+          <h2>PRESTIGE</h2>
           <p>
-            Cristal circular de 4 mm de espesor. Luz retroiluminada de
-            5500 oK. Bastidor de goma EVA.
+            1 fijo+1 corredera
           </p>
         </div>
       </v-col>
@@ -700,7 +671,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img30)"
         />
       </v-col>
     </v-row>
@@ -716,16 +687,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img31)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO MOON</h2>
+          <h2>PRESTIGE</h2>
           <p>
-            Cristal circular de 4 mm de espesor y arenado de 30 mm. Luz
-            retroiluminada de 5500 oK. Bastidor de goma EVA.
+            2 fijos+2 correderas
           </p>
         </div>
       </v-col>
@@ -738,7 +708,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img32)"
         />
       </v-col>
     </v-row>
@@ -754,17 +724,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img33)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO SUN</h2>
+          <h2>PRESTIGE</h2>
           <p>
-            Cristal circular de 4 mm de espesor y arenado de 35 mm con film anti–
-            explosión. Luz frontal regulable de 3000 oK a 6500 oK.
-            Marco exterior de aluminio. Protección IP65.
+            angular al vértice
           </p>
         </div>
       </v-col>
@@ -777,7 +745,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img34)"
         />
       </v-col>
     </v-row>
@@ -793,17 +761,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img35)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO REDONDO</h2>
+          <h2>PRESTIGE</h2>
           <p>
-            Cristal circular de 4 mm de espesor y arenado de
-            35 mm. Con luz frontal de 5500 oK, sensor on/off
-            antivaho y bastidor de PVC.
+            frontal + lateral fijo 8 mm
           </p>
         </div>
       </v-col>
@@ -816,7 +782,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img36)"
         />
       </v-col>
     </v-row>
@@ -832,17 +798,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img37)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO ARENA</h2>
+          <h2>AKTUAL</h2>
           <p>
-            Cristal circular de 4 mm de espesor y arenado de 35 mm.
-            Luz frontal y retroiluminada de 5500 oK. Bastidor de
-            goma EVA.
+            1 fijo+1 corredera
           </p>
         </div>
       </v-col>
@@ -855,7 +819,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img38)"
         />
       </v-col>
     </v-row>
@@ -871,17 +835,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img39)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO HULA</h2>
+          <h2>AKTUAL</h2>
           <p>
-            Espejo circular con 4 mm de espesor con film antiexplosión.
-            Encendido de luz progresiva de 5500 oK. Posiciones
-            de instalación: izquierda o derecha.
+            2 fijos+2 correderas
           </p>
         </div>
       </v-col>
@@ -894,7 +856,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img40)"
         />
       </v-col>
     </v-row>
@@ -910,16 +872,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img41)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO LUK</h2>
+          <h2>AKTUAL</h2>
           <p>
-            Cristal cápsula de 4 mm de espesor. 
-            Fijación mediante pletinas metálicas.
+            angular al vértice
           </p>
         </div>
       </v-col>
@@ -932,7 +893,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img42)"
         />
       </v-col>
     </v-row>
@@ -948,16 +909,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img43)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO AURA</h2>
+          <h2>AKTUAL</h2>
           <p>
-            Cristal cápsula de 4 mm de espesor. 
-            Luz retroiluminada de 5500 oK. Bastidor de goma EVA.
+            frontal + lateral fijo STD 8 mm
           </p>
         </div>
       </v-col>
@@ -970,7 +930,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img44)"
         />
       </v-col>
     </v-row>
@@ -986,16 +946,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img45)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO CALAS</h2>
+          <h2>VETRUM</h2>
           <p>
-            Cristal cápsula de 4 mm de espesor y arenado de 30 mm. Luz
-            retroiluminada de 5500 oK. Bastidor de goma EVA.
+            1 fijo + 1 corredera
           </p>
         </div>
       </v-col>
@@ -1008,7 +967,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img46)"
         />
       </v-col>
     </v-row>
@@ -1024,17 +983,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img47)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO CALAS VESTIDOR</h2>
+          <h2>VETRUM</h2>
           <p>
-            Cristal cápsula de 4 mm de espesor y arenado de
-            30 mm. Luz retroiluminada de 5500 oK. Bastidor de
-            goma EVA.
+            2 fijos + 2 correderas
           </p>
         </div>
       </v-col>
@@ -1047,7 +1004,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img48)"
         />
       </v-col>
     </v-row>
@@ -1063,16 +1020,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img49)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO EROS</h2>
+          <h2>VETRUM</h2>
           <p>
-            Cristal cápsula de 4 mm de espesor y arenado de 25 mm. Luz frontal y
-            retroiluminada de 5500 oK. Bastidor de goma EVA.
+            angular al vértice
           </p>
         </div>
       </v-col>
@@ -1085,7 +1041,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img50)"
         />
       </v-col>
     </v-row>
@@ -1101,17 +1057,15 @@ onMounted(() => {
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img1)"
+          @click="openImage(img51)"
         />
       </v-col>
 
       <v-col cols="12" md="6" class="d-flex align-center justify-center">
         <div class="pa-4 text-center">
-          <h2>ESPEJO DANTE</h2>
+          <h2>VETRUM</h2>
           <p>
-            Cristal cápsula de 4 mm de espesor y arenado de 30 mm
-            con film antiexplosión. Luz frontal regulable de 3000
-            a 6500 oK. Marco exterior de aluminio.
+            frontal + lateral fijo
           </p>
         </div>
       </v-col>
@@ -1124,7 +1078,7 @@ onMounted(() => {
           height="250"
           contain
           class="cursor-pointer"
-          @click="openImage(img2)"
+          @click="openImage(img52)"
         />
       </v-col>
     </v-row>

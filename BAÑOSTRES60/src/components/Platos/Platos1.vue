@@ -124,10 +124,10 @@ onMounted(() => {
     <!-- Arriba derecha: texto/información -->
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>ZEUS PIEDRA</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          El modelo Stone ZEUS se incorpora a la colección con la nueva textura piedra que complementa-
+          ra la versión en textura pizarra. La dureza de la piedra en su máxima expresión.
         </p>
       </div>
     </v-col>
@@ -190,10 +190,10 @@ onMounted(() => {
     <!-- Arriba derecha: texto/información -->
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>PLUS</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          El modelo Stone PLUS es la esencia de nuestra colección se caracteriza por la simplicidad de
+          sus líneas y su rejilla cuadrada. Un plato sencillo y elegante.
         </p>
       </div>
     </v-col>
@@ -256,10 +256,10 @@ onMounted(() => {
     <!-- Arriba derecha: texto/información -->
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>SMART</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          El modelo Stone SMART crea una armonia perfecta entre la rejilla mimetizada con el plato
+          y las líneas de caida degradadas hacia la zona de descanso.
         </p>
       </div>
     </v-col>
@@ -322,10 +322,10 @@ onMounted(() => {
     <!-- Arriba derecha: texto/información -->
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>MIO</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          El modelo Stone MIO ofrece una belleza singular gracias a su rejilla en esquina,
+          una forma original que lo hace único en la gama.
         </p>
       </div>
     </v-col>
@@ -388,10 +388,10 @@ onMounted(() => {
     <!-- Arriba derecha: texto/información -->
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>SIDE</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          El modelo Stone SIDE ofrece una nueva forma de entender el baño con un diseño de
+          pendiente centrada de suma elegancia.
         </p>
       </div>
     </v-col>
@@ -454,10 +454,10 @@ onMounted(() => {
     <!-- Arriba derecha: texto/información -->
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>SORTY</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          El modelo Stone SORTY con desagüe central y diseño más suavizado, une estética y
+          sostenibilidad al igual que el resto de platos de la gama.
         </p>
       </div>
     </v-col>
@@ -520,10 +520,10 @@ onMounted(() => {
     <!-- Arriba derecha: texto/información -->
     <v-col cols="12" md="6" class="d-flex align-center justify-center">
       <div class="pa-4 text-center">
-        <h2>GRIFO 1.1.1 MODELO XZY</h2>
+        <h2>CACH</h2>
         <p>
-          Grifo que suelta agua de mi casa.  
-          Funciona de forma muy correcta levantas y sale agua.
+          El modelo Stone CACH nos muestra un diseño excepcional de caidas suaves que dota a este
+          plato de carácter propio y eficiente.
         </p>
       </div>
     </v-col>
@@ -573,9 +573,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
@@ -612,9 +612,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
@@ -651,9 +651,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para ducahs modernas.
       </p>
     </v-col>
   </v-row>
@@ -690,9 +690,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
@@ -729,9 +729,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
@@ -768,9 +768,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
@@ -807,9 +807,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
@@ -846,9 +846,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
@@ -885,9 +885,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
@@ -924,9 +924,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
@@ -962,9 +962,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
@@ -1000,9 +1000,9 @@ onMounted(() => {
   <!-- Texto centrado arriba -->
   <v-row>
     <v-col cols="12" class="text-center">
-      <h2>GRIFO 2.0 MODELO XZY</h2>
+      <h2>PURE DESIGN</h2>
       <p>
-        Diseño renovado, más caudal y perfecto para cocinas y baños modernos.
+        Diseño renovado, más caudal y perfecto para duchas modernas.
       </p>
     </v-col>
   </v-row>
