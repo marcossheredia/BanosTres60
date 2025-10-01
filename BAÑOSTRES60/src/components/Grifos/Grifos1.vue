@@ -641,7 +641,7 @@ onMounted(() => {
 }
 .pa-4.text-center h2 {
   margin: 0 0 8px;
-  color: var(--text);
+  color: #00bcd4;
   font-weight: 800;
   letter-spacing: .2px;
 }

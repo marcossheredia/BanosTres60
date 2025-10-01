@@ -491,7 +491,7 @@ onMounted(() => {
 
 /* Títulos de cada espejo */
 h2 {
-  color: var(--text);
+  color: #00bcd4;
   font-weight: 800;
   letter-spacing: .2px;
   margin-bottom: 8px;
