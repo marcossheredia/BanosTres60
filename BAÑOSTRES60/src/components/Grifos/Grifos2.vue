@@ -56,7 +56,7 @@ function openImage(img) {
         <v-img
           :src="img1"
           alt="Descripción de la imagen 1"
-          aspect-ratio="3/4"
+          height="300"
           contain
           class="cursor-pointer"
           @click="openImage(img1)"
