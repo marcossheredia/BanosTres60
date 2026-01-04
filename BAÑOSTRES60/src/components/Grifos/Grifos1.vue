@@ -1,42 +1,47 @@
 <script setup>
+
+defineOptions({
+  name: 'Grifos1View'
+})
+
 import { ref, onMounted } from 'vue';
 
 
 import img1 from '@/assets/imagenes/Grifos/Gr 1/1.1.JPG'
 import img2 from '@/assets/imagenes/Grifos/Gr 1/1.2.JPG'
-import img3 from '@/assets/imagenes/Grifos/Gr 1/1.3.JPG'
+//import img3 from '@/assets/imagenes/Grifos/Gr 1/1.3.JPG'
 
 import img4 from '@/assets/imagenes/Grifos/Gr 2/2.1.JPG'
 import img5 from '@/assets/imagenes/Grifos/Gr 2/2.2.JPG'
-import img6 from '@/assets/imagenes/Grifos/Gr 2/2.3.JPG'
+//import img6 from '@/assets/imagenes/Grifos/Gr 2/2.3.JPG'
 
 import img7 from '@/assets/imagenes/Grifos/3.1.JPG'
 import img8 from '@/assets/imagenes/Grifos/3.2.JPG'
-import img9 from '@/assets/imagenes/Grifos/3.3.JPG'
+//import img9 from '@/assets/imagenes/Grifos/3.3.JPG'
 
 import img10 from '@/assets/imagenes/Grifos/4.1.JPG'
 import img11 from '@/assets/imagenes/Grifos/4.2.JPG'
-import img12 from '@/assets/imagenes/Grifos/4.3.JPG'
+import img12 from '@/assets/imagenes/Grifos/5.4.png'
 
 import img13 from '@/assets/imagenes/Grifos/5.1.PNG'
-import img14 from '@/assets/imagenes/Grifos/5.2.PNG'
+import img14 from '@/assets/imagenes/Grifos/6.4.PNG'
 import img15 from '@/assets/imagenes/Grifos/5.3.PNG'
 
 import img16 from '@/assets/imagenes/Grifos/6.1.PNG'
-import img17 from '@/assets/imagenes/Grifos/6.2.PNG'
+//import img17 from '@/assets/imagenes/Grifos/6.2.PNG'
 import img18 from '@/assets/imagenes/Grifos/6.3.PNG'
 
-import img19 from '@/assets/imagenes/Grifos/7.1.PNG'
-import img20 from '@/assets/imagenes/Grifos/7.2.PNG'
-import img21 from '@/assets/imagenes/Grifos/7.3.PNG'
+import img19 from '@/assets/imagenes/Grifos/9.1.PNG'
+//import img20 from '@/assets/imagenes/Grifos/7.2.PNG'
+//import img21 from '@/assets/imagenes/Grifos/7.3.PNG'
 
-import img22 from '@/assets/imagenes/Grifos/7.1.PNG'
-import img23 from '@/assets/imagenes/Grifos/7.2.PNG'
-import img24 from '@/assets/imagenes/Grifos/7.3.PNG'
+import img22 from '@/assets/imagenes/Grifos/10.1.PNG'
+//import img23 from '@/assets/imagenes/Grifos/7.2.PNG'
+//import img24 from '@/assets/imagenes/Grifos/7.3.PNG'
 
-import img25 from '@/assets/imagenes/Grifos/8.1.PNG'
-import img26 from '@/assets/imagenes/Grifos/8.2.PNG'
-import img27 from '@/assets/imagenes/Grifos/8.3.PNG'
+import img25 from '@/assets/imagenes/Grifos/7.1.PNG'
+//import img26 from '@/assets/imagenes/Grifos/8.2.PNG'
+//import img27 from '@/assets/imagenes/Grifos/8.3.PNG'
 
 
 const dialog = ref(false)
@@ -112,7 +117,7 @@ onMounted(() => {
         />
       </v-col>
 
-        <!-- Abajo derecha: imagen -->
+        <!-- Abajo derecha: imagen
       <v-col cols="12" md="6">
         <v-img
           :src="img3"
@@ -122,7 +127,7 @@ onMounted(() => {
           class="cursor-pointer"
           @click="openImage(img3)"
         />
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 
@@ -167,7 +172,7 @@ onMounted(() => {
         />
       </v-col>
 
-        <!-- Abajo derecha: imagen -->
+        <!-- Abajo derecha: imagen
       <v-col cols="12" md="6">
         <v-img
           :src="img6"
@@ -177,7 +182,7 @@ onMounted(() => {
           class="cursor-pointer"
           @click="openImage(img6)"
         />
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 
@@ -222,7 +227,7 @@ onMounted(() => {
         />
       </v-col>
 
-        <!-- Abajo derecha: imagen -->
+        <!-- Abajo derecha: imagen
       <v-col cols="12" md="6">
         <v-img
           :src="img9"
@@ -232,7 +237,7 @@ onMounted(() => {
           class="cursor-pointer"
           @click="openImage(img9)"
         />
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 
@@ -277,7 +282,7 @@ onMounted(() => {
         />
       </v-col>
 
-        <!-- Abajo derecha: imagen -->
+        <!-- Abajo derecha: imagen
       <v-col cols="12" md="6">
         <v-img
           :src="img12"
@@ -287,7 +292,7 @@ onMounted(() => {
           class="cursor-pointer"
           @click="openImage(img12)"
         />
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 
@@ -324,12 +329,12 @@ onMounted(() => {
         <!-- Abajo izquierda: imagen -->
       <v-col cols="12" md="6">
         <v-img
-          :src="img14"
+          :src="img12"
           alt="Descripción de la imagen 1"
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img14)"
+          @click="openImage(img12)"
         />
       </v-col>
 
@@ -379,12 +384,12 @@ onMounted(() => {
         <!-- Abajo izquierda: imagen -->
       <v-col cols="12" md="6">
         <v-img
-          :src="img17"
+          :src="img14"
           alt="Descripción de la imagen 1"
           height="300"
           contain
           class="cursor-pointer"
-          @click="openImage(img17)"
+          @click="openImage(img14)"
         />
       </v-col>
 
@@ -431,19 +436,7 @@ onMounted(() => {
           </div>
       </v-col>
 
-        <!-- Abajo izquierda: imagen -->
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img20"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img20)"
-        />
-      </v-col>
-
-        <!-- Abajo derecha: imagen -->
+        <!-- Abajo izquierda: imagen
       <v-col cols="12" md="6">
         <v-img
           :src="img21"
@@ -453,7 +446,19 @@ onMounted(() => {
           class="cursor-pointer"
           @click="openImage(img21)"
         />
-      </v-col>
+      </v-col> -->
+
+        <!-- Abajo derecha: imagen
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img21"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img21)"
+        />
+      </v-col> -->
     </v-row>
   </v-container>
 
@@ -484,19 +489,7 @@ onMounted(() => {
           </div>
       </v-col>
 
-        <!-- Abajo izquierda: imagen -->
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img23"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img23)"
-        />
-      </v-col>
-
-        <!-- Abajo derecha: imagen -->
+        <!-- Abajo izquierda: imagen
       <v-col cols="12" md="6">
         <v-img
           :src="img24"
@@ -506,7 +499,20 @@ onMounted(() => {
           class="cursor-pointer"
           @click="openImage(img24)"
         />
+       Abajo izquierda: imagen
       </v-col>
+
+         Abajo derecha: imagen -
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img24"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img24)"
+        />
+      </v-col> -->
     </v-row>
   </v-container>
 
@@ -539,19 +545,7 @@ onMounted(() => {
           </div>
       </v-col>
 
-        <!-- Abajo izquierda: imagen -->
-      <v-col cols="12" md="6">
-        <v-img
-          :src="img26"
-          alt="Descripción de la imagen 1"
-          height="300"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img26)"
-        />
-      </v-col>
-
-        <!-- Abajo derecha: imagen -->
+        <!-- Abajo izquierda: imagen
       <v-col cols="12" md="6">
         <v-img
           :src="img27"
@@ -561,18 +555,30 @@ onMounted(() => {
           class="cursor-pointer"
           @click="openImage(img27)"
         />
-      </v-col>
+      </v-col> -->
+
+        <!-- Abajo derecha: imagen -
+      <v-col cols="12" md="6">
+        <v-img
+          :src="img27"
+          alt="Descripción de la imagen 1"
+          height="300"
+          contain
+          class="cursor-pointer"
+          @click="openImage(img27)"
+        />
+      </v-col> -->
     </v-row>
   </v-container>
 
-  
+
 
 <v-dialog v-model="dialog" max-width="800px">
   <v-card>
     <v-img :src="selectedImage" height="500" contain />
   </v-card>
 </v-dialog>
-    
+
 </template>
 
 

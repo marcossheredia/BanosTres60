@@ -1,11 +1,27 @@
 <script setup>
+
+  defineOptions({
+  name: 'HomeView'
+})
+
 import { ref, onMounted, onUnmounted } from 'vue'
 import slide1 from '../../assets/imagenes/usoGeneral/Slide.png'
-import slide2 from '../../assets/imagenes/usoGeneral/Logo verde recortado.png'
+//import slide2 from '../../assets/imagenes/usoGeneral/Logo verde recortado.png'
 
-import foto1b from '../../assets/imagenes/home/foto1b.webp'
-import foto2b from '../../assets/imagenes/home/foto2b.webp'
-import foto3b from '../../assets/imagenes/home/foto3b.webp'
+import foto1b from '../../assets/imagenes/Obra/1.1.jpg'
+import foto2b from '../../assets/imagenes/Obra/1.2.jpg'
+import foto3b from '../../assets/imagenes/Obra/1.3.jpg'
+
+import banera1 from '../../assets/imagenes/Obra/1.1.jpg'
+import banera2 from '../../assets/imagenes/Obra/1.1.jpg'
+import banera3 from '../../assets/imagenes/Obra/1.1.jpg'
+import banera4 from '../../assets/imagenes/Obra/1.1.jpg'
+
+import logoGme from '../../assets/imagenes/home/confian/gme.jpg'
+import logoDuplach from '../../assets/imagenes/home/confian/duplach.jpg'
+import logoManillons from '../../assets/imagenes/home/confian/manillons.jpg'
+import logoRoyo from '../../assets/imagenes/home/confian/royogroup.png'
+import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
 
 const slides = ref([
   {
@@ -48,7 +64,7 @@ function nextSlide() {
       ></div>
     </div>
   </div>
-  
+
 <section class="conocenos-section">
   <div class="conocenos-container">
     <div class="conocenos-imagenes">
@@ -69,8 +85,8 @@ function nextSlide() {
       </h1>
       <p><strong>¡Renueva tu baño de manera fácil y rápida!</strong></p>
       <p>
-        ¿Pensando en cambiar tu bañera por una ducha?  
-        Transforma tu espacio con una solución <strong>moderna, segura y funcional</strong>.  
+        ¿Pensando en cambiar tu bañera por una ducha?
+        Transforma tu espacio con una solución <strong>moderna, segura y funcional</strong>.
         Nuestro equipo profesional se adapta a tus necesidades y preferencias.
       </p>
       <ul>
@@ -109,31 +125,31 @@ function nextSlide() {
 <section class="banera-section">
   <div class="banera-container">
     <div class="imagenes">
-      
+
 
       <div class="img img-right">
-        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Cambio de bañera imagen 2" loading="lazy" width="600" height="600"/>
+        <img :src="banera1" alt="Cambio de bañera imagen 1" loading="lazy" />
       </div>
 
-      <!-- NUEVAS: fila intermedia -->
       <div class="img img-left-middle">
-        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Cambio de bañera imagen 3" loading="lazy" width="600" height="600"/>
+        <img :src="banera2" alt="Cambio de bañera imagen 2" loading="lazy" />
       </div>
+
       <div class="img img-right-middle">
-        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Cambio de bañera imagen 4" loading="lazy" width="600" height="600"/>
+        <img :src="banera3" alt="Cambio de bañera imagen 3" loading="lazy" />
       </div>
 
       <div class="img img-left-bottom">
-        <img src="../../assets/imagenes/usoGeneral/Logo verde.png" alt="Cambio de bañera imagen 5" loading="lazy" width="600" height="600"/>
+        <img :src="banera4" alt="Cambio de bañera imagen 4" loading="lazy" />
       </div>
 
-      
+
     </div>
 
     <div class="texto">
       <h2>🚿 Cambio de bañera por plato de ducha</h2>
       <p>¡Renueva tu baño de manera <strong>fácil y rápida</strong>!</p>
-      <p>Transforma tu espacio con una solución <strong>moderna, segura y funcional</strong>. 
+      <p>Transforma tu espacio con una solución <strong>moderna, segura y funcional</strong>.
          Nuestro equipo profesional adapta la instalación a tus necesidades y preferencias.</p>
       <ul>
         <li>⚡ Instalación rápida y sin complicaciones</li>
@@ -152,12 +168,11 @@ function nextSlide() {
   <div class="confian-container">
     <h2 class="confian-title">Nuestros proveedores</h2>
     <div class="confian-logos">
-      <img src="../../assets/imagenes/home/confian/gme.jpg" alt="Logo Gme" /> 
-      <img src="../../assets/imagenes/home/confian/duplach.jpg" alt="Logo Duplach" />
-      <img src="../../assets/imagenes/home/confian/manillons.jpg" alt="Logo Manillons" />
-      <img src="../../assets/imagenes/home/confian/royogroup.png" alt="Logo Royo Group" />
-      <img src="../../assets/imagenes/home/confian/decorban.gif" alt="Logo Decorban" />
-      
+      <img :src="logoGme" alt="Logo Gme" />
+      <img :src="logoDuplach" alt="Logo Duplach" />
+      <img :src="logoManillons" alt="Logo Manillons" />
+      <img :src="logoRoyo" alt="Logo Royo Group" />
+      <img :src="logoDecorban" alt="Logo Decorban" />
     </div>
   </div>
 </section>
@@ -478,7 +493,7 @@ function nextSlide() {
     gap: 16px;
   }
 
-  .img{ 
+  .img{
     background: #fff;
     border-radius: 20px;
     overflow: hidden;

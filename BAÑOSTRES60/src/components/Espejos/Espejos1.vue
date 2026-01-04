@@ -1,89 +1,94 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+
+defineOptions({
+  name: 'EspejosView'
+})
+
+import { ref } from 'vue';
 
 import img1 from '@/assets/imagenes/Espejos/1.1.PNG'
-import img2 from '@/assets/imagenes/Espejos/1.2.PNG'
+//import img2 from '@/assets/imagenes/Espejos/1.2.PNG'
 
 import img3 from '@/assets/imagenes/Espejos/2.1.PNG'
-import img4 from '@/assets/imagenes/Espejos/2.2.PNG'
+//import img4 from '@/assets/imagenes/Espejos/2.2.PNG'
 
 import img5 from '@/assets/imagenes/Espejos/3.1.PNG'
-import img6 from '@/assets/imagenes/Espejos/3.2.PNG'
+//import img6 from '@/assets/imagenes/Espejos/3.2.PNG'
 
 import img7 from '@/assets/imagenes/Espejos/4.1.PNG'
-import img8 from '@/assets/imagenes/Espejos/4.2.PNG'
+//import img8 from '@/assets/imagenes/Espejos/4.2.PNG'
 
 import img9 from '@/assets/imagenes/Espejos/5.1.PNG'
-import img10 from '@/assets/imagenes/Espejos/5.2.PNG'
+//import img10 from '@/assets/imagenes/Espejos/5.2.PNG'
 
 import img11 from '@/assets/imagenes/Espejos/6.1.PNG'
-import img12 from '@/assets/imagenes/Espejos/6.2.PNG'
+//import img12 from '@/assets/imagenes/Espejos/6.2.PNG'
 
 import img13 from '@/assets/imagenes/Espejos/7.1.PNG'
-import img14 from '@/assets/imagenes/Espejos/7.2.PNG'
+//import img14 from '@/assets/imagenes/Espejos/7.2.PNG'
 
 import img15 from '@/assets/imagenes/Espejos/8.1.PNG'
-import img16 from '@/assets/imagenes/Espejos/8.2.PNG'
+//import img16 from '@/assets/imagenes/Espejos/8.2.PNG'
 
 import img17 from '@/assets/imagenes/Espejos/9.1.PNG'
-import img18 from '@/assets/imagenes/Espejos/9.2.PNG'
+//import img18 from '@/assets/imagenes/Espejos/9.2.PNG'
 
 import img19 from '@/assets/imagenes/Espejos/10.1.PNG'
-import img20 from '@/assets/imagenes/Espejos/10.2.PNG'
+//import img20 from '@/assets/imagenes/Espejos/10.2.PNG'
 
 import img21 from '@/assets/imagenes/Espejos/11.1.PNG'
-import img22 from '@/assets/imagenes/Espejos/11.2.PNG'
+//import img22 from '@/assets/imagenes/Espejos/11.2.PNG'
 
 import img23 from '@/assets/imagenes/Espejos/12.1.PNG'
-import img24 from '@/assets/imagenes/Espejos/12.2.PNG'
+//import img24 from '@/assets/imagenes/Espejos/12.2.PNG'
 
 import img25 from '@/assets/imagenes/Espejos/13.1.PNG'
-import img26 from '@/assets/imagenes/Espejos/13.2.PNG'
+//import img26 from '@/assets/imagenes/Espejos/13.2.PNG'
 
 import img27 from '@/assets/imagenes/Espejos/14.1.PNG'
-import img28 from '@/assets/imagenes/Espejos/14.2.PNG'
+//import img28 from '@/assets/imagenes/Espejos/14.2.PNG'
 
 import img29 from '@/assets/imagenes/Espejos/15.1.PNG'
-import img30 from '@/assets/imagenes/Espejos/15.2.PNG'
+//import img30 from '@/assets/imagenes/Espejos/15.2.PNG'
 
 import img31 from '@/assets/imagenes/Espejos/16.1.PNG'
-import img32 from '@/assets/imagenes/Espejos/16.2.PNG'
+//import img32 from '@/assets/imagenes/Espejos/16.2.PNG'
 
 import img33 from '@/assets/imagenes/Espejos/17.1.PNG'
-import img34 from '@/assets/imagenes/Espejos/17.2.PNG'
+//import img34 from '@/assets/imagenes/Espejos/17.2.PNG'
 
 import img35 from '@/assets/imagenes/Espejos/18.1.PNG'
-import img36 from '@/assets/imagenes/Espejos/18.2.PNG'
+//import img36 from '@/assets/imagenes/Espejos/18.2.PNG'
 
 import img37 from '@/assets/imagenes/Espejos/19.1.PNG'
-import img38 from '@/assets/imagenes/Espejos/19.2.PNG'
+//import img38 from '@/assets/imagenes/Espejos/19.2.PNG'
 
 import img39 from '@/assets/imagenes/Espejos/20.1.PNG'
-import img40 from '@/assets/imagenes/Espejos/20.2.PNG'
+//import img40 from '@/assets/imagenes/Espejos/20.2.PNG'
 
 import img41 from '@/assets/imagenes/Espejos/21.1.PNG'
-import img42 from '@/assets/imagenes/Espejos/21.2.PNG'
+//import img42 from '@/assets/imagenes/Espejos/21.2.PNG'
 
 import img43 from '@/assets/imagenes/Espejos/22.1.PNG'
-import img44 from '@/assets/imagenes/Espejos/22.2.PNG'
+//import img44 from '@/assets/imagenes/Espejos/22.2.PNG'
 
 import img45 from '@/assets/imagenes/Espejos/23.1.PNG'
-import img46 from '@/assets/imagenes/Espejos/23.2.PNG'
+//import img46 from '@/assets/imagenes/Espejos/23.2.PNG'
 
 import img47 from '@/assets/imagenes/Espejos/24.1.PNG'
-import img48 from '@/assets/imagenes/Espejos/24.2.PNG'
+//import img48 from '@/assets/imagenes/Espejos/24.2.PNG'
 
 import img49 from '@/assets/imagenes/Espejos/25.1.PNG'
-import img50 from '@/assets/imagenes/Espejos/25.2.PNG'
+//import img50 from '@/assets/imagenes/Espejos/25.2.PNG'
 
 import img51 from '@/assets/imagenes/Espejos/26.1.PNG'
-import img52 from '@/assets/imagenes/Espejos/26.2.PNG'
+//import img52 from '@/assets/imagenes/Espejos/26.2.PNG'
 
 import img53 from '@/assets/imagenes/Espejos/27.1.PNG'
-import img54 from '@/assets/imagenes/Espejos/27.2.PNG'
+//import img54 from '@/assets/imagenes/Espejos/27.2.PNG'
 
 import img55 from '@/assets/imagenes/Espejos/28.1.PNG'
-import img56 from '@/assets/imagenes/Espejos/28.2.PNG'
+//import img56 from '@/assets/imagenes/Espejos/28.2.PNG'
 
 
 const dialog = ref(false)
@@ -94,17 +99,6 @@ function openImage(img) {
   dialog.value = true
 }
 
-// Optimizar para SEO
-onMounted(() => {
-  document.title = 'Bañostres60';
-  const metaDescription = document.querySelector('meta[name="description"]');
-  if (metaDescription) {
-    metaDescription.setAttribute(
-      'content',
-      'Servicio profesional de soldadura industrial, soldadura MIG MAG robotizada, acero inoxidable, brazing y tratamiento de metales. Tecnología puntera y optimización de procesos industriales.'
-    );
-  }
-});
 </script>
 
 
@@ -116,7 +110,7 @@ onMounted(() => {
           <h1 class="text-h3 font-weight-bold position-relative d-inline-block">ESPEJOS</h1>
         </v-col>
         <v-col cols="12" md="10" lg="8">
-          
+
         </v-col>
       </v-row>
     </v-container>
@@ -141,21 +135,9 @@ onMounted(() => {
           <h2>ESPEJO BASIC</h2>
           <p>
             Colección Basic, cristal de canto pulido recto
-            con 4 mm de espesor.  
+            con 4 mm de espesor.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img2"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img2)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -185,18 +167,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img4"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img4)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -222,18 +192,6 @@ onMounted(() => {
             y sistema de fijación extensible.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img6"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img6)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -263,18 +221,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img8"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img8)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -295,23 +241,11 @@ onMounted(() => {
         <div class="pa-4 text-center">
           <h2>ESPEJO BRIA</h2>
           <p>
-            Cristal de canto recto con 4 mm de espesor y arenado de 
+            Cristal de canto recto con 4 mm de espesor y arenado de
             33 mm. Luz frontal y retroiluminada de 5500 oK. Bastidor
             de PVC con sistema de fijación regulable y nivelable.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img10"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img10)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -339,18 +273,6 @@ onMounted(() => {
             de PVC con sistema de fijación regulable y nivelable.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img12"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img12)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -381,18 +303,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img14"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img14)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -420,18 +330,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img16"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img16)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -457,18 +355,6 @@ onMounted(() => {
             con sistema de fijación regulable y nivelable.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img18"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img18)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -499,18 +385,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img20"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img20)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -537,18 +411,6 @@ onMounted(() => {
             regulable y nivelable.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img22"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img22)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -578,18 +440,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img24"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img24)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -610,22 +460,10 @@ onMounted(() => {
         <div class="pa-4 text-center">
           <h2>ESPEJO ALVERO</h2>
           <p>
-            Cristal circular de 4 mm de espesor. 
+            Cristal circular de 4 mm de espesor.
             Fijación mediante pletinas metálicas.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img26"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img26)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -648,22 +486,10 @@ onMounted(() => {
         <div class="pa-4 text-center">
           <h2>ESPEJO ALBA</h2>
           <p>
-            Cristal circular de 4 mm de espesor. 
+            Cristal circular de 4 mm de espesor.
             Marco exterior de aluminio.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img28"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img28)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -692,18 +518,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img30"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img30)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -728,18 +542,6 @@ onMounted(() => {
             retroiluminada de 5500 oK. Bastidor de goma EVA.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img32"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img32)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -769,18 +571,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img34"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img34)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -806,18 +596,6 @@ onMounted(() => {
             antivaho y bastidor de PVC.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img36"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img36)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -847,18 +625,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img38"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img38)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -886,18 +652,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img40"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img40)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -918,22 +672,10 @@ onMounted(() => {
         <div class="pa-4 text-center">
           <h2>ESPEJO LUK</h2>
           <p>
-            Cristal cápsula de 4 mm de espesor. 
+            Cristal cápsula de 4 mm de espesor.
             Fijación mediante pletinas metálicas.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img42"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img42)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -956,22 +698,10 @@ onMounted(() => {
         <div class="pa-4 text-center">
           <h2>ESPEJO AURA</h2>
           <p>
-            Cristal cápsula de 4 mm de espesor. 
+            Cristal cápsula de 4 mm de espesor.
             Luz retroiluminada de 5500 oK. Bastidor de goma EVA.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img44"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img44)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -998,18 +728,6 @@ onMounted(() => {
             retroiluminada de 5500 oK. Bastidor de goma EVA.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img46"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img46)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -1039,18 +757,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img48"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img48)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -1075,18 +781,6 @@ onMounted(() => {
             retroiluminada de 5500 oK. Bastidor de goma EVA.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img50"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img50)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -1116,18 +810,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img52"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img52)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -1152,18 +834,6 @@ onMounted(() => {
             Luz frontal de 5500 oK y bastidor de PVC.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img54"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img54)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -1191,18 +861,6 @@ onMounted(() => {
             regulable y nivelable.
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img56"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img56)"
-        />
       </v-col>
     </v-row>
   </v-container>

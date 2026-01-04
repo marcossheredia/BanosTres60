@@ -1,38 +1,31 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+
+defineOptions({
+  name: 'Grifos2View'
+})
+
+import { ref } from 'vue'
 
 // 👇 Aquí importas tus imágenes, solo cambia la ruta a la que quieras
-import img1 from '@/assets/imagenes/Grifos_ducha/1.1.PNG'
-import img2 from '@/assets/imagenes/Grifos_ducha/1.2.PNG'
-import img3 from '@/assets/imagenes/Grifos_ducha/2.1.PNG'
-import img4 from '@/assets/imagenes/Grifos_ducha/2.2.PNG'
-import img5 from '@/assets/imagenes/Grifos_ducha/3.1.PNG'
-import img6 from '@/assets/imagenes/Grifos_ducha/3.2.PNG'
-import img7 from '@/assets/imagenes/Grifos_ducha/4.1.PNG'
-import img8 from '@/assets/imagenes/Grifos_ducha/4.2.PNG'
-import img11 from '@/assets/imagenes/Grifos_ducha/5.2.PNG'
-import img12 from '@/assets/imagenes/Grifos_ducha/5.3.PNG'
-import img13 from '@/assets/imagenes/Grifos_ducha/5.4.PNG'
-import img14 from '@/assets/imagenes/Grifos_ducha/5.5.PNG'
+import img1 from '../../assets/imagenes/Grifos_ducha/1.1.png'
+import img2 from '../../assets/imagenes/Grifos_ducha/1.2.png'
+import img3 from '../../assets/imagenes/Grifos_ducha/2.1.png'
+import img4 from '../../assets/imagenes/Grifos_ducha/2.2.png'
+import img5 from '../../assets/imagenes/Grifos_ducha/3.1.png'
+import img6 from '../../assets/imagenes/Grifos_ducha/3.2.png'
+import img7 from '../../assets/imagenes/Grifos_ducha/4.1.png'
+import img8 from '../../assets/imagenes/Grifos_ducha/4.2.png'
+import img11 from '../../assets/imagenes/Grifos_ducha/5.2.png'
+import img12 from '../../assets/imagenes/Grifos_ducha/5.3.png'
+import img13 from '../../assets/imagenes/Grifos_ducha/5.4.png'
+import img14 from '../../assets/imagenes/Grifos_ducha/5.5.png'
 
 
-import img15 from '@/assets/imagenes/Grifos_ducha/6.1.PNG'
-import img16 from '@/assets/imagenes/Grifos_ducha/6.2.PNG'
+import img15 from '../../assets/imagenes/Grifos_ducha/6.1.png'
+import img16 from '../../assets/imagenes/Grifos_ducha/6.2.png'
 
-import img17 from '@/assets/imagenes/Grifos_ducha/7.1.PNG'
-import img18 from '@/assets/imagenes/Grifos_ducha/7.2.PNG'
-import img19 from '@/assets/imagenes/Grifos_ducha/7.3.PNG'
-import img20 from '@/assets/imagenes/Grifos_ducha/7.4.PNG'
-import img21 from '@/assets/imagenes/Grifos_ducha/7.5.PNG'
-import img22 from '@/assets/imagenes/Grifos_ducha/7.6.PNG'
-import img23 from '@/assets/imagenes/Grifos_ducha/7.7.PNG'
-import img24 from '@/assets/imagenes/Grifos_ducha/7.8.PNG'
-import img25 from '@/assets/imagenes/Grifos_ducha/7.9.PNG'
-import img26 from '@/assets/imagenes/Grifos_ducha/7.10.PNG'
-import img27 from '@/assets/imagenes/Grifos_ducha/7.11.PNG'
 
-import img28 from '@/assets/imagenes/Grifos_ducha/8.1.PNG'
-import img29 from '@/assets/imagenes/Grifos_ducha/8.2.PNG'
+import img28 from '../../assets/imagenes/Grifos_ducha/8.1.png'
 
 const dialog = ref(false)
 const selectedImage = ref(null)
@@ -42,17 +35,6 @@ function openImage(img) {
   dialog.value = true
 }
 
-// Optimizar para SEO
-onMounted(() => {
-  document.title = 'Bañostres60';
-  const metaDescription = document.querySelector('meta[name="description"]');
-  if (metaDescription) {
-    metaDescription.setAttribute(
-      'content',
-      'Servicio profesional de soldadura industrial, soldadura MIG MAG robotizada, acero inoxidable, brazing y tratamiento de metales. Tecnología puntera y optimización de procesos industriales.'
-    );
-  }
-});
 </script>
 
 
@@ -74,7 +56,7 @@ onMounted(() => {
         <v-img
           :src="img1"
           alt="Descripción de la imagen 1"
-          height="300"
+          aspect-ratio="3/4"
           contain
           class="cursor-pointer"
           @click="openImage(img1)"
@@ -436,250 +418,6 @@ onMounted(() => {
   </v-row>
 </v-container>
 
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img29"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img29)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>ROCIADOR DUCHA MINIMAL</h2>
-        <p>
-          Acero inoxidable 304
-          Sistema de fácil limpieza para prevenir la cal
-          Conexión de Entrada 1/2”
-          Aireador spray ref. 3291 - 40 puntos
-          Aireador cascada ref. 3292 - 10 puntos
-        </p>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img17"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img17)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>MANETA CARTUCHO 35</h2>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img18"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img18)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>MANETA CARTUCHO 35</h2>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img19"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img19)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>MANETA CARTUCHO 25</h2>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img20"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img20)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>ROCIADOR CUADRADO EXTRAPLANO 25x25cm</h2>
-        <p>
-          Material: Acero Inox S304
-        </p>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img21"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img21)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>ROCIADOR REDONDO EXTRAPLANO Ø25cm</h2>
-        <p>
-          Material: Acero Inox S304
-        </p>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img22"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img22)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>Mangos de ducha</h2>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img23"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img23)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>FLEXOS</h2>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img24"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img24)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>VALCULAS CLICK-CLACK</h2>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img25"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img25)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>BARRA DUCHA REGULABLE</h2>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
-<v-container class="py-8">
-  <v-row>
-    <v-col cols="12" md="6">
-      <v-img
-        :src="img26"
-        alt="Descripción de la imagen 1"
-        height="300"
-        contain
-        class="cursor-pointer"
-        @click="openImage(img26)"
-      />
-    </v-col>
-
-    <v-col cols="12" md="6" class="d-flex align-center justify-center">
-      <div class="pa-4 text-center">
-        <h2>SOPORTES</h2>
-      </div>
-    </v-col>
-  </v-row>
-</v-container>
-
 <v-dialog v-model="dialog" max-width="800px">
   <v-card>
     <v-img :src="selectedImage" height="500" contain />
@@ -781,8 +519,24 @@ onMounted(() => {
   border-top: 1px dashed rgba(0,0,0,.06);
 }
 
+.producto-img {
+  max-width: 420px;
+  margin: auto;
+}
+
+:deep(.v-img__img) {
+  object-fit: contain;
+}
+
 /* Impresión: ocultar elementos decorativos */
 @media print {
   .servicios-header { display: none; }
 }
+
+@media (min-width: 960px) {
+  .producto-img {
+    max-width: 480px;
+  }
+}
+
 </style>
