@@ -47,43 +47,43 @@ import img29 from '@/assets/imagenes/MamparasAbatibles/15.1.PNG'
 import img30 from '@/assets/imagenes/MamparasAbatibles/15.2.PNG'
 
 import img31 from '@/assets/imagenes/MamparasAbatibles/16.1.PNG'
-import img32 from '@/assets/imagenes/MamparasAbatibles/16.2.PNG'
+//import img32 from '@/assets/imagenes/MamparasAbatibles/16.2.PNG'
 
 import img33 from '@/assets/imagenes/MamparasAbatibles/17.1.PNG'
-import img34 from '@/assets/imagenes/MamparasAbatibles/17.2.PNG'
+//import img34 from '@/assets/imagenes/MamparasAbatibles/17.2.PNG'
 
-import img35 from '@/assets/imagenes/MamparasAbatibles/18.1.PNG'
-import img36 from '@/assets/imagenes/MamparasAbatibles/18.2.PNG'
+//import img35 from '@/assets/imagenes/MamparasAbatibles/18.1.PNG'
+//import img36 from '@/assets/imagenes/MamparasAbatibles/18.2.PNG'
 
-import img37 from '@/assets/imagenes/MamparasCorr/19.1.PNG'
-import img38 from '@/assets/imagenes/MamparasCorr/19.2.PNG'
+//import img37 from '@/assets/imagenes/MamparasCorr/19.1.PNG'
+//import img38 from '@/assets/imagenes/MamparasCorr/19.2.PNG'
 
-import img39 from '@/assets/imagenes/MamparasCorr/20.1.PNG'
-import img40 from '@/assets/imagenes/MamparasCorr/20.2.PNG'
+//import img39 from '@/assets/imagenes/MamparasCorr/20.1.PNG'
+//import img40 from '@/assets/imagenes/MamparasCorr/20.2.PNG'
 
-import img41 from '@/assets/imagenes/MamparasCorr/21.1.PNG'
-import img42 from '@/assets/imagenes/MamparasCorr/21.2.PNG'
+//import img41 from '@/assets/imagenes/MamparasCorr/21.1.PNG'
+//import img42 from '@/assets/imagenes/MamparasCorr/21.2.PNG'
 
-import img43 from '@/assets/imagenes/MamparasCorr/22.1.PNG'
-import img44 from '@/assets/imagenes/MamparasCorr/22.2.PNG'
+//import img43 from '@/assets/imagenes/MamparasCorr/22.1.PNG'
+//import img44 from '@/assets/imagenes/MamparasCorr/22.2.PNG'
 
-import img45 from '@/assets/imagenes/MamparasCorr/23.1.PNG'
-import img46 from '@/assets/imagenes/MamparasCorr/23.2.PNG'
+//import img45 from '@/assets/imagenes/MamparasCorr/23.1.PNG'
+//import img46 from '@/assets/imagenes/MamparasCorr/23.2.PNG'
 
-import img47 from '@/assets/imagenes/MamparasCorr/24.1.PNG'
-import img48 from '@/assets/imagenes/MamparasCorr/24.2.PNG'
+//import img47 from '@/assets/imagenes/MamparasCorr/24.1.PNG'
+//import img48 from '@/assets/imagenes/MamparasCorr/24.2.PNG'
 
-import img49 from '@/assets/imagenes/MamparasCorr/25.1.PNG'
-import img50 from '@/assets/imagenes/MamparasCorr/25.2.PNG'
+//import img49 from '@/assets/imagenes/MamparasCorr/25.1.PNG'
+//import img50 from '@/assets/imagenes/MamparasCorr/25.2.PNG'
 
-import img51 from '@/assets/imagenes/MamparasCorr/26.1.PNG'
-import img52 from '@/assets/imagenes/MamparasCorr/27.1.PNG'
+//import img51 from '@/assets/imagenes/MamparasCorr/26.1.PNG'
+//import img52 from '@/assets/imagenes/MamparasCorr/27.1.PNG'
 
-import img53 from '@/assets/imagenes/Espejos/27.1.PNG'
-import img54 from '@/assets/imagenes/Espejos/27.2.PNG'
+//import img53 from '@/assets/imagenes/Espejos/27.1.PNG'
+//import img54 from '@/assets/imagenes/Espejos/27.2.PNG'
 
-import img55 from '@/assets/imagenes/Espejos/28.1.PNG'
-import img56 from '@/assets/imagenes/Espejos/28.2.PNG'
+//import img55 from '@/assets/imagenes/Espejos/28.1.PNG'
+//import img56 from '@/assets/imagenes/Espejos/28.2.PNG'
 
 
 const dialog = ref(false)
@@ -116,7 +116,7 @@ onMounted(() => {
           <h1 class="text-h3 font-weight-bold position-relative d-inline-block">MAMPARAS ABATIBLES</h1>
         </v-col>
         <v-col cols="12" md="10" lg="8">
-          
+
         </v-col>
       </v-row>
     </v-container>
@@ -140,7 +140,7 @@ onMounted(() => {
         <div class="pa-4 text-center">
           <h2>OPEN COMBI A</h2>
           <p>
-            puerta con cierre imán a pared 
+            puerta con cierre imán a pared
           </p>
         </div>
       </v-col>
@@ -404,18 +404,7 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img16"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img16)"
-        />
-      </v-col>
-    </v-row>
+
   </v-container>
 
     <!-- Primer bloque -->
@@ -441,18 +430,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img18"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img18)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -476,18 +453,6 @@ onMounted(() => {
             angular 2 puertas + 2 fijos
           </p>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img20"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img20)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -552,18 +517,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img24"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img24)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -621,18 +574,6 @@ onMounted(() => {
         <div class="pa-4 text-center">
           <h2>COMBI A FROST</h2>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img28"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img28)"
-        />
       </v-col>
     </v-row>
   </v-container>
@@ -697,18 +638,6 @@ onMounted(() => {
         </div>
       </v-col>
     </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img32"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img32)"
-        />
-      </v-col>
-    </v-row>
   </v-container>
 
     <!-- Primer bloque -->
@@ -729,18 +658,6 @@ onMounted(() => {
         <div class="pa-4 text-center">
           <h2>COMBI G FROST</h2>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="d-flex justify-center">
-        <v-img
-          :src="img34"
-          alt="Descripción de la imagen 2"
-          height="250"
-          contain
-          class="cursor-pointer"
-          @click="openImage(img34)"
-        />
       </v-col>
     </v-row>
   </v-container>

@@ -79,11 +79,11 @@ import img50 from '@/assets/imagenes/MamparasCorr/25.2.PNG'
 import img51 from '@/assets/imagenes/MamparasCorr/26.1.PNG'
 import img52 from '@/assets/imagenes/MamparasCorr/27.1.PNG'
 
-import img53 from '@/assets/imagenes/Espejos/27.1.PNG'
-import img54 from '@/assets/imagenes/Espejos/27.2.PNG'
+//import img53 from '@/assets/imagenes/Espejos/27.1.PNG'
+//import img54 from '@/assets/imagenes/Espejos/27.2.PNG'
 
-import img55 from '@/assets/imagenes/Espejos/28.1.PNG'
-import img56 from '@/assets/imagenes/Espejos/28.2.PNG'
+//import img55 from '@/assets/imagenes/Espejos/28.1.PNG'
+//import img56 from '@/assets/imagenes/Espejos/28.2.PNG'
 
 
 const dialog = ref(false)
@@ -116,7 +116,7 @@ onMounted(() => {
           <h1 class="text-h3 font-weight-bold position-relative d-inline-block">MAMPARAS CORREDERAS</h1>
         </v-col>
         <v-col cols="12" md="10" lg="8">
-          
+
         </v-col>
       </v-row>
     </v-container>
@@ -140,7 +140,7 @@ onMounted(() => {
         <div class="pa-4 text-center">
           <h2>TWENTY </h2>
           <p>
-            1 fijo+1 corredera 
+            1 fijo+1 corredera
           </p>
         </div>
       </v-col>

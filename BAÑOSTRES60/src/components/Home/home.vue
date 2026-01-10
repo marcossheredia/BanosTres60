@@ -1,6 +1,7 @@
 <script setup>
 
-  defineOptions({
+
+defineOptions({
   name: 'HomeView'
 })
 
@@ -12,10 +13,10 @@ import foto1b from '../../assets/imagenes/Obra/1.1.jpg'
 import foto2b from '../../assets/imagenes/Obra/1.2.jpg'
 import foto3b from '../../assets/imagenes/Obra/1.3.jpg'
 
-import banera1 from '../../assets/imagenes/Obra/1.1.jpg'
-import banera2 from '../../assets/imagenes/Obra/1.1.jpg'
-import banera3 from '../../assets/imagenes/Obra/1.1.jpg'
-import banera4 from '../../assets/imagenes/Obra/1.1.jpg'
+import banera1 from '../../assets/imagenes/home/cb.1.jpg'
+import banera2 from '../../assets/imagenes/home/cb.2.jpg'
+import banera3 from '../../assets/imagenes/home/cb.3.jpg'
+import banera4 from '../../assets/imagenes/home/cb.4.jpg'
 
 import logoGme from '../../assets/imagenes/home/confian/gme.jpg'
 import logoDuplach from '../../assets/imagenes/home/confian/duplach.jpg'
@@ -128,19 +129,19 @@ function nextSlide() {
 
 
       <div class="img img-right">
-        <img :src="banera1" alt="Cambio de bañera imagen 1" loading="lazy" />
+        <img :src="banera4" alt="Cambio de bañera imagen 1" loading="lazy" />
       </div>
 
       <div class="img img-left-middle">
-        <img :src="banera2" alt="Cambio de bañera imagen 2" loading="lazy" />
+        <img :src="banera1" alt="Cambio de bañera imagen 2" loading="lazy" />
       </div>
 
       <div class="img img-right-middle">
-        <img :src="banera3" alt="Cambio de bañera imagen 3" loading="lazy" />
+        <img :src="banera2" alt="Cambio de bañera imagen 3" loading="lazy" />
       </div>
 
       <div class="img img-left-bottom">
-        <img :src="banera4" alt="Cambio de bañera imagen 4" loading="lazy" />
+        <img :src="banera3" alt="Cambio de bañera imagen 4" loading="lazy" />
       </div>
 
 
