@@ -1,8 +1,9 @@
 <script setup>
-import imgTraccion1 from '@/assets/imagenes/nuestrasinstalaciones/Laboratorio/_S0A7398.webp'
-import imgTraccion2 from '@/assets/imagenes/nuestrasinstalaciones/Laboratorio/_S0A7401.webp'
-import imgMetal1    from '@/assets/imagenes/nuestrasinstalaciones/Laboratorio/_S0A7384.webp'
-import imgMetal2    from '@/assets/imagenes/nuestrasinstalaciones/Laboratorio/_S0A7391.webp'
+//import imgTraccion1 from '@/assets/imagenes/nuestrasinstalaciones/Laboratorio/_S0A7398.webp'
+
+//import imgTraccion2 from '@/assets/imagenes/nuestrasinstalaciones/Laboratorio/_S0A7401.webp'
+//import imgMetal1    from '@/assets/imagenes/nuestrasinstalaciones/Laboratorio/_S0A7384.webp'
+//import imgMetal2    from '@/assets/imagenes/nuestrasinstalaciones/Laboratorio/_S0A7391.webp'
 </script>
 
 
@@ -25,7 +26,7 @@ import imgMetal2    from '@/assets/imagenes/nuestrasinstalaciones/Laboratorio/_S
           <div class="pa-4 text-center">
             <h2>Plato 1.1.1 MODELO XZY</h2>
             <p>
-              Plato de ducha cojonudo.  
+              Plato de ducha cojonudo.
               Duchate y experimenta como cae el agua en el plato de ducha.
             </p>
           </div>
