@@ -1,7 +1,10 @@
 <script setup>
 import './NavbarStyleAdditions.css';
-import { ref, onMounted, onUnmounted, nextTick, computed } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 import { useRouter } from 'vue-router';
+
+// Nombre multi-word para evitar la regla de lint de Vue
+defineOptions({ name: 'AppNavbar' })
 
 // Inicializar router para navegación programática
 const router = useRouter();
@@ -9,50 +12,42 @@ const router = useRouter();
 // Reactive state for controlling navbar behavior
 const scrolled = ref(false);
 const isMenuOpen = ref(false);
-const menuButtonRef = ref(null);
 const firstFocusableElement = ref(null);
 const lastFocusableElement = ref(null);
 const activeDropdowns = ref({});
 const isMobile = ref(window.innerWidth <= 768);
 const drawer = ref(false);
 
-// Check if device is mobile
-const checkDevice = () => {
-  isMobile.value = window.innerWidth <= 768;
-};
-
-// Toggle submenu para menú móvil solamente
+// menu logic helpers
 const toggleSubmenu = (index, event) => {
   if (!isMobile.value) return;
-
   event.preventDefault();
-
-  // Toggle solo el elemento actual
   activeDropdowns.value[index] = !activeDropdowns.value[index];
 };
 
-// Toggle nested submenu para menú móvil solamente
 const toggleNestedSubmenu = (parentIndex, childIndex, event) => {
   if (!isMobile.value) return;
-
   event.preventDefault();
-
-  const nestedKey = `${parentIndex}-${childIndex}`;
-
-  // Toggle solo el elemento actual
-  activeDropdowns.value[nestedKey] = !activeDropdowns.value[nestedKey];
-  if (activeDropdowns.value[nestedKey]) {
-    // Si abrimos el submenú, asegurarnos que el padre esté abierto
+  const key = `${parentIndex}-${childIndex}`;
+  activeDropdowns.value[key] = !activeDropdowns.value[key];
+  if (activeDropdowns.value[key]) {
     activeDropdowns.value[parentIndex] = true;
   }
 };
 
-// Close all dropdowns
+let structuredDataScripts = []; // will hold inserted script tags (tag elements)
+
+// helper to update isMobile on resize
+const checkDevice = () => {
+  isMobile.value = window.innerWidth <= 768;
+};
+
+// manage dropdown state
 const closeAllDropdowns = () => {
   activeDropdowns.value = {};
 };
 
-// Organization schema data for SEO
+// SEO structured data
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -65,6 +60,84 @@ const organizationSchema = {
     "https://www.linkedin.com/company/ssab450"
   ]
 };
+
+const navItems = ref([
+  {
+    name: 'INICIO',
+    path: '/',
+    title: 'Ir a la página de inicio',
+    ariaLabel: 'Inicio',
+    keywords: 'inicio, home, página principal',
+    hasSubmenu: false
+  },
+  {
+    name: 'QUIENES SOMOS',
+    path: '',
+    title: 'Conozca más sobre nuestra empresa y nuestros valores',
+    ariaLabel: 'Quiénes somos',
+    keywords: 'empresa, valores, misión, visión, historia',
+    hasSubmenu: true,
+    submenu: [
+      { name: 'SOBRE NOSOTROS', path: '/sobre-nosotros', title: 'Conozca la historia y valores de nuestra empresa', ariaLabel: 'Sobre nosotros' },
+      { name: 'NUESTRA MISIÓN', path: '/mision', title: 'Nuestra misión y objetivos como empresa', ariaLabel: 'Nuestra misión' }
+    ]
+  },
+  {
+    name: 'PLATOS',
+    path: '/platos1',
+    title: 'Catálogo completo de platos de ducha',
+    ariaLabel: 'Platos',
+    keywords: 'platos, ducha, repuestos',
+    hasSubmenu: false
+  },
+  {
+    name: 'MAMPARAS',
+    path: '',
+    title: 'Procesos auxiliares y servicios adicionales',
+    ariaLabel: 'Mamparas',
+    keywords: 'mamparas, correderas, abatibles, plegables',
+    hasSubmenu: true,
+    submenu: [
+      { name: 'Mamparas Correderas', path: '/mamparas1', title: 'Catálogo completo de mamparas correderas', ariaLabel: 'Correderas' },
+      { name: 'Mamparas Abatibles', path: '/mamparas3', title: 'Catálogo completo de mamparas abatibles', ariaLabel: 'Abatibles' },
+      { name: 'Mamparas Plegables', path: '/mamparas4', title: 'Catálogo completo de mamparas plegables', ariaLabel: 'Plegables' },
+      { name: 'Otras soluciones', path: '/mamparas5', title: 'Catálogo completo de otras soluciones para mamparas', ariaLabel: 'Otras soluciones' }
+    ]
+  },
+  {
+    name: 'GRIFOS',
+    path: '', // ruta vacía, no hay vista principal, sólo submenú
+    title: 'Nuestros servicios profesionales acerca de grifos',
+    ariaLabel: 'Grifos',
+    keywords: 'grifos, cocina, ducha, lavabo',
+    hasSubmenu: true,
+    submenu: [
+      { name: 'Grifos Lavabo', path: '/grifos1', title: 'Catálogo completo de grifos de lavabo', ariaLabel: 'Grifos lavabo' },
+      { name: 'Grifos Ducha', path: '/grifos2', title: 'Catálogo completo de grifos de ducha', ariaLabel: 'Grifos ducha' },
+      { name: 'Grifos Cocina', path: '/grifos3', title: 'Catálogo completo de grifos de cocina', ariaLabel: 'Grifos cocina' }
+    ]
+  },
+
+  {
+    name: 'ESPEJOS',
+    path: '/espejos',
+    title: 'Catálogo completo de espejos',
+    ariaLabel: 'Espejos',
+    keywords: 'espejos, decoración',
+    hasSubmenu: false,
+    submenu: [
+      { name: 'Servicio 3.1', path: '/maquinaria/instalaciones', title: 'Instalaciones y equipamiento técnico', ariaLabel: 'Instalaciones' }
+    ]
+  },
+  {
+    name: 'Pide Presupuesto',
+    path: '/contacto',
+    title: 'Contacte con nosotros para más información',
+    ariaLabel: 'Contacto',
+    keywords: 'contacto, ubicación, teléfono, email',
+    hasSubmenu: false
+  }
+]);
 
 // Navigation schema for SEO
 const getNavigationSchema = () => {
@@ -105,102 +178,6 @@ const handleOutsideClick = (event) => {
   }
 };
 
-// Scripts to be removed on unmount
-let structuredDataScripts = [];
-
-const navItems = ref([
-    {
-    name: 'INICIO',
-    path: '/',              // va al home
-    title: 'Ir a la página de inicio',
-    ariaLabel: 'Inicio',
-    keywords: 'inicio, home, página principal',
-    hasSubmenu: false
-  },
-  {
-    name: 'QUIENES SOMOS',
-    path: '',
-    title: 'Conozca más sobre nuestra empresa y nuestros valores',
-    ariaLabel: 'Quiénes somos',
-    keywords: 'empresa, valores, misión, visión, historia',
-    hasSubmenu: true,
-    submenu: [
-      { name: 'SOBRE NOSOTROS', path: '/sobre-nosotros', title: 'Conozca la historia y valores de nuestra empresa', ariaLabel: 'Sobre nosotros' },
-      { name: 'NUESTRA MISIÓN', path: '/mision', title: 'Nuestra misión y objetivos como empresa', ariaLabel: 'Nuestra misión' },
-      //{ name: '¿POR QUÉ SSAB450?', path: '/por-que', title: 'Ventajas de elegir nuestros servicios industriales', ariaLabel: '¿Por qué SSAB450?' }
-    ]
-  },
-  {
-    name: 'GRIFOS' ,
-    path: '/',    // determinar path
-    title: 'Nuestros servicios profesionales acerca de grifos',  // esto es para cuando dejas en raton sobre el boton la info que sale
-    ariaLabel: 'Servicios',
-    keywords: 'servicios industriales, acero inoxidable, soldadura, soluciones',
-    hasSubmenu: true,
-    //* DESPLEGABLE PARA EL SERVICIO
-    submenu: [
-      { name: 'Grifos Lavabo', path: '/grifos1', title: 'Catálogo completo de grifos de lavabo', ariaLabel: 'Nuestros servicios' },
-      { name: 'Grifos Ducha', path: '/grifos2', title: 'Catálogo completo de grifos de ducha', ariaLabel: 'Así funciona' },
-      {
-        name: 'Grifos Cocina',
-        path: '/grifos3',
-        title: 'Catálogo completo de grifos de cocina',
-        ariaLabel: 'Tipos de soldadura',
-        hasSubmenu: false
-      }
-    ]
-    //*/
-  },
-  {
-    name: 'PLATOS',
-    path: '/platos1',
-    title: 'Catálogo completo de platos de ducha',
-    ariaLabel: 'Laboratorio',
-    keywords: 'laboratorio, análisis, control calidad, pruebas',
-    hasSubmenu: false
-  },
-  {
-    name: 'ESPEJOS',
-    path: '/espejos',
-    title: 'Catálogo completo de espejos',
-    ariaLabel: 'Maquinaria',
-    keywords: 'maquinaria industrial, equipos, tecnología',
-    hasSubmenu: false,
-    //* DESPLEGABLE PARA EL SERVICIO
-    submenu: [
-      { name: 'Servicio 3.1', path: '/maquinaria/instalaciones', title: 'Instalaciones y equipamiento técnico', ariaLabel: 'Nuestras instalaciones' },
-    //  { name: 'Servicio 3.2', path: '/maquinaria/industria', title: 'Soluciones para la industria con nuestra maquinaria', ariaLabel: 'Industria' }
-    ]
-    //*/
-  },
-  {
-    name: 'MAMPARAS',
-    path: '',
-    title: 'Procesos auxiliares y servicios adicionales',
-    ariaLabel: 'Procesos Auxiliares',
-    keywords: 'procesos auxiliares, servicios adicionales',
-    hasSubmenu: true,
-    //* DESPLEGABLE PARA EL SERVICIO
-    submenu: [
-      { name: 'Mamparas Correderas', path: '/mamparas1', title: 'Catálogo completo de mamparas correderas', ariaLabel: 'Transformación metalúrgica', component: 'TransformacionesMetalurgicas.vue' },
-      //{ name: 'Mamparas de Aluminio ', path: '/mamparas2', title: 'Catálogo completo de mamparas de alumino', ariaLabel: 'Tratamiento de superficies', component: 'TratamientoDeSuperficies.vue' },
-      { name: 'Mamparas Abatibles', path: '/mamparas3', title: 'Catálogo completo de mamparas abatibles', ariaLabel: 'Modulación', component: 'Modulacion.vue' },
-      { name: 'Mamparas Plegables', path: '/mamparas4', title: 'Catálogo completo de mamparas plegables', ariaLabel: 'Logística', component: 'Logistica.vue' },
-      { name: 'Otras soluciones', path: '/mamparas5', title: 'Catálogo completo de otras soluciones para mamparas', ariaLabel: 'Logística', component: 'Logistica.vue' }
-
-    ]
-    //*/
-  },
-  {
-    name: 'CONTACTO',
-    path: '/contacto',
-    title: 'Contacte con nosotros para más información',
-    ariaLabel: 'Contacto',
-    keywords: 'contacto, ubicación, teléfono, email',
-    hasSubmenu: false
-  }
-]);
-
 // Set up focus trap elements for the mobile menu
 const setupFocusTrap = () => {
   const menu = document.getElementById('main-menu');
@@ -222,15 +199,15 @@ const toggleMenu = () => {
   isMenuOpen.value = drawer.value;
   document.body.style.overflow = isMenuOpen.value ? 'hidden' : '';
 
+  // When menu opens, recalc focusable elements for trap
+  if (isMenuOpen.value) {
+    setupFocusTrap();
+  }
+
   // Si se cierra el menú, limpiar todos los submenús abiertos
   if (!isMenuOpen.value) {
     closeAllDropdowns();
   }
-};
-
-// Function to close specific submenu
-const closeSubmenu = (index) => {
-  delete activeDropdowns.value[index];
 };
 
 // Function to handle navigation to hash links
@@ -321,9 +298,6 @@ const navbarElevation = computed(() => scrolled.value ? 4 : 1);
 const navbarHeight = computed(() => scrolled.value ? 64 : 80);
 
 // Dynamic image import for the logo with spaces in filename
-const logoPath = ref('/src/assets/imagenes/usoGeneral/Logo verde recortado.png');
-
-const currentYear = new Date().getFullYear();
 const faviconPath = new URL('@/assets/imagenes/usoGeneral/logo_iconoPagina.png', import.meta.url).href;
 
 // Añadir el favicon dinámicamente
@@ -724,27 +698,26 @@ onUnmounted(() => {
 
 
 
+<style scoped>
 /* ============================
-   NAVBAR STYLE - BAÑOS TRES60
-   ============================ */
+  NAVBAR STYLE - BAÑOS TRES60
+  ============================ */
 
 .navbar {
-  background-color: #0D3642; /* fondo oscuro */
+  background-color: #ffffff; /* barra clara para texto azul */
   padding: 0.75rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-/* Logo */
-.navbar-logo img {
-  height: 50px;
+  /* opcional: sombra sutil para separar de contenido */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   width: auto;
 }
 
 /* Links de la navbar */
 .nav-link {
-  color: #FFFFFF !important;
+  color: #0D3642 !important; /* azul oscuro para texto */
   text-decoration: none;
   margin: 0 1rem;
   font-size: 1rem;
@@ -759,7 +732,7 @@ onUnmounted(() => {
 
 /* Botón destacado (ej: contacto o CTA) */
 .nav-btn {
-  background-color: #58B7AE !important;
+  background-color: #0D3642 !important; /* azul oscuro */
   color: #FFFFFF !important;
   font-weight: 600;
   padding: 0.5rem 1rem;
@@ -768,10 +741,10 @@ onUnmounted(() => {
 }
 
 .nav-btn:hover {
-  background-color: #46a199 !important; /* verde agua más oscuro */
+  background-color: #58B7AE !important; /* verde agua (hover) */
 }
 
-
+</style>
 
 
 

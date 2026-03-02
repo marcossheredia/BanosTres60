@@ -1,13 +1,8 @@
 <script setup>
 
-
 defineOptions({
   name: 'HomeView'
 })
-
-import { ref, onMounted, onUnmounted } from 'vue'
-import slide1 from '../../assets/imagenes/usoGeneral/Slide.png'
-//import slide2 from '../../assets/imagenes/usoGeneral/Logo verde recortado.png'
 
 import foto1b from '../../assets/imagenes/Obra/1.1.jpg'
 import foto2b from '../../assets/imagenes/Obra/1.2.jpg'
@@ -24,45 +19,38 @@ import logoManillons from '../../assets/imagenes/home/confian/manillons.jpg'
 import logoRoyo from '../../assets/imagenes/home/confian/royogroup.png'
 import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
 
-const slides = ref([
-  {
-    image: slide1,
-  }
-])
-
-const currentSlide = ref(0)
-let intervalId = null
-
-onMounted(() => {
-  // Si solo hay 1 slide, no hace falta carrusel
-  if (slides.value.length > 1) {
-    intervalId = setInterval(nextSlide, 7500)
-  }
-})
-
-onUnmounted(() => {
-  if (intervalId) clearInterval(intervalId)
-})
-
-function nextSlide() {
-  if (slides.value.length <= 1) return
-  currentSlide.value = (currentSlide.value + 1) % slides.value.length
-}
 </script>
 
 
 <template>
-  <div class="carousel">
-    <div
-      class="slide-container"
-      v-for="(slide, index) in slides"
-      :key="index"
-      v-show="currentSlide === index"
-    >
-    <div
-      class="slide slide-logo"
-      :style="{ backgroundImage: `url(${slide.image})` }"
-    ></div>
+  <!-- HERO HEADER CON TEXTO -->
+  <div class="hero-header">
+    <div class="hero-content">
+
+      <!--
+      <div class="logo-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+
+          <circle cx="50" cy="50" r="48" fill="#5DAFB3"/>
+
+          <g transform="translate(50, 50)">
+
+            <rect x="-8" y="-25" width="16" height="20" rx="4" fill="none" stroke="white" stroke-width="2"/>
+
+            <circle cx="0" cy="-25" r="12" fill="white"/>
+
+            <circle cx="-8" cy="0" r="1.5" fill="white"/>
+            <circle cx="0" cy="2" r="1.5" fill="white"/>
+            <circle cx="8" cy="0" r="1.5" fill="white"/>
+            <circle cx="-8" cy="8" r="1.5" fill="white"/>
+            <circle cx="0" cy="10" r="1.5" fill="white"/>
+            <circle cx="8" cy="8" r="1.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      -->
+      <h1 class="company-name">BAÑOS TRES 60</h1>
+      <p class="company-tagline">Baños adaptados. Cambios de bañera por ducha.</p>
     </div>
   </div>
 
@@ -179,34 +167,56 @@ function nextSlide() {
 </section>
 
 </template>
-  <style scoped>
-  /* 🎞️ Carrusel */
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 50vh;        /* antes 90vh: menos alto, menos sensación de zoom */
-  max-height: 500px;   /* por si la pantalla es muy alta */
-  overflow: hidden;
-}
 
-.slide {
-  width: 100%;
-  height: 100%;
-  background-size: cover;    /* ANTES: cover (recortaba la imagen) */
-  background-repeat: no-repeat;
-  background-position: center;
-}
+<style scoped>
+  /* 🎯 HERO HEADER CON TEXTO */
+  .hero-header {
+    width: 100%;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
+    padding: clamp(40px, 8vw, 80px) 2rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+  }
 
-.slide-logo {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
-  .slide-container {
-    position: absolute;
-    inset: 0;
-    transition: opacity 0.8s ease-in-out;
+  .logo-circle {
+    width: clamp(80px, 12vw, 120px);
+    height: clamp(80px, 12vw, 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-circle svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+  }
+
+  .company-name {
+    font-size: clamp(32px, 6vw, 56px);
+    font-weight: 800;
+    color: #0b3340;
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+  }
+
+  .company-tagline {
+    font-size: clamp(16px, 2vw, 22px);
+    color: #23424a;
+    margin: 0;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.3px;
   }
 
 
@@ -570,14 +580,22 @@ function nextSlide() {
 /* ========================= */
 @media (max-width: 768px) {
 
-  /* 🔹 HERO */
-  .carousel {
-    height: 30vh;
+  /* 🔹 HERO HEADER */
+  .hero-header {
+    padding: 30px 1rem;
   }
 
-  .slide {
-    background-size: contain;
-    background-position: center;
+  .logo-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .company-name {
+    font-size: 28px;
+  }
+
+  .company-tagline {
+    font-size: 14px;
   }
 
   /* 🔹 CONÓCENOS */

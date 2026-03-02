@@ -16,6 +16,12 @@ const acceptCookies = () => {
   localStorage.setItem('cookieConsentAccepted', 'true');
   showBanner.value = false;
 };
+
+const denieCookies = () => {
+  localStorage.setItem('cookieConsentAccepted', 'false');
+  showBanner.value = false;
+};
+
 </script>
 
 <template>
@@ -27,6 +33,7 @@ const acceptCookies = () => {
           <a href="/politica-de-cookies" target="_blank">política de cookies</a>.
         </div>
         <button class="cookie-button" @click="acceptCookies">Aceptar</button>
+        <button class="cookie-button" @click="denieCookies">Rechazar</button>
       </div>
     </div>
   </transition>
@@ -52,7 +59,7 @@ const acceptCookies = () => {
 }
 
 .cookie-container {
-  max-width: 1200px;
+  max-width: 12000px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
