@@ -4,14 +4,22 @@ defineOptions({
   name: 'HomeView'
 })
 
-import foto1b from '../../assets/imagenes/Obra/1.1.jpg'
-import foto2b from '../../assets/imagenes/Obra/1.2.jpg'
-import foto3b from '../../assets/imagenes/Obra/1.3.jpg'
+import fotoSuelta from '../../assets/imagenes/Cambio_banera/1.png'
 
-import banera1 from '../../assets/imagenes/home/cb.1.jpg'
-import banera2 from '../../assets/imagenes/home/cb.2.jpg'
-import banera3 from '../../assets/imagenes/home/cb.3.jpg'
-import banera4 from '../../assets/imagenes/home/cb.4.jpg'
+import foto1b from '../../assets/imagenes/Obra/1.jpg'
+import foto2b from '../../assets/imagenes/Obra/2.jpg'
+import foto3b from '../../assets/imagenes/Obra/3.jpg'
+
+import banera1 from '../../assets/imagenes/Proceso/1.jpg'
+import banera2 from '../../assets/imagenes/Proceso/2.jpg'
+import banera3 from '../../assets/imagenes/Proceso/3.jpg'
+import banera4 from '../../assets/imagenes/Proceso/4.jpg'
+
+import expo1 from '../../assets/imagenes/Exposicion/1.jpg'
+import expo2 from '../../assets/imagenes/Exposicion/2.jpg'
+import expo3 from '../../assets/imagenes/Exposicion/3.jpg'
+import expo4 from '../../assets/imagenes/Exposicion/4.jpg'
+import expo5 from '../../assets/imagenes/Exposicion/5.jpg'
 
 import logoGme from '../../assets/imagenes/home/confian/gme.jpg'
 import logoDuplach from '../../assets/imagenes/home/confian/duplach.jpg'
@@ -61,24 +69,17 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
     </div>
   </div>
 
-<section class="conocenos-section">
-  <div class="conocenos-container">
-    <div class="conocenos-imagenes">
-      <div class="conocenos-img conocenos-img-left-top">
-        <img :src="foto1b" alt="Imagen 1" loading="lazy" />
-      </div>
-      <div class="conocenos-img conocenos-img-right">
-        <img :src="foto2b" alt="Imagen 2" loading="lazy" />
-      </div>
-      <div class="conocenos-img conocenos-img-left-bottom">
-        <img :src="foto3b" alt="Imagen 3" loading="lazy" />
+<!-- SECCIÓN 1: Imagen LEFT + Texto RIGHT -->
+<section class="zigzag-section section-normal">
+  <div class="zigzag-container">
+    <div class="zigzag-imagenes">
+      <div class="zigzag-img-single">
+        <img :src="foto1b" alt="Dale una vuelta a tu baño" loading="lazy" />
       </div>
     </div>
 
-    <div class="texto">
-      <h1 style="font-size: 2rem; color: #000; margin-bottom: 15px;">
-        ¡Dale una vuelta a tu baño!
-      </h1>
+    <div class="zigzag-texto">
+      <h2>¡Dale una vuelta a tu baño!</h2>
       <p><strong>¡Renueva tu baño de manera fácil y rápida!</strong></p>
       <p>
         ¿Pensando en cambiar tu bañera por una ducha?
@@ -91,6 +92,65 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
         <li>✔ Mayor comodidad y accesibilidad</li>
       </ul>
       <p><strong>Renueva tu baño hoy mismo. ¡Te esperamos!</strong></p>
+      <p><strong>¡Pide presupuesto hoy mismo!</strong></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECCIÓN 2: Texto LEFT + Imagen RIGHT (Invertida) -->
+<section class="zigzag-section section-reverse">
+  <div class="zigzag-container">
+    <div class="zigzag-texto">
+      <h2>Soluciones a medida para tu hogar</h2>
+      <p><strong>Diseño y funcionalidad en perfecta armonía.</strong></p>
+      <p>
+        Gana en tranquilidad y diseño con un baño adaptado a tu ritmo de vida.
+        Tanto si la bañera se ha convertido en un obstáculo diario como si simplemente buscas un espacio más funcional y moderno, tenemos la solución.
+        Sustituimos tu bañera por un plato de ducha antideslizante a ras de suelo.
+        Mejora tu autonomía y disfruta de un baño más espacioso, seguro y fácil de mantener.
+      </p>
+      <ul>
+        <li>✔ Presupuestos sin compromiso</li>
+        <li>✔ Instalaciones rápidas y profesionales</li>
+        <li>✔ Materiales de primera calidad</li>
+      </ul>
+      <p><strong>Contacta con nosotros hoy mismo</strong></p>
+    </div>
+
+    <div class="zigzag-imagenes">
+      <div class="zigzag-img-single">
+        <img :src="foto2b" alt="Soluciones a medida" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECCIÓN 3: Imagen LEFT + Texto RIGHT -->
+<section class="zigzag-section section-normal">
+  <div class="zigzag-container">
+    <div class="zigzag-imagenes">
+      <div class="zigzag-img-single">
+        <img :src="foto3b" alt="Transformamos espacios" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="zigzag-texto">
+      <h2>Transformamos tus espacios</h2>
+      <p><strong>Calidad y dedicación en cada proyecto.</strong></p>
+      <p>
+        Seamos prácticos: una bañera que no se usa para su fin, solo ocupa espacio,
+        al cambiarla por un plato de ducha moderno y funcional no solo modernizas la estética,
+        estás dando más amplitud a tu baño,,más funcionalidad al espacio y disfrutarás de la comodidad de una ducha más amplia y segura.
+        Es una inversión inteligente que revaloriza tu vivienda y te hace la vida más fácil
+      </p>
+      <ul>
+        <li>✔ Expertos en renovación de baños</li>
+        <li>✔ Garantía en nuestros trabajos</li>
+        <li>✔ Atención personalizada</li>
+      </ul>
+      <p><strong>¡Nos encanta lo que hacemos!</strong></p>
     </div>
   </div>
 </section>
@@ -114,6 +174,25 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
     </table>
     <div class="mejor-opcion-imagen">
       <img src="../../assets/imagenes/home/5estrellas.webp" alt="5 estrellas" />
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN: Sobre Nosotros / Atención -->
+<section class="atencion-section">
+  <div class="atencion-container">
+    <div class="atencion-texto">
+      <h2>En un sector donde abundan las ofertas</h2>
+      <p>
+        Nosotros elegimos otro camino. Preferimos realizar menos trabajos al mes
+        para asegurar que el suyo reciba nuestra total atención. Cada cliente es importante
+        para nosotros, y eso se refleja en la calidad de nuestro trabajo.
+      </p>
+      <p><strong>Tu baño merece lo mejor.</strong></p>
+    </div>
+
+    <div class="atencion-img">
+      <img :src="fotoSuelta" alt="Atención dedicada" loading="lazy" />
     </div>
   </div>
 </section>
@@ -152,8 +231,36 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
         <li>🏆 Materiales de calidad y acabados a tu gusto</li>
         <li>👌 Mayor comodidad y accesibilidad</li>
       </ul>
-      <p class="cta">✨ <strong>¡Solicita tu presupuesto sin compromiso!</strong></p>
-      <p>📞 Llámanos al <a href="tel:912950536">912 950 536</a> o visítanos en nuestra tienda a partir del 1 de septiembre.</p>
+      <p class="cta">✨ <strong>Pide presupuesto hoy mismo. ¡Te esperamos!</strong></p>
+      <p style="font-weight: 600; margin-top: 1rem;">📞 Llámanos:</p>
+      <p>
+        <a href="tel:912950536">912 950 536</a> (fijo) | <a href="tel:661805952">661 805 952</a> (móvil)
+      </p>
+      <p style="margin-top: 1rem; font-style: italic;">✓ Presupuesto sin compromiso</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA HORIZONTAL -->
+<section class="galeria-final">
+  <div class="galeria-container">
+    <h2>Nuestros trabajos</h2>
+    <div class="galeria-items">
+      <div class="galeria-item">
+        <img :src="expo1" alt="Trabajo 1" loading="lazy" />
+      </div>
+      <div class="galeria-item">
+        <img :src="expo2" alt="Trabajo 2" loading="lazy" />
+      </div>
+      <div class="galeria-item">
+        <img :src="expo3" alt="Trabajo 3" loading="lazy" />
+      </div>
+      <div class="galeria-item">
+        <img :src="expo4" alt="Trabajo 4" loading="lazy" />
+      </div>
+      <div class="galeria-item">
+        <img :src="expo5" alt="Trabajo 5" loading="lazy" />
+      </div>
     </div>
   </div>
 </section>
@@ -337,54 +444,177 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
     transition: width 0.1s linear;
   }
 
-  /* ✨ Sección Conócenos */
-  .conocenos-section {
-    padding: 5rem 2rem;
+  /* ✨ ZigZag Sections - Alternancia Imagen/Texto */
+  .zigzag-section {
+    padding: clamp(40px, 8vw, 60px) 2rem;
+    background: #fafbfc;
+  }
+
+  .zigzag-section:nth-child(even) {
+    background: #f4f6f8;
+  }
+
+  .zigzag-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(30px, 5vw, 60px);
+    align-items: center;
+  }
+
+  .zigzag-imagenes {
+    flex: 1;
+  }
+
+  .zigzag-img-single {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    aspect-ratio: 4/3;
+  }
+
+  .zigzag-img-single img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .zigzag-img-single:hover img {
+    transform: scale(1.05);
+  }
+
+  .zigzag-texto {
+    flex: 1;
+  }
+
+  .zigzag-texto h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    color: #0b3340;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+  }
+
+  .zigzag-texto p {
+    font-size: 1rem;
+    color: #23424a;
+    margin: 0 0 1rem;
+    line-height: 1.6;
+  }
+
+  .zigzag-texto ul {
+    margin: 1.5rem 0;
+    padding-left: 20px;
+    list-style: none;
+  }
+
+  .zigzag-texto li {
+    color: #23424a;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+  }
+
+  /* Invertir orden para section-reverse */
+  .section-reverse .zigzag-container {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+  }
+
+  .section-reverse .zigzag-container > * {
+    direction: ltr;
+  }
+
+  /* Sección de Atención */
+  .atencion-section {
+    padding: clamp(40px, 8vw, 60px) 2rem;
     background: #f9f9f9;
   }
 
-  .conocenos-container {
+  .atencion-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: clamp(30px, 5vw, 60px);
     align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  .imagenes {
+  .atencion-texto {
     flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .img-left-top,
-  .img-left-bottom {
-    grid-column: 1;
-  }
-  .img-right {
-    grid-column: 2;
-    grid-row: span 2;
+    min-width: 300px;
   }
 
-  .imagenes img {
+  .atencion-texto h2 {
+    font-size: clamp(24px, 3vw, 32px);
+    color: #0b3340;
+    margin: 0 0 1.5rem;
+    line-height: 1.2;
+  }
+
+  .atencion-texto p {
+    font-size: 1rem;
+    color: #23424a;
+    margin: 0 0 1rem;
+    line-height: 1.6;
+  }
+
+  .atencion-img {
+    flex: 0 1 200px;
+    align-self: flex-start;
+  }
+
+  .atencion-img img {
     width: 100%;
     border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   }
 
-  .texto {
-    flex: 1;
-    max-width: 500px;
+  /* Galería Horizontal */
+  .galeria-final {
+    padding: clamp(40px, 8vw, 60px) 2rem;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
   }
-  .texto h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+
+  .galeria-container {
+    max-width: 1400px;
+    margin: 0 auto;
   }
-  .texto p {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    line-height: 1.5;
+
+  .galeria-final h2 {
+    text-align: center;
+    font-size: clamp(24px, 3vw, 32px);
+    color: #0b3340;
+    margin: 0 0 2rem;
+  }
+
+  .galeria-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: clamp(16px, 3vw, 24px);
+  }
+
+  .galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 1/1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .galeria-item:hover img {
+    transform: scale(1.08);
   }
 
   /*Ubicacion mapa estilo*/
@@ -467,7 +697,10 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
     align-items: center;
     justify-content: center;
   }
-
+  /* modifier to invert order */
+  .conocenos-section.section-reverse .conocenos-container {
+    flex-direction: row-reverse;
+  }
   .banera-container .imagenes {
     flex: 1;
     display: grid;
@@ -575,52 +808,88 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
 
   /* --- Responsive --- */
 
-  /* --- Conócenos (aislado para que no choque con otras secciones) --- */
-  .conocenos-section {
-    padding: 5rem 2rem;
-    background: #f9f9f9;
-  }
-  .conocenos-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-  }
+  /* ========================= */
+  /* 📱 MÓVIL – DEFINITIVO */
+  /* ========================= */
+  @media (max-width: 768px) {
 
-  /* GRID de 2 columnas:
-    ┌─────────┬─────────┐
-    │ leftTop │  right  │
-    │ leftBot │  right  │
-    └─────────┴─────────┘
-  */
-  .conocenos-imagenes {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "lt r"
-      "lb r";
-    gap: 1rem;
+    /* 🔹 HERO HEADER */
+    .hero-header {
+      padding: 30px 1rem;
+    }
 
-    /* Filas homogéneas y responsivas: la derecha (2 filas) mantiene proporciones
-      y evita “descolgarse” */
-    grid-auto-rows: minmax(140px, 18vw);
-    min-width: 280px;
-  }
+    .logo-circle {
+      width: 80px;
+      height: 80px;
+    }
 
-  .conocenos-img {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    background: #fff;
-  }
+    .company-name {
+      font-size: 28px;
+    }
 
-  /* Áreas */
-  .conocenos-img-left-top { grid-area: lt; }
-  .conocenos-img-left-bottom { grid-area: lb; }
-  .conocenos-img-right { grid-area: r; }
+    .company-tagline {
+      font-size: 14px;
+    }
+
+    /* 🔹 ZIGZAG SECTIONS */
+    .zigzag-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .section-reverse .zigzag-container {
+      direction: ltr;
+    }
+
+    /* 🔹 ATENCIÓN SECTION */
+    .atencion-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .atencion-img {
+      flex: 1;
+      width: 100%;
+    }
+
+    /* 🔹 GALERÍA */
+    .galeria-items {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    /* 🔹 BAÑERA */
+    .banera-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .imagenes {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .img {
+      aspect-ratio: 1 / 1;
+    }
+
+    /* 🔹 TEXTO */
+    .texto {
+      max-width: 100%;
+      text-align: left;
+    }
+
+    section {
+      padding: 2rem 1rem;
+    }
+}
+
+
+
+
+
 
   /* Imágenes: ocupan su contenedor sin deformarse */
   .conocenos-img img {
@@ -711,4 +980,4 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
 
 
 
-  </style>
+</style>

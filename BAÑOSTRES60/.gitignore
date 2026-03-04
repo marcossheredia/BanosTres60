@@ -28,3 +28,5 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+echo "Docker Desktop Installer.exe" >> .gitignore
