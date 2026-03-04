@@ -4,6 +4,8 @@ defineOptions({
   name: 'HomeView'
 })
 
+import { ref } from 'vue';
+
 import fotoSuelta from '../../assets/imagenes/Cambio_banera/1.png'
 
 import foto1b from '../../assets/imagenes/Obra/1.jpg'
@@ -27,6 +29,15 @@ import logoManillons from '../../assets/imagenes/home/confian/manillons.jpg'
 import logoRoyo from '../../assets/imagenes/home/confian/royogroup.png'
 import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
 
+
+const dialog = ref(false)
+const selectedImage = ref(null)
+
+function openImage(img) {
+  selectedImage.value = img
+  dialog.value = true
+}
+
 </script>
 
 
@@ -34,29 +45,6 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
   <!-- HERO HEADER CON TEXTO -->
   <div class="hero-header">
     <div class="hero-content">
-
-      <!--
-      <div class="logo-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-
-          <circle cx="50" cy="50" r="48" fill="#5DAFB3"/>
-
-          <g transform="translate(50, 50)">
-
-            <rect x="-8" y="-25" width="16" height="20" rx="4" fill="none" stroke="white" stroke-width="2"/>
-
-            <circle cx="0" cy="-25" r="12" fill="white"/>
-
-            <circle cx="-8" cy="0" r="1.5" fill="white"/>
-            <circle cx="0" cy="2" r="1.5" fill="white"/>
-            <circle cx="8" cy="0" r="1.5" fill="white"/>
-            <circle cx="-8" cy="8" r="1.5" fill="white"/>
-            <circle cx="0" cy="10" r="1.5" fill="white"/>
-            <circle cx="8" cy="8" r="1.5" fill="white"/>
-          </g>
-        </svg>
-      </div>
-      -->
       <h1 class="company-name">BAÑOS TRES<strong>60</strong></h1>
 
       <!-- llamada de atención secundaria -->
@@ -74,7 +62,9 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
   <div class="zigzag-container">
     <div class="zigzag-imagenes">
       <div class="zigzag-img-single">
-        <img :src="foto1b" alt="Dale una vuelta a tu baño" loading="lazy" />
+        <img :src="foto1b" alt="Dale una vuelta a tu baño" loading="lazy"
+        class="cursor-pointer"
+        @click="openImage(foto1b)" />
       </div>
     </div>
 
@@ -120,7 +110,9 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
 
     <div class="zigzag-imagenes">
       <div class="zigzag-img-single">
-        <img :src="foto2b" alt="Soluciones a medida" loading="lazy" />
+        <img :src="foto2b" alt="Soluciones a medida" loading="lazy"
+        class="cursor-pointer"
+        @click="openImage(foto2b)"/>
       </div>
     </div>
   </div>
@@ -132,7 +124,9 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
   <div class="zigzag-container">
     <div class="zigzag-imagenes">
       <div class="zigzag-img-single">
-        <img :src="foto3b" alt="Transformamos espacios" loading="lazy" />
+        <img :src="foto3b" alt="Transformamos espacios" loading="lazy"
+        class="cursor-pointer"
+        @click="openImage(foto3b)" />
       </div>
     </div>
 
@@ -192,7 +186,9 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
     </div>
 
     <div class="atencion-img">
-      <img :src="fotoSuelta" alt="Atención dedicada" loading="lazy" />
+      <img :src="fotoSuelta" alt="Atención dedicada" loading="lazy"
+      class="cursor-pointer"
+      @click="openImage(fotoSuelta)" />
     </div>
   </div>
 </section>
@@ -203,19 +199,27 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
 
 
       <div class="img img-right">
-        <img :src="banera4" alt="Cambio de bañera imagen 1" loading="lazy" />
+        <img :src="banera4" alt="Cambio de bañera imagen 1" loading="lazy"
+        class="cursor-pointer"
+        @click="openImage(banera4)" />
       </div>
 
       <div class="img img-left-middle">
-        <img :src="banera1" alt="Cambio de bañera imagen 2" loading="lazy" />
+        <img :src="banera1" alt="Cambio de bañera imagen 2" loading="lazy"
+        class="cursor-pointer"
+        @click="openImage(banera1)" />
       </div>
 
       <div class="img img-right-middle">
-        <img :src="banera2" alt="Cambio de bañera imagen 3" loading="lazy" />
+        <img :src="banera2" alt="Cambio de bañera imagen 3" loading="lazy"
+        class="cursor-pointer"
+        @click="openImage(banera2)" />
       </div>
 
       <div class="img img-left-bottom">
-        <img :src="banera3" alt="Cambio de bañera imagen 4" loading="lazy" />
+        <img :src="banera3" alt="Cambio de bañera imagen 4" loading="lazy"
+        class="cursor-pointer"
+        @click="openImage(banera3)" />
       </div>
 
 
@@ -247,19 +251,29 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
     <h2>Nuestros trabajos</h2>
     <div class="galeria-items">
       <div class="galeria-item">
-        <img :src="expo1" alt="Trabajo 1" loading="lazy" />
+        <img :src="expo1" alt="Trabajo 1" loading="lazy"
+         class="cursor-pointer"
+         @click="openImage(expo1)" />
       </div>
       <div class="galeria-item">
-        <img :src="expo2" alt="Trabajo 2" loading="lazy" />
+        <img :src="expo2" alt="Trabajo 2" loading="lazy"
+         class="cursor-pointer"
+         @click="openImage(expo2)" />
       </div>
       <div class="galeria-item">
-        <img :src="expo3" alt="Trabajo 3" loading="lazy" />
+        <img :src="expo3" alt="Trabajo 3" loading="lazy"
+         class="cursor-pointer"
+         @click="openImage(expo3)" />
       </div>
       <div class="galeria-item">
-        <img :src="expo4" alt="Trabajo 4" loading="lazy" />
+        <img :src="expo4" alt="Trabajo 4" loading="lazy"
+         class="cursor-pointer"
+         @click="openImage(expo4)" />
       </div>
       <div class="galeria-item">
-        <img :src="expo5" alt="Trabajo 5" loading="lazy" />
+        <img :src="expo5" alt="Trabajo 5" loading="lazy"
+         class="cursor-pointer"
+         @click="openImage(expo5)" />
       </div>
     </div>
   </div>
@@ -290,6 +304,14 @@ import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
     </div>
   </div>
 </section>
+
+
+<v-dialog v-model="dialog" max-width="800px">
+  <v-card>
+    <v-img :src="selectedImage" height="500" contain />
+  </v-card>
+</v-dialog>
+
 
 </template>
 
