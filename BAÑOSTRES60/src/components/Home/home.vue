@@ -12,11 +12,6 @@ import foto1b from '../../assets/imagenes/Obra/1.jpg'
 import foto2b from '../../assets/imagenes/Obra/2.jpg'
 import foto3b from '../../assets/imagenes/Obra/3.jpg'
 
-import banera1 from '../../assets/imagenes/Proceso/1.jpg'
-import banera2 from '../../assets/imagenes/Proceso/2.jpg'
-import banera3 from '../../assets/imagenes/Proceso/3.jpg'
-import banera4 from '../../assets/imagenes/Proceso/4.jpg'
-
 import expo1 from '../../assets/imagenes/Exposicion/1.jpg'
 import expo2 from '../../assets/imagenes/Exposicion/2.jpg'
 import expo3 from '../../assets/imagenes/Exposicion/3.jpg'
@@ -193,57 +188,7 @@ function openImage(img) {
   </div>
 </section>
 
-<section class="banera-section">
-  <div class="banera-container">
-    <div class="imagenes">
 
-
-      <div class="img img-right">
-        <img :src="banera4" alt="Cambio de bañera imagen 1" loading="lazy"
-        class="cursor-pointer"
-        @click="openImage(banera4)" />
-      </div>
-
-      <div class="img img-left-middle">
-        <img :src="banera1" alt="Cambio de bañera imagen 2" loading="lazy"
-        class="cursor-pointer"
-        @click="openImage(banera1)" />
-      </div>
-
-      <div class="img img-right-middle">
-        <img :src="banera2" alt="Cambio de bañera imagen 3" loading="lazy"
-        class="cursor-pointer"
-        @click="openImage(banera2)" />
-      </div>
-
-      <div class="img img-left-bottom">
-        <img :src="banera3" alt="Cambio de bañera imagen 4" loading="lazy"
-        class="cursor-pointer"
-        @click="openImage(banera3)" />
-      </div>
-
-
-    </div>
-
-    <div class="texto">
-      <h2>🚿 Cambio de bañera por plato de ducha</h2>
-      <p>¡Renueva tu baño de manera <strong>fácil y rápida</strong>!</p>
-      <p>Transforma tu espacio con una solución <strong>moderna, segura y funcional</strong>.
-         Nuestro equipo profesional adapta la instalación a tus necesidades y preferencias.</p>
-      <ul>
-        <li>⚡ Instalación rápida y sin complicaciones</li>
-        <li>🏆 Materiales de calidad y acabados a tu gusto</li>
-        <li>👌 Mayor comodidad y accesibilidad</li>
-      </ul>
-      <p class="cta">✨ <strong>Pide presupuesto hoy mismo. ¡Te esperamos!</strong></p>
-      <p style="font-weight: 600; margin-top: 1rem;">📞 Llámanos:</p>
-      <p>
-        <a href="tel:912950536">912 950 536</a> (fijo) | <a href="tel:661805952">661 805 952</a> (móvil)
-      </p>
-      <p style="margin-top: 1rem; font-style: italic;">✓ Presupuesto sin compromiso</p>
-    </div>
-  </div>
-</section>
 
 <!-- GALERÍA HORIZONTAL -->
 <section class="galeria-final">
