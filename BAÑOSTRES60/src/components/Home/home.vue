@@ -156,7 +156,7 @@ function openImage(img) {
           <td>Cuidamos <b>detalladamente</b> cada paso del proceso</td>
         </tr>
         <tr>
-          <td>Más de <b>30 años de experiencia</b> nos avalan</td>
+          <td>Más de <b>20 años de experiencia</b> nos avalan</td>
           <td>Apostamos siempre por una <b>gestión de calidad</b></td>
         </tr>
       </tbody>
@@ -235,6 +235,48 @@ function openImage(img) {
         loading="lazy">
       </iframe>
     </div>
+</section>
+
+<section class="diseno-confianza-section">
+  <div class="diseno-container">
+
+    <div class="diseno-header">
+      <h2>Diseñemos juntos tu nuevo baño</h2>
+      <p class="pregunta-clave">¿Qué te preocupa más? La seguridad, el diseño moderno, la limpieza o el espacio.</p>
+      <div class="compromiso-card">
+        <p>Cuidamos al detalle todo el proceso para interferir lo menos posible en tu ritmo: <strong>protegemos las zonas de paso</strong> y dejamos el baño operativo al terminar la jornada si es el único del que dispones.</p>
+        <p>La limpieza y el orden son nuestras constantes. Puedes confiar plenamente en nosotros.</p>
+      </div>
+    </div>
+
+    <div class="visita-tecnica">
+      <h3>¿Por qué es mejor que visitemos tu baño?</h3>
+      <div class="razones-grid">
+        <div class="razon-item">
+          <span class="razon-num">1</span>
+          <p><strong>Medición profesional:</strong> Evitamos sorpresas de última hora midiendo nosotros mismos el espacio real.</p>
+        </div>
+        <div class="razon-item">
+          <span class="razon-num">2</span>
+          <p><strong>Muestrario en mano:</strong> Toca los materiales y elige las texturas de nuestros platos antideslizantes sin moverte de casa.</p>
+        </div>
+        <div class="razon-item">
+          <span class="razon-num">3</span>
+          <p><strong>Asesoramiento experto:</strong> Te ofrecemos la mejor solución técnica para un presupuesto cerrado y sin sorpresas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-final-box">
+      <p>Llámanos ahora, te atenderá Francisco personalmente:</p>
+      <a href="tel:661805952" class="telefono-destacado">661 805 952</a>
+      <p class="presupuesto-tiempo">Te entregamos tu presupuesto en <strong>24 horas</strong> tras la visita.</p>
+      <blockquote class="frase-cierre">
+        "Nos encanta nuestro trabajo y queremos dedicarle a tu proyecto el tiempo que se merece para que el resultado sea perfecto."
+      </blockquote>
+    </div>
+
+  </div>
 </section>
 
 <section class="confian-section">
@@ -944,7 +986,120 @@ function openImage(img) {
   }
 }
 
+/* ✨ Estilos Nueva Sección Diseño y Confianza */
+.diseno-confianza-section {
+  padding: clamp(60px, 10vw, 100px) 2rem;
+  background: #ffffff;
+}
 
+.diseno-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
 
+.diseno-header h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  color: #0b3340;
+  margin-bottom: 1rem;
+}
+
+.pregunta-clave {
+  font-size: 1.4rem;
+  color: #5DAFB3;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.compromiso-card {
+  background: #f0f7f8;
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 5px solid #5DAFB3;
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.visita-tecnica h3 {
+  font-size: 2rem;
+  color: #0b3340;
+  margin-bottom: 2.5rem;
+}
+
+.razones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.razon-item {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  position: relative;
+  text-align: left;
+}
+
+.razon-num {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #5DAFB3;
+  color: white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.cta-final-box {
+  margin-top: 4rem;
+  padding: 3rem 1rem;
+  border-top: 2px dashed #e0e0e0;
+}
+
+.telefono-destacado {
+  display: block;
+  font-size: clamp(40px, 8vw, 72px);
+  font-weight: 800;
+  color: #0b3340;
+  text-decoration: none;
+  margin: 1rem 0;
+  transition: color 0.3s;
+}
+
+.telefono-destacado:hover {
+  color: #5DAFB3;
+}
+
+.presupuesto-tiempo {
+  font-size: 1.2rem;
+  color: #23424a;
+  margin-bottom: 3rem;
+}
+
+.frase-cierre {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5rem;
+  color: #5DAFB3;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+  .diseno-confianza-section {
+    padding: 40px 1.5rem;
+  }
+  .razon-item {
+    margin-top: 10px;
+  }
+}
 
 </style>
