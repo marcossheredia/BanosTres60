@@ -1063,6 +1063,13 @@ function openImage(img) {
   border-top: 2px dashed #e0e0e0;
 }
 
+.cta-final-box p:first-child {
+  font-size: 1.5rem; /* Antes era el tamaño por defecto, ahora es más grande */
+  font-weight: 500;   /* Un poco más de grosor para que se lea mejor */
+  color: #0b3340;    /* Color oscuro para que resalte */
+  margin-bottom: 0.5rem;
+}
+
 .telefono-destacado {
   display: block;
   font-size: clamp(40px, 8vw, 72px);
@@ -1078,9 +1085,10 @@ function openImage(img) {
 }
 
 .presupuesto-tiempo {
-  font-size: 1.2rem;
+  font-size: 1.6rem; /* Lo hemos subido de 1.2rem a 1.6rem */
   color: #23424a;
   margin-bottom: 3rem;
+  line-height: 1.4;  /* Espaciado entre líneas para que no se amontone */
 }
 
 .frase-cierre {
