@@ -295,7 +295,12 @@ const checkScroll = () => {
 
 // Propiedades computadas para los estilos del navbar basados en scroll
 const navbarElevation = computed(() => scrolled.value ? 4 : 1);
-const navbarHeight = computed(() => scrolled.value ? 64 : 80);
+const navbarHeight = computed(() => {
+  if (isMobile.value) {
+    return scrolled.value ? 52 : 62;
+  }
+  return scrolled.value ? 64 : 80;
+});
 
 // Dynamic image import for the logo with spaces in filename
 // use new green logo for favicon (path contains space)
@@ -352,7 +357,7 @@ onUnmounted(() => {
 
 <template>
   <!-- Enlace de accesibilidad para saltar al contenido principal -->
-  <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+
 
   <!-- Barra de navegación principal usando componentes Vuetify -->
   <v-app-bar
@@ -581,7 +586,7 @@ onUnmounted(() => {
             :aria-label="item.ariaLabel"
             density="comfortable"
             class="text-none font-weight-bold"
-            color="#F6911D"
+            color="#0D3642"
             @click="item.path.includes('#') ? handleHashNavigation(item.path) : null"
           >
             <template v-slot:prepend>
@@ -599,7 +604,7 @@ onUnmounted(() => {
           <v-list-group
             :key="`mobile-menu-group-${index}`"
             :value="activeDropdowns[index]"
-            color="#F6911D"
+            color="#0D3642"
             @click="toggleSubmenu(index, $event)"
           >
             <template v-slot:activator="{ props }">
@@ -608,7 +613,7 @@ onUnmounted(() => {
                 :title="item.name"
                 :aria-label="item.ariaLabel"
                 class="text-none font-weight-bold"
-                color="#F6911D"
+                color="#0D3642"
               >
                 <template v-slot:prepend>
                   <v-icon color="#808990" size="x-small">mdi-circle-small</v-icon>
@@ -630,7 +635,7 @@ onUnmounted(() => {
                   :aria-label="subitem.ariaLabel"
                   density="comfortable"
                   class="text-none pl-8 submenu-item"
-                  color="#F6911D"
+                  color="#0D3642"
                   @click="subitem.path.includes('#') ? handleHashNavigation(subitem.path) : null"
                 >
                   <template v-slot:prepend>
@@ -647,7 +652,7 @@ onUnmounted(() => {
                 <v-list-group
                   :key="`mobile-submenu-group-${index}-${subIndex}`"
                   :value="activeDropdowns[`${index}-${subIndex}`]"
-                  color="#F6911D"
+                  color="#0D3642"
                   @click="toggleNestedSubmenu(index, subIndex, $event)"
                 >
                   <template v-slot:activator="{ props }">                  <v-list-item
@@ -655,7 +660,7 @@ onUnmounted(() => {
                     :title="subitem.name"
                     :aria-label="subitem.ariaLabel"
                     class="text-none pl-8"
-                    color="#F6911D"
+                    color="#0D3642"
                   >
                       <template v-slot:prepend>
                         <v-icon color="#808990" size="x-small">mdi-minus</v-icon>
@@ -676,7 +681,7 @@ onUnmounted(() => {
                     :aria-label="nestedItem.ariaLabel"
                     density="comfortable"
                     class="text-none pl-12 nested-submenu-item"
-                    color="#F6911D"
+                    color="#0D3642"
                     @click="nestedItem.path.includes('#') ? handleHashNavigation(nestedItem.path) : null"
                   >
                     <template v-slot:prepend>
@@ -743,6 +748,34 @@ onUnmounted(() => {
 
 .nav-btn:hover {
   background-color: #58B7AE !important; /* verde agua (hover) */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.4rem 0.9rem;
+  }
+
+  :deep(#mobile-menu .v-list-item) {
+    border-radius: 10px;
+    margin: 0.2rem 0.55rem;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+
+  :deep(#mobile-menu .v-list-item:hover) {
+    background-color: rgba(13, 54, 66, 0.08) !important;
+    transform: translateX(2px);
+  }
+
+  :deep(#mobile-menu .v-list-item--active) {
+    background-color: rgba(13, 54, 66, 0.12) !important;
+    border-left: 3px solid #58B7AE;
+    color: #0D3642 !important;
+  }
+
+  :deep(#mobile-menu .v-list-item--active .v-list-item-title) {
+    color: #0D3642 !important;
+    font-weight: 700;
+  }
 }
 
 </style>

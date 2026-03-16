@@ -526,14 +526,9 @@ function openImage(img) {
     line-height: 1.5;
   }
 
-  /* Invertir orden para section-reverse */
+  /* Section reverse: mantener texto izquierda e imagen derecha */
   .section-reverse .zigzag-container {
     grid-template-columns: 1fr 1fr;
-    direction: rtl;
-  }
-
-  .section-reverse .zigzag-container > * {
-    direction: ltr;
   }
 
   /* Sección de Atención */
@@ -814,92 +809,6 @@ function openImage(img) {
   .texto p{ color: #23424a; margin: 8px 0; }
   .texto ul{ margin: 12px 0 18px; padding-left: 20px; color:#23424a; }
   .texto .cta{ margin-top: 10px; font-weight: 700; color:#0b3340; }
-
-  /* --- Responsive --- */
-
-  /* ========================= */
-  /* 📱 MÓVIL – DEFINITIVO */
-  /* ========================= */
-  @media (max-width: 768px) {
-
-    /* 🔹 HERO HEADER */
-    .hero-header {
-      padding: 30px 1rem;
-    }
-
-    .logo-circle {
-      width: 80px;
-      height: 80px;
-    }
-
-    .company-name {
-      font-size: 28px;
-    }
-
-    .company-tagline {
-      font-size: 14px;
-    }
-
-    /* 🔹 ZIGZAG SECTIONS */
-    .zigzag-container {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .section-reverse .zigzag-container {
-      direction: ltr;
-    }
-
-    /* 🔹 ATENCIÓN SECTION */
-    .atencion-container {
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .atencion-img {
-      flex: 1;
-      width: 100%;
-    }
-
-    /* 🔹 GALERÍA */
-    .galeria-items {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 12px;
-    }
-
-    /* 🔹 BAÑERA */
-    .banera-container {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .imagenes {
-      display: grid !important;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .img {
-      aspect-ratio: 1 / 1;
-    }
-
-    /* 🔹 TEXTO */
-    .texto {
-      max-width: 100%;
-      text-align: left;
-    }
-
-    section {
-      padding: 2rem 1rem;
-    }
-}
-
-
-
-
-
-
   /* Imágenes: ocupan su contenedor sin deformarse */
   .conocenos-img img {
     width: 100%;
@@ -907,84 +816,6 @@ function openImage(img) {
     display: block;
     object-fit: cover;
   }
-
-  /* Móvil: 1 columna; la imagen “right” pasa al medio */
-
-
-/* ========================= */
-/* 📱 MÓVIL – DEFINITIVO */
-/* ========================= */
-@media (max-width: 768px) {
-
-  /* 🔹 HERO HEADER */
-  .hero-header {
-    padding: 30px 1rem;
-  }
-
-  .logo-circle {
-    width: 80px;
-    height: 80px;
-  }
-
-  .company-name {
-    font-size: 28px;
-  }
-
-  .company-tagline {
-    font-size: 14px;
-  }
-
-  /* 🔹 CONÓCENOS */
-  .conocenos-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .conocenos-imagenes {
-    display: flex !important;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .conocenos-img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-  }
-
-  .conocenos-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* 🔹 BAÑERA */
-  .banera-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .imagenes {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
-  .img {
-    aspect-ratio: 1 / 1;
-  }
-
-  /* 🔹 TEXTO */
-  .texto {
-    max-width: 100%;
-    text-align: left;
-  }
-
-  section {
-    padding: 2rem 1rem;
-  }
-}
 
 /* ✨ Estilos Nueva Sección Diseño y Confianza */
 .diseno-confianza-section {
@@ -1100,13 +931,167 @@ function openImage(img) {
   line-height: 1.4;
 }
 
-/* Ajuste móvil */
+/* ========================= */
+/* 📱 MÓVIL – DEFINITIVO */
+/* ========================= */
 @media (max-width: 768px) {
-  .diseno-confianza-section {
-    padding: 40px 1.5rem;
+  /* Base de espaciado y jerarquía visual */
+  section {
+    padding: 3rem 1.5rem;
   }
+
+  section h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  /* HERO */
+  .hero-header {
+    padding: 30px 1rem;
+  }
+
+  .logo-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .company-name {
+    font-size: 28px;
+  }
+
+  .company-tagline {
+    font-size: 14px;
+  }
+
+  /* ZIGZAG */
+  .zigzag-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section-reverse .zigzag-container {
+    grid-template-columns: 1fr;
+  }
+
+  .zigzag-imagenes {
+    margin-bottom: 1.5rem;
+  }
+
+  /* ATENCIÓN */
+  .atencion-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .atencion-img {
+    flex: 1;
+    width: 100%;
+  }
+
+  /* GALERÍA */
+  .galeria-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .galeria-item {
+    border-radius: 12px;
+  }
+
+  /* MEJOR OPCIÓN - TABLA COMO TARJETAS */
+  .mejor-opcion-tabla,
+  .mejor-opcion-tabla tbody,
+  .mejor-opcion-tabla tr {
+    display: block;
+    width: 100%;
+  }
+
+  .mejor-opcion-tabla {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .mejor-opcion-tabla td {
+    display: block;
+    border: 1px solid #e5ecef;
+    border-radius: 12px;
+    background: #f7fbfc;
+    margin-bottom: 0.9rem;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 2px 8px rgba(11, 51, 64, 0.06);
+  }
+
+  .mejor-opcion-tabla tr:last-child td:last-child {
+    margin-bottom: 0;
+  }
+
+  /* CONÓCENOS */
+  .conocenos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .conocenos-imagenes {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .conocenos-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .conocenos-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* BAÑERA */
+  .banera-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .imagenes {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .texto {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  /* DISEÑO Y CONFIANZA */
+  .diseno-confianza-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .compromiso-card {
+    padding: 1.35rem 1.1rem;
+  }
+
+  .razones-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
   .razon-item {
-    margin-top: 10px;
+    margin-top: 0;
+  }
+
+  .telefono-destacado {
+    font-size: clamp(30px, 10vw, 46px);
+    line-height: 1.1;
+    word-break: break-word;
   }
 }
 
