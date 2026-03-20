@@ -50,15 +50,21 @@ const closeAllDropdowns = () => {
 // SEO structured data
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "SSAB450",
-  "description": "Especialistas en acero inoxidable y servicios industriales",
-  "url": "https://ssab450.com",
-  "logo": "https://ssab450.com/logo.png",
-  "sameAs": [
-    "https://www.facebook.com/ssab450",
-    "https://www.linkedin.com/company/ssab450"
-  ]
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Baños Tres60",
+  "description": "Especialistas en cambio de bañera por plato de ducha, mamparas y reformas de baño.",
+  "url": "https://www.banostres60.es",
+  "logo": "https://www.banostres60.es/favicon.ico",
+  "telephone": "+34 661 80 59 52",
+  "email": "duchastres60@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Diego de Torres, 5",
+    "addressLocality": "Alcala de Henares",
+    "addressRegion": "Madrid",
+    "postalCode": "28802",
+    "addressCountry": "ES"
+  }
 };
 
 const navItems = ref([
@@ -146,7 +152,7 @@ const getNavigationSchema = () => {
     "@context": "https://schema.org",
     "@type": "SiteNavigationElement",
     "name": navItems.value.map(item => item.name),
-    "url": navItems.value.map(item => `https://ssab450.com${item.path}`)
+    "url": navItems.value.map(item => `https://www.banostres60.es${item.path}`)
   };
 };
 
@@ -369,7 +375,7 @@ onUnmounted(() => {
     :class="{ 'scrolled': scrolled }"
     app
     role="banner"
-    aria-label="Navegación principal de SSAB450"
+    aria-label="Navegación principal de Baños Tres60"
     itemscope
     itemtype="https://schema.org/WPHeader"
   >

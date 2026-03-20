@@ -1,4 +1,6 @@
 <script setup>
+defineOptions({ name: 'AppFooter' })
+
 const currentYear = new Date().getFullYear();
 const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo_BN_nf.png', import.meta.url).href;
 </script>
@@ -110,7 +112,24 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo_BN_nf.png', import.m
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+  .footer-link {
+    font-size: 0.95rem !important;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.45;
+  }
 
+  .footer-link-static {
+    justify-content: center;
+    width: 100%;
+  }
 
+  .copyright-text {
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+    padding: 0 0.5rem;
+  }
+}
 
 </style>
