@@ -1,305 +1,317 @@
 <script setup>
+import { ref } from 'vue';
 
 defineOptions({
   name: 'HomeView'
 })
 
-import { ref } from 'vue';
-
-import fotoSuelta from '../../assets/imagenes/Cambio_banera/1.png'
-
+// Imports de imágenes
 import foto1b from '../../assets/imagenes/Obra/1.jpg'
 import foto2b from '../../assets/imagenes/Obra/2.jpg'
 import foto3b from '../../assets/imagenes/Obra/3.jpg'
-
 import expo1 from '../../assets/imagenes/Exposicion/1.jpg'
 import expo2 from '../../assets/imagenes/Exposicion/2.jpg'
 import expo3 from '../../assets/imagenes/Exposicion/3.jpg'
 import expo4 from '../../assets/imagenes/Exposicion/4.jpg'
 import expo5 from '../../assets/imagenes/Exposicion/5.jpg'
+import fotoTiendaFisica from '../../assets/imagenes/usoGeneral/fotoTiendaFisica.jpeg'
+import logoSello from '../../assets/imagenes/usoGeneral/Logo sello.png'
 
+// Logos
 import logoGme from '../../assets/imagenes/home/confian/gme.jpg'
 import logoDuplach from '../../assets/imagenes/home/confian/duplach.jpg'
 import logoManillons from '../../assets/imagenes/home/confian/manillons.jpg'
 import logoRoyo from '../../assets/imagenes/home/confian/royogroup.png'
 import logoDecorban from '../../assets/imagenes/home/confian/decorban.gif'
 
-
+// Lógica de galeria y lightbox
 const dialog = ref(false)
-const selectedImage = ref(null)
+const selectedGalleryIndex = ref(0)
+const galleryMode = ref(false)
+const singleImage = ref('')
 
-function openImage(img) {
-  selectedImage.value = img
+// Solo esta seccion tendra carrusel
+const fotosTrabajos = [expo1, expo2, expo3, expo4, expo5]
+
+function openSingleImage(image) {
+  singleImage.value = image
+  galleryMode.value = false
   dialog.value = true
 }
 
+function openGalleryImage(index) {
+  selectedGalleryIndex.value = index
+  galleryMode.value = true
+  dialog.value = true
+}
+
+function closeLightbox() {
+  dialog.value = false
+  galleryMode.value = false
+  singleImage.value = ''
+}
 </script>
 
 
 <template>
-  <!-- HERO HEADER CON TEXTO -->
   <div class="hero-header">
     <div class="hero-content">
       <h1 class="company-name">BAÑOS TRES<strong>60</strong></h1>
 
-      <!-- llamada de atención secundaria -->
       <div class="hero-cta">
         <span class="hero-cta-text">¡Cambio de bañera por plato de ducha!</span>
       </div>
 
       <p class="company-tagline">Adaptamos el baño a tus necesidades.</p>
-
     </div>
   </div>
 
-<!-- SECCIÓN 1: Imagen LEFT + Texto RIGHT -->
-<section class="zigzag-section section-normal">
-  <div class="zigzag-container">
-    <div class="zigzag-imagenes">
-      <div class="zigzag-img-single">
-        <img :src="foto1b" alt="Dale una vuelta a tu baño" loading="lazy"
-        class="cursor-pointer"
-        @click="openImage(foto1b)" />
-      </div>
-    </div>
-
-    <div class="zigzag-texto">
-      <h2>¡Dale una vuelta a tu baño!</h2>
-      <p><strong>¡Renueva tu baño de manera fácil y rápida!</strong></p>
-      <p>
-        ¿Pensando en cambiar tu bañera por una ducha?
-        Transforma tu espacio con una solución <strong>moderna, segura y funcional</strong>.
-        Nuestro equipo profesional se adapta a tus necesidades y preferencias.
-      </p>
-      <ul>
-        <li>✔ Instalación rápida y sin complicaciones</li>
-        <li>✔ Materiales de calidad y acabados a tu gusto</li>
-        <li>✔ Mayor comodidad y accesibilidad</li>
-      </ul>
-      <p><strong>Renueva tu baño hoy mismo. ¡Te esperamos!</strong></p>
-      <p><strong>¡Pide presupuesto hoy mismo!</strong></p>
-    </div>
-  </div>
-</section>
-
-
-<!-- SECCIÓN 2: Texto LEFT + Imagen RIGHT (Invertida) -->
-<section class="zigzag-section section-reverse">
-  <div class="zigzag-container">
-    <div class="zigzag-texto">
-      <h2>Soluciones a medida para tu hogar</h2>
-      <p><strong>Diseño y funcionalidad en perfecta armonía.</strong></p>
-      <p>
-        Gana en tranquilidad y diseño con un baño adaptado a tu ritmo de vida.
-        Tanto si la bañera se ha convertido en un obstáculo diario como si simplemente buscas un espacio más funcional y moderno, tenemos la solución.
-        Sustituimos tu bañera por un plato de ducha antideslizante a ras de suelo.
-        Mejora tu autonomía y disfruta de un baño más espacioso, seguro y fácil de mantener.
-      </p>
-      <ul>
-        <li>✔ Presupuestos sin compromiso</li>
-        <li>✔ Instalaciones rápidas y profesionales</li>
-        <li>✔ Materiales de primera calidad</li>
-      </ul>
-      <p><strong>Contacta con nosotros hoy mismo</strong></p>
-    </div>
-
-    <div class="zigzag-imagenes">
-      <div class="zigzag-img-single">
-        <img :src="foto2b" alt="Soluciones a medida" loading="lazy"
-        class="cursor-pointer"
-        @click="openImage(foto2b)"/>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- SECCIÓN 3: Imagen LEFT + Texto RIGHT -->
-<section class="zigzag-section section-normal">
-  <div class="zigzag-container">
-    <div class="zigzag-imagenes">
-      <div class="zigzag-img-single">
-        <img :src="foto3b" alt="Transformamos espacios" loading="lazy"
-        class="cursor-pointer"
-        @click="openImage(foto3b)" />
-      </div>
-    </div>
-
-    <div class="zigzag-texto">
-      <h2>Transformamos tus espacios</h2>
-      <p><strong>Calidad y dedicación en cada proyecto.</strong></p>
-      <p>
-        Seamos prácticos: una bañera que no se usa para su fin, solo ocupa espacio,
-        al cambiarla por un plato de ducha moderno y funcional no solo modernizas la estética,
-        estás dando más amplitud a tu baño,,más funcionalidad al espacio y disfrutarás de la comodidad de una ducha más amplia y segura.
-        Es una inversión inteligente que revaloriza tu vivienda y te hace la vida más fácil
-      </p>
-      <ul>
-        <li>✔ Expertos en renovación de baños</li>
-        <li>✔ Garantía en nuestros trabajos</li>
-        <li>✔ Atención personalizada</li>
-      </ul>
-      <p><strong>¡Nos encanta lo que hacemos!</strong></p>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="mejor-opcion-section">
-  <div class="mejor-opcion-container">
-    <h2>¿Por qué somos la mejor opción?</h2>
-    <table class="mejor-opcion-tabla">
-      <tbody>
-        <tr>
-          <td>Servicio de <b>5 estrellas</b></td>
-          <td>Cuidamos <b>detalladamente</b> cada paso del proceso</td>
-        </tr>
-        <tr>
-          <td>Más de <b>20 años de experiencia</b> nos avalan</td>
-          <td>Apostamos siempre por una <b>gestión de calidad</b></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="mejor-opcion-imagen">
-      <img src="../../assets/imagenes/home/5estrellas.webp" alt="5 estrellas" />
-    </div>
-  </div>
-</section>
-
-<!-- SECCIÓN: Sobre Nosotros / Atención -->
-<section class="atencion-section">
-  <div class="atencion-container">
-    <div class="atencion-texto">
-      <h2>En un sector donde abundan las ofertas</h2>
-      <p>
-        Nosotros elegimos otro camino. Preferimos realizar menos trabajos al mes
-        para asegurar que el suyo reciba nuestra total atención. Cada cliente es importante
-        para nosotros, y eso se refleja en la calidad de nuestro trabajo.
-      </p>
-      <p><strong>Tu baño merece lo mejor.</strong></p>
-    </div>
-
-    <div class="atencion-img">
-      <img :src="fotoSuelta" alt="Atención dedicada" loading="lazy"
-      class="cursor-pointer"
-      @click="openImage(fotoSuelta)" />
-    </div>
-  </div>
-</section>
-
-
-
-<!-- GALERÍA HORIZONTAL -->
-<section class="galeria-final">
-  <div class="galeria-container">
-    <h2>Nuestros trabajos</h2>
-    <div class="galeria-items">
-      <div class="galeria-item">
-        <img :src="expo1" alt="Trabajo 1" loading="lazy"
-         class="cursor-pointer"
-         @click="openImage(expo1)" />
-      </div>
-      <div class="galeria-item">
-        <img :src="expo2" alt="Trabajo 2" loading="lazy"
-         class="cursor-pointer"
-         @click="openImage(expo2)" />
-      </div>
-      <div class="galeria-item">
-        <img :src="expo3" alt="Trabajo 3" loading="lazy"
-         class="cursor-pointer"
-         @click="openImage(expo3)" />
-      </div>
-      <div class="galeria-item">
-        <img :src="expo4" alt="Trabajo 4" loading="lazy"
-         class="cursor-pointer"
-         @click="openImage(expo4)" />
-      </div>
-      <div class="galeria-item">
-        <img :src="expo5" alt="Trabajo 5" loading="lazy"
-         class="cursor-pointer"
-         @click="openImage(expo5)" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="mapa-ubicacion">
-      <div class="mapa">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.6249220943014!2d-3.3706795250006976!3d40.48356217142898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424912b7372f4b%3A0x71d49bab96654b45!2sCalle%20Diego%20de%20Torres%2C%205%2C%2028802%20Alcal%C3%A1%20de%20Henares%2C%20Madrid!5e0!3m2!1ses!2ses!4v1756914418984!5m2!1ses!2ses"
-        width="100%"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
-</section>
-
-<section class="diseno-confianza-section">
-  <div class="diseno-container">
-
-    <div class="diseno-header">
-      <h2>Diseñemos juntos tu nuevo baño</h2>
-      <p class="pregunta-clave">¿Qué te preocupa más? La seguridad, el diseño moderno, la limpieza o el espacio.</p>
-      <div class="compromiso-card">
-        <p>Cuidamos al detalle todo el proceso para interferir lo menos posible en tu ritmo: <strong>protegemos las zonas de paso</strong> y dejamos el baño operativo al terminar la jornada si es el único del que dispones.</p>
-        <p>La limpieza y el orden son nuestras constantes. Puedes confiar plenamente en nosotros.</p>
-      </div>
-    </div>
-
-    <div class="visita-tecnica">
-      <h3>¿Por qué es mejor que visitemos tu baño?</h3>
-      <div class="razones-grid">
-        <div class="razon-item">
-          <span class="razon-num">1</span>
-          <p><strong>Medición profesional:</strong> Evitamos sorpresas de última hora midiendo nosotros mismos el espacio real.</p>
+  <section class="zigzag-section section-normal">
+    <div class="zigzag-container">
+      <div class="zigzag-imagenes">
+        <div class="zigzag-img-single">
+          <img :src="foto1b" alt="Dale una vuelta a tu baño" loading="lazy"
+          class="cursor-pointer"
+          @click="openSingleImage(foto1b)" />
         </div>
-        <div class="razon-item">
-          <span class="razon-num">2</span>
-          <p><strong>Muestrario en mano:</strong> Toca los materiales y elige las texturas de nuestros platos antideslizantes sin moverte de casa.</p>
-        </div>
-        <div class="razon-item">
-          <span class="razon-num">3</span>
-          <p><strong>Asesoramiento experto:</strong> Te ofrecemos la mejor solución técnica para un presupuesto cerrado y sin sorpresas.</p>
+      </div>
+
+      <div class="zigzag-texto">
+        <h2>¡Dale una vuelta a tu baño!</h2>
+        <p><strong>¡Renueva tu baño de manera fácil y rápida!</strong></p>
+        <p>
+          ¿Pensando en cambiar tu bañera por una ducha?
+          Transforma tu espacio con una solución <strong>moderna, segura y funcional</strong>.
+          Nuestro equipo profesional se adapta a tus necesidades y preferencias.
+        </p>
+        <ul>
+          <li>✔ Platos de ducha, diferentes medidas y colores</li>
+          <li>✔ Mobiliario de baño: mamparas y espejos </li>
+          <li>✔ Griferia vista y empotrada</li>
+        </ul>
+        <p><strong>Renueva tu baño hoy mismo. ¡Te esperamos!</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="zigzag-section section-reverse">
+    <div class="zigzag-container">
+      <div class="zigzag-texto">
+        <h2>Soluciones a medida para tu hogar</h2>
+        <p><strong>Diseño y funcionalidad en perfecta armonía.</strong></p>
+        <p>
+          Gana en tranquilidad y diseño con un baño adaptado a tu ritmo de vida.
+          Tanto si la bañera se ha convertido en un obstáculo diario como si simplemente buscas un espacio más funcional y moderno, tenemos la solución.
+          Sustituimos tu bañera por un plato de ducha antideslizante a ras de suelo.
+        </p>
+        <ul>
+          <li>✔ Presupuestos sin compromiso</li>
+          <li>✔ Instalaciones rápidas y profesionales</li>
+          <li>✔ Materiales de primera calidad</li>
+        </ul>
+      </div>
+
+      <div class="zigzag-imagenes">
+        <div class="zigzag-img-single">
+          <img :src="foto2b" alt="Soluciones a medida" loading="lazy"
+          class="cursor-pointer"
+          @click="openSingleImage(foto2b)"/>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="cta-final-box">
-      <p>Llámanos ahora, te atenderá Francisco personalmente:</p>
-      <a href="tel:661805952" class="telefono-destacado">661 805 952</a>
-      <p class="presupuesto-tiempo">Te entregamos tu presupuesto en <strong>24 horas</strong> tras la visita.</p>
-      <blockquote class="frase-cierre">
-        "Nos encanta nuestro trabajo y queremos dedicarle a tu proyecto el tiempo que se merece para que el resultado sea perfecto."
-      </blockquote>
+  <section class="zigzag-section section-normal">
+    <div class="zigzag-container">
+      <div class="zigzag-imagenes">
+        <div class="zigzag-img-single">
+          <img :src="foto3b" alt="Transformamos espacios" loading="lazy"
+          class="cursor-pointer"
+          @click="openSingleImage(foto3b)" />
+        </div>
+      </div>
+
+      <div class="zigzag-texto">
+        <h2>Transformamos tus espacios</h2>
+        <p><strong>Calidad y dedicación en cada proyecto.</strong></p>
+        <p>
+          Al cambiarla por un plato de ducha moderno y funcional no solo modernizas la estética,
+          estás dando más amplitud a tu baño y disfrutarás de una ducha más amplia y segura.
+        </p>
+        <ul>
+          <li>✔ Expertos en renovación de baños</li>
+          <li>✔ Garantía en nuestros trabajos</li>
+          <li>✔ Atención personalizada</li>
+        </ul>
+        <p><strong>¡Nos encanta lo que hacemos!</strong></p>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<section class="confian-section">
-  <div class="confian-container">
-    <h2 class="confian-title">Nuestros proveedores</h2>
-    <div class="confian-logos">
-      <img :src="logoGme" alt="Logo Gme" />
-      <img :src="logoDuplach" alt="Logo Duplach" />
-      <img :src="logoManillons" alt="Logo Manillons" />
-      <img :src="logoRoyo" alt="Logo Royo Group" />
-      <img :src="logoDecorban" alt="Logo Decorban" />
+  <section class="mejor-opcion-section">
+    <div class="mejor-opcion-container">
+      <h2>¿Por qué somos la mejor opción?</h2>
+      <table class="mejor-opcion-tabla">
+        <tbody>
+          <tr>
+            <td>Servicio de <b>5 estrellas</b></td>
+            <td>Cuidamos <b>detalladamente</b> cada paso del proceso</td>
+          </tr>
+          <tr>
+            <td>Más de <b>20 años de experiencia</b> nos avalan</td>
+            <td>Apostamos siempre por una <b>gestión de calidad</b></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="mejor-opcion-imagen">
+        <img src="../../assets/imagenes/home/5estrellas.webp" alt="5 estrellas" />
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="atencion-section">
+    <div class="atencion-container">
+      <div class="atencion-texto">
+        <h2>En un sector donde abundan las ofertas</h2>
+        <p>
+          Nosotros elegimos otro camino. Preferimos realizar menos trabajos al mes
+          para asegurar que el suyo reciba nuestra total atención.
+        </p>
+        <p><strong>Tu baño merece lo mejor.</strong></p>
+      </div>
+    </div>
+  </section>
 
-<v-dialog v-model="dialog" max-width="800px">
-  <v-card>
-    <v-img :src="selectedImage" height="500" contain />
-  </v-card>
-</v-dialog>
+ <section class="galeria-final">
+    <div class="galeria-container">
+      <h2>Nuestros trabajos</h2>
+      <div class="galeria-items">
+        <div class="galeria-item"><img :src="expo1" @click="openGalleryImage(0)" class="cursor-pointer" /></div>
+        <div class="galeria-item"><img :src="expo2" @click="openGalleryImage(1)" class="cursor-pointer" /></div>
+        <div class="galeria-item"><img :src="expo3" @click="openGalleryImage(2)" class="cursor-pointer" /></div>
+        <div class="galeria-item"><img :src="expo4" @click="openGalleryImage(3)" class="cursor-pointer" /></div>
+        <div class="galeria-item"><img :src="expo5" @click="openGalleryImage(4)" class="cursor-pointer" /></div>
+      </div>
+    </div>
+  </section>
 
+  <section class="mapa-ubicacion">
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.6249220943014!2d-3.3706795250006976!3d40.48356217142898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424912b7372f4b%3A0x71d49bab96654b45!2sCalle%20Diego%20de%20Torres%2C%205%2C%2028802%20Alcal%C3%A1%20de%20Henares%2C%20Madrid!5e0!3m2!1ses!2ses!4v1756914418984!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
 
+  <section class="diseno-confianza-section">
+    <div class="diseno-container">
+      <div class="diseno-header">
+        <h2>Diseñemos juntos tu nuevo baño</h2>
+        <p class="pregunta-clave">¿Qué te preocupa más? La seguridad, el diseño moderno, la limpieza o el espacio.</p>
+        <div class="compromiso-card">
+          <p>Cuidamos al detalle todo el proceso: <strong>protegemos las zonas de paso</strong> y dejamos el baño operativo.</p>
+          <p>La limpieza y el orden son nuestras constantes.</p>
+        </div>
+      </div>
+
+      <div class="visita-tecnica">
+        <h3>¿Por qué es mejor que visitemos tu baño?</h3>
+        <div class="razones-grid">
+          <div class="razon-item"><span class="razon-num">1</span><p><strong>Medición profesional</strong></p></div>
+          <div class="razon-item"><span class="razon-num">2</span><p><strong>Muestrario en mano</strong></p></div>
+          <div class="razon-item"><span class="razon-num">3</span><p><strong>Asesoramiento experto</strong></p></div>
+        </div>
+      </div>
+
+      <div class="cta-final-box">
+        <div class="cta-header-row">
+          <img
+            :src="fotoTiendaFisica"
+            alt="Tienda fisica de Banos Tres60"
+            class="cta-side-image cta-photo"
+            loading="lazy"
+          />
+
+          <div class="cta-contact-main">
+            <p class="cta-intro">Llámanos ahora, te atenderá Francisco personalmente:</p>
+            <span class="telefono-destacado">661 805 952</span>
+          </div>
+
+          <img
+            :src="logoSello"
+            alt="Sello de calidad Banos Tres60"
+            class="cta-side-image cta-logo"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="visita-tienda">
+          <p>O bien visítanos en nuestra tienda <span class="cita-previa">(con cita previa)</span></p>
+          <p class="direccion-texto"><v-icon color="#5DAFB3" class="mr-1">mdi-map-marker</v-icon> Calle Diego de torres 5</p>
+        </div>
+        <div class="presupuesto-badge">
+          <div class="badge-content">
+            <span class="badge-icon">⏱️</span>
+            <p>Te entregamos tu presupuesto en <strong>24 horas</strong> tras la visita</p>
+          </div>
+        </div>
+        <blockquote class="frase-cierre">"Nos encanta nuestro trabajo y queremos dedicarte a tu proyecto el tiempo que se merece para que el resultado sea perfecto"</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="confian-section">
+    <div class="confian-container">
+      <h2 class="confian-title">Nuestros proveedores</h2>
+      <div class="confian-logos">
+        <img :src="logoGme" alt="Logo Gme" /><img :src="logoDuplach" alt="Logo Duplach" />
+        <img :src="logoManillons" alt="Logo Manillons" /><img :src="logoRoyo" alt="Logo Royo" />
+        <img :src="logoDecorban" alt="Logo Decorban" />
+      </div>
+    </div>
+  </section>
+
+  <v-dialog
+    v-model="dialog"
+    class="lightbox-dialog"
+    content-class="lightbox-content"
+    scrim="rgba(5, 17, 22, 0.88)"
+    width="min(96vw, 1200px)"
+  >
+    <v-card class="lightbox-card" flat>
+      <v-btn
+        icon="mdi-close"
+        class="lightbox-close"
+        color="white"
+        variant="flat"
+        @click="closeLightbox"
+      ></v-btn>
+
+      <template v-if="galleryMode">
+        <v-carousel
+          class="lightbox-carousel"
+          v-model="selectedGalleryIndex"
+          hide-delimiter-background
+          show-arrows="always"
+          height="82vh"
+          hide-delimiters
+        >
+          <v-carousel-item
+            v-for="(foto, i) in fotosTrabajos"
+            :key="i"
+          >
+            <div class="lightbox-image-wrap">
+              <v-img :src="foto" height="100%" contain />
+            </div>
+          </v-carousel-item>
+        </v-carousel>
+      </template>
+
+      <template v-else>
+        <div class="lightbox-image-wrap lightbox-single-image">
+          <v-img :src="singleImage" height="82vh" contain />
+        </div>
+      </template>
+    </v-card>
+  </v-dialog>
 </template>
 
 <style scoped>
@@ -595,19 +607,67 @@ function openImage(img) {
     margin: 0 0 2rem;
   }
 
-  .galeria-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: clamp(16px, 3vw, 24px);
+  /* Contenedor relativo para las flechas */
+  .galeria-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
   }
 
+  /* Transformamos el grid en un contenedor de scroll horizontal */
+  .galeria-items {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 5px;
+    scrollbar-width: none;
+  }
+
+  .galeria-items::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Ajustamos el tamaño de los items para que no se encojan */
   .galeria-item {
     position: relative;
-    overflow: hidden;
-    border-radius: 12px;
+    flex: 0 0 280px;
     aspect-ratio: 1/1;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   }
+
+  /* Estilo de los botones de navegación */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-btn:hover {
+    background: #5DAFB3;
+  }
+
+  .nav-btn:hover .v-icon {
+    color: white !important;
+  }
+
+  .nav-btn.prev { left: -15px; }
+  .nav-btn.next { right: -15px; }
 
   .galeria-item img {
     width: 100%;
@@ -619,6 +679,69 @@ function openImage(img) {
 
   .galeria-item:hover img {
     transform: scale(1.08);
+  }
+
+  /* Lightbox de galeria */
+  .lightbox-card {
+    background: transparent;
+    overflow: visible;
+    border-radius: 20px;
+    box-shadow: none;
+    position: relative;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 20;
+    background: rgba(10, 22, 28, 0.6);
+    backdrop-filter: blur(6px);
+  }
+
+  .lightbox-image-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .lightbox-single-image {
+    background: rgba(8, 20, 26, 0.48);
+    border-radius: 18px;
+    min-height: 82vh;
+  }
+
+  :deep(.lightbox-content) {
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  :deep(.lightbox-carousel) {
+    background: transparent;
+  }
+
+  :deep(.lightbox-carousel .v-window__container) {
+    background: transparent;
+    border-radius: 18px;
+  }
+
+  :deep(.lightbox-carousel .v-window-item) {
+    background: rgba(8, 20, 26, 0.48);
+    border-radius: 18px;
+  }
+
+  :deep(.lightbox-carousel .v-btn--icon) {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    backdrop-filter: blur(4px);
+  }
+
+  :deep(.lightbox-carousel .v-btn--icon:hover) {
+    background: rgba(93, 175, 179, 0.9);
   }
 
   /*Ubicacion mapa estilo*/
@@ -894,6 +1017,38 @@ function openImage(img) {
   border-top: 2px dashed #e0e0e0;
 }
 
+.cta-header-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 180px) 1fr minmax(140px, 180px);
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.cta-contact-main {
+  text-align: center;
+}
+
+.cta-side-image {
+  width: 100%;
+  max-width: 180px;
+  justify-self: center;
+  box-shadow: 0 8px 20px rgba(11, 51, 64, 0.14);
+}
+
+.cta-photo {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.cta-logo {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 0.7rem;
+}
+
 .cta-final-box p:first-child {
   font-size: 1.5rem; /* Antes era el tamaño por defecto, ahora es más grande */
   font-weight: 500;   /* Un poco más de grosor para que se lea mejor */
@@ -901,34 +1056,97 @@ function openImage(img) {
   margin-bottom: 0.5rem;
 }
 
+.cta-intro {
+  font-size: 1.4rem !important;
+  color: #0b3340;
+  margin-bottom: 0.5rem;
+}
+
 .telefono-destacado {
   display: block;
-  font-size: clamp(40px, 8vw, 72px);
-  font-weight: 800;
+  font-size: clamp(45px, 10vw, 85px); /* Un poco más grande */
+  font-weight: 900;
   color: #0b3340;
   text-decoration: none;
-  margin: 1rem 0;
-  transition: color 0.3s;
+  margin: 0.5rem 0;
+  line-height: 1;
+  transition: all 0.3s ease;
+  letter-spacing: -2px;
 }
 
 .telefono-destacado:hover {
   color: #5DAFB3;
+  transform: scale(1.02);
 }
 
-.presupuesto-tiempo {
-  font-size: 1.6rem; /* Lo hemos subido de 1.2rem a 1.6rem */
-  color: #23424a;
-  margin-bottom: 3rem;
-  line-height: 1.4;  /* Espaciado entre líneas para que no se amontone */
+/* Estilo para la zona de dirección */
+.visita-tienda {
+  margin: 2rem 0;
 }
 
+.cita-previa {
+  color: #5DAFB3;
+  font-weight: 600;
+}
+
+.direccion-texto {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0b3340;
+  margin-top: 0.5rem;
+}
+
+/* El Badge de 24 Horas (Lo más atractivo visualmente) */
+.presupuesto-badge {
+  display: inline-block;
+  background: #0b3340; /* Fondo oscuro para contraste máximo */
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  margin: 2.5rem 0;
+  box-shadow: 0 10px 20px rgba(11, 51, 64, 0.2);
+}
+
+.badge-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.badge-content p {
+  margin: 0 !important;
+  color: white !important;
+  font-size: 1.2rem;
+}
+
+.badge-content strong {
+  color: #5DAFB3;
+  font-size: 1.4rem;
+}
+
+.badge-icon {
+  font-size: 1.8rem;
+}
+
+/* Ajuste fino de la frase de cierre */
 .frase-cierre {
   font-family: 'Lobster', cursive;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #5DAFB3;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.4;
+  max-width: 800px;
+  margin: 3rem auto 0;
+  line-height: 1.3;
+  position: relative;
+}
+
+/* Añadimos unas comillas decorativas */
+.frase-cierre::before {
+  content: '"';
+  font-size: 4rem;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  opacity: 0.2;
 }
 
 /* ========================= */
@@ -988,13 +1206,12 @@ function openImage(img) {
   }
 
   /* GALERÍA */
-  .galeria-items {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+  .nav-btn {
+    display: none;
   }
 
   .galeria-item {
-    border-radius: 12px;
+    flex: 0 0 240px;
   }
 
   /* MEJOR OPCIÓN - TABLA COMO TARJETAS */
@@ -1086,6 +1303,27 @@ function openImage(img) {
 
   .razon-item {
     margin-top: 0;
+  }
+
+  .cta-header-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cta-contact-main {
+    order: 1;
+  }
+
+  .cta-photo {
+    order: 2;
+    width: min(62vw, 230px);
+    max-width: 230px;
+  }
+
+  .cta-logo {
+    order: 3;
+    width: min(58vw, 210px);
+    max-width: 210px;
   }
 
   .telefono-destacado {

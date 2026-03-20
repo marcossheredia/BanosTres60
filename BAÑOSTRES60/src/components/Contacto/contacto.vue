@@ -103,13 +103,13 @@ const enviarFormulario = async () => {
         <div class="dato">
           <div>
             <h3><b>Teléfono</b> <i class="fa-solid fa-user" style="color: black; font-size: large;"></i></h3>
-            <p><a href="tel:+34912950536">+34 912 95 05 36</a></p>
+            <p>+34 912 95 05 36</p>
           </div>
         </div>
         <div class="dato">
           <div>
             <h3><b>Email</b> <i class="fa-solid fa-envelope" style="color: black; font-size: large;"></i></h3>
-            <p><a href="duchastres60@gmail.com">duchastres60@gmail.com</a></p>
+            <p>duchastres60@gmail.com</p>
           </div>
         </div>
       </div>

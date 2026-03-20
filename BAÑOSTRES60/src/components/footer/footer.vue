@@ -13,7 +13,7 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo_BN_nf.png', import.m
           <v-col cols="12" sm="auto" class="text-center mb-4 mb-sm-0">
             <v-img
               :src="logoPath"
-              alt="SSAB450 - Especialistas en acero inoxidable"
+              alt="BAÑOS TRES60"
               width="150"
               height="auto"
               class="mx-auto"
@@ -34,26 +34,18 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo_BN_nf.png', import.m
             <v-divider vertical class="d-none d-sm-block mx-4" color="white"></v-divider>
             <v-divider class="d-block d-sm-none my-2" color="white" width="80%"></v-divider>
 
-            <v-btn
-              href="mailto:duchastres60@gmail.com"
-              variant="text"
-              class="footer-link my-1 my-sm-0 mx-sm-2"
-            >
+            <div class="footer-link footer-link-static my-1 my-sm-0 mx-sm-2">
               <v-icon start size="small" class="mr-1">mdi-email-outline</v-icon>
               duchastres60@gmail.com
-            </v-btn>
+            </div>
 
             <v-divider vertical class="d-none d-sm-block mx-4" color="white"></v-divider>
             <v-divider class="d-block d-sm-none my-2" color="white" width="80%"></v-divider>
 
-            <v-btn
-              href="tel:+34661805952"
-              variant="text"
-              class="footer-link my-1 my-sm-0 mx-sm-2"
-            >
+            <div class="footer-link footer-link-static my-1 my-sm-0 mx-sm-2">
               <v-icon start size="small" class="mr-1">mdi-phone</v-icon>
               +34 661 80 59 52
-            </v-btn>
+            </div>
           </v-col>
         </v-row>
 
@@ -98,6 +90,11 @@ const logoPath = new URL('@/assets/imagenes/usoGeneral/Logo_BN_nf.png', import.m
 .footer-link:hover {
   color: var(--color-primary, #00bcd4) !important; /* hover en cian */
   transform: translateY(-2px);
+}
+
+.footer-link-static {
+  display: inline-flex;
+  align-items: center;
 }
 
 .copyright-text {

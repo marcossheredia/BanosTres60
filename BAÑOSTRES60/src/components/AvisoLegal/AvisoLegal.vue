@@ -14,7 +14,7 @@ onMounted(() => {
       <ul>
         <li><b>Titular:</b> Baños Tres60, S.L.</li>
         <li><b>Domicilio:</b> C. Diego de Torres, 5.</li>
-        <li><b>Correo electrónico:</b> <a href="mailto:duchastres60@gmail.com" class="legal-link">duchastres60@gmail.com</a></li>
+        <li><b>Correo electrónico:</b> <span class="legal-email">duchastres60@gmail.com</span></li>
       </ul>
     </section>
 
@@ -140,7 +140,7 @@ onMounted(() => {
     <section>
       <h2>Contacto</h2>
       <p>
-        En caso de que usted tenga cualquier duda acerca de estas Condiciones legales o quiera realizar cualquier comentario sobre este sitio Web, puede enviar un mensaje de correo electrónico a la dirección <a href="mailto:info@banostres60.es" class="legal-link">info@banostres60.es</a>.
+        En caso de que usted tenga cualquier duda acerca de estas Condiciones legales o quiera realizar cualquier comentario sobre este sitio Web, puede enviar un mensaje de correo electrónico a la dirección <span class="legal-email">info@banostres60.es</span>.
       </p>
     </section>
   </div>
@@ -232,6 +232,11 @@ section {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+.legal-email {
+  color: var(--primary-dark);
+  font-weight: 600;
 }
 
 /* Responsive */

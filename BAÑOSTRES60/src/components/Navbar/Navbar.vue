@@ -135,7 +135,8 @@ const navItems = ref([
     title: 'Contacte con nosotros para más información',
     ariaLabel: 'Contacto',
     keywords: 'contacto, ubicación, teléfono, email',
-    hasSubmenu: false
+    hasSubmenu: false,
+    isCTA: true
   }
 ]);
 
@@ -388,15 +389,15 @@ onUnmounted(() => {
             >
               <template v-slot:activator="{ props }">
                 <v-btn
-                  class="text-uppercase font-weight-bold mx-1 nav-link"
+                  :class="['text-uppercase font-weight-bold mx-1', item.isCTA ? 'cta-navbar' : 'nav-link']"
                   :ripple="false"
-                  variant="text"
+                  :variant="item.isCTA ? 'flat' : 'text'"
                   :title="item.title"
                   :aria-label="item.ariaLabel"
                   aria-haspopup="true"
                   :data-index="index"
                   v-bind="props"
-                  color="black"
+                  :color="item.isCTA ? undefined : 'black'"
                   height="64"
                   style="font-family: 'Calibri', 'MS Sans Serif', sans-serif;"
                   :to="item.path.includes('#') ? undefined : item.path"
@@ -502,12 +503,12 @@ onUnmounted(() => {
             <v-btn
               :to="item.path.includes('#') ? undefined : item.path"
               :href="item.path.includes('#') ? item.path : undefined"
-              class="text-uppercase font-weight-bold mx-1 nav-link"
+              :class="['text-uppercase font-weight-bold mx-1', item.isCTA ? 'cta-navbar' : 'nav-link']"
               :ripple="false"
-              variant="text"
+              :variant="item.isCTA ? 'flat' : 'text'"
               :title="item.title"
               :aria-label="item.ariaLabel"
-              color="black"
+              :color="item.isCTA ? undefined : 'black'"
               height="64"
               :active="$route.path === item.path || $route.path.startsWith(item.path + '/')"
               style="font-family: 'Calibri', 'MS Sans Serif', sans-serif;"
@@ -585,7 +586,7 @@ onUnmounted(() => {
             :title="item.name"
             :aria-label="item.ariaLabel"
             density="comfortable"
-            class="text-none font-weight-bold"
+            :class="['text-none font-weight-bold', item.isCTA ? 'cta-mobile-item' : '']"
             color="#0D3642"
             @click="item.path.includes('#') ? handleHashNavigation(item.path) : null"
           >
@@ -748,6 +749,35 @@ onUnmounted(() => {
 
 .nav-btn:hover {
   background-color: #58B7AE !important; /* verde agua (hover) */
+}
+
+.cta-navbar {
+  background-color: #0D3642 !important;
+  color: #FFFFFF !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 14px rgba(13, 54, 66, 0.22) !important;
+  padding-inline: 1.15rem !important;
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-navbar:hover {
+  background-color: #58B7AE !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(13, 54, 66, 0.24) !important;
+}
+
+.cta-mobile-item {
+  background-color: #58B7AE !important;
+  color: #FFFFFF !important;
+  margin-top: 0.8rem;
+  border-radius: 12px;
+}
+
+:deep(.cta-mobile-item .v-list-item-title),
+:deep(.cta-mobile-item .v-icon) {
+  color: #FFFFFF !important;
 }
 
 @media (max-width: 768px) {
