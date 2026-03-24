@@ -195,11 +195,7 @@ function closeLightbox() {
     </div>
   </section>
 
-  <section class="mapa-ubicacion">
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.6249220943014!2d-3.3706795250006976!3d40.48356217142898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424912b7372f4b%3A0x71d49bab96654b45!2sCalle%20Diego%20de%20Torres%2C%205%2C%2028802%20Alcal%C3%A1%20de%20Henares%2C%20Madrid!5e0!3m2!1ses!2ses!4v1756914418984!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </section>
+
 
   <section class="diseno-confianza-section">
     <div class="diseno-container">
@@ -254,6 +250,43 @@ function closeLightbox() {
           </div>
         </div>
         <blockquote class="frase-cierre">"Nos encanta nuestro trabajo y queremos dedicarte a tu proyecto el tiempo que se merece para que el resultado sea perfecto"</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="mapa-ubicacion">
+    <div class="mapa-shell">
+      <div class="mapa-copy">
+        <span class="mapa-badge">Ven a conocernos</span>
+        <h2>Estamos en Alcalá de Henares</h2>
+        <p>
+          Te asesoramos en tienda para elegir plato, mampara y grifería con muestras reales,
+          y salir con una propuesta ajustada a tu baño.
+        </p>
+
+        <div class="mapa-datos">
+          <p><strong>Dirección:</strong> Calle Diego de Torres, 5</p>
+          <p><strong>Zona:</strong> Alcalá de Henares, Madrid</p>
+        </div>
+
+        <div class="mapa-actions">
+          <a href="https://maps.google.com/?q=Calle+Diego+de+Torres+5+Alcala+de+Henares" target="_blank" rel="noopener noreferrer">
+            Ver en Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.6249220943014!2d-3.3706795250006976!3d40.48356217142898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd424912b7372f4b%3A0x71d49bab96654b45!2sCalle%20Diego%20de%20Torres%2C%205%2C%2028802%20Alcal%C3%A1%20de%20Henares%2C%20Madrid!5e0!3m2!1ses!2ses!4v1756914418984!5m2!1ses!2ses"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicacion de Banos Tres60 en Alcala de Henares"
+        ></iframe>
       </div>
     </div>
   </section>
@@ -744,15 +777,117 @@ function closeLightbox() {
     background: rgba(93, 175, 179, 0.9);
   }
 
-  /*Ubicacion mapa estilo*/
+  /* Ubicacion mapa estilo */
 
   .mapa-ubicacion {
-  width: 100%;
-  height: 450px;
-  margin-top: 2rem;
-  border-radius: 8px;
-  overflow: hidden;
-}
+    width: 100%;
+    margin-top: 2rem;
+    padding: clamp(36px, 5vw, 64px) clamp(16px, 4vw, 40px);
+    background: linear-gradient(180deg, #f7fcfc 0%, #eef7f8 100%);
+  }
+
+  .mapa-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 20px 42px rgba(11, 51, 64, 0.14);
+    display: grid;
+    grid-template-columns: minmax(300px, 420px) 1fr;
+    min-height: 450px;
+  }
+
+  .mapa-copy {
+    padding: clamp(1.6rem, 3vw, 2.4rem);
+    background: radial-gradient(circle at top left, #ffffff 0%, #edf6f7 78%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .mapa-badge {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #0b3340;
+    background: rgba(93, 175, 179, 0.24);
+  }
+
+  .mapa-copy h2 {
+    font-size: clamp(1.6rem, 2.3vw, 2.1rem);
+    margin: 0;
+    line-height: 1.15;
+  }
+
+  .mapa-copy p {
+    margin: 0;
+    color: #23424a;
+    line-height: 1.55;
+  }
+
+  .mapa-datos {
+    margin-top: 0.2rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(11, 51, 64, 0.12);
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .mapa-actions {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .mapa-actions a {
+    padding: 0.72rem 1rem;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+
+  .mapa-actions a:first-child {
+    background: #0b3340;
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(11, 51, 64, 0.2);
+  }
+
+  .mapa-actions a:last-child {
+    background: rgba(93, 175, 179, 0.16);
+    color: #0b3340;
+  }
+
+  .mapa-actions a:hover {
+    transform: translateY(-1px);
+  }
+
+  .mapa {
+    position: relative;
+    min-height: 450px;
+  }
+
+  .mapa::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(11, 51, 64, 0.12) 0%, rgba(11, 51, 64, 0) 20%);
+  }
+
+  .mapa iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 
   /* ⭐ Sección Mejor opción */
   .mejor-opcion-section {
@@ -1330,6 +1465,39 @@ function closeLightbox() {
     font-size: clamp(30px, 10vw, 46px);
     line-height: 1.1;
     word-break: break-word;
+  }
+
+  /* MAPA */
+  .mapa-ubicacion {
+    padding: 2.6rem 1rem;
+  }
+
+  .mapa-shell {
+    border-radius: 16px;
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .mapa-copy {
+    text-align: left;
+    padding: 1.3rem 1rem 1.1rem;
+  }
+
+  .mapa-copy h2 {
+    font-size: clamp(1.35rem, 6.2vw, 1.75rem);
+  }
+
+  .mapa-actions {
+    flex-direction: column;
+  }
+
+  .mapa-actions a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mapa {
+    min-height: 320px;
   }
 }
 
